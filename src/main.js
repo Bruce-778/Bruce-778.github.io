@@ -5,19 +5,22 @@ const content = {
     nav: [
       ['intro', '首页'],
       ['about', '关于'],
+      ['path', 'AI 路径'],
       ['work', '作品'],
       ['journey', '轨迹'],
       ['contact', '联系'],
     ],
     brandRole: 'AI 产品经理 · 独立构建者',
     hero: {
-      eyebrow: 'AI PRODUCT MANAGER / BUILDER',
-      title: '把复杂的 AI，做成有人愿意使用的产品。',
-      subtitle: 'Bruce Tu 屠炳豪',
+      eyebrow: 'BRUCE TU / 屠炳豪',
+      title: 'Bruce Tu',
+      nameCn: '屠炳豪',
+      motto: '把复杂的 AI，做成有人愿意使用的产品。',
+      subtitle: 'AI 产品经理 · 独立构建者',
       body: '我在研究、设计和上线之间工作：从一个模糊问题出发，把它拆成可验证的体验，再把体验做成真正可用的产品。',
       note: 'Currently in Hangzhou · Open to thoughtful collaborations',
       primary: '查看作品',
-      secondary: '下载简历',
+      secondary: '联系我',
       portraitAlt: '屠炳豪的肖像照片',
       floating: ['AI × Product', '杭州 / 香港', 'Build · Test · Refine'],
     },
@@ -34,8 +37,18 @@ const content = {
       ],
       chips: ['AI 产品设计', '用户研究', '全栈原型', '学习科学', '增长与转化'],
     },
+    path: {
+      kicker: '02 / AI PRODUCT PATH',
+      title: '从真实问题出发，走到可用的产品。',
+      body: '我把 AI 产品看作一条完整路径：理解用户的处境，找到最值得解决的问题，设计清晰的交互，再用快速迭代把想法交付到真实世界。',
+      focusLabel: 'AI 产品路径',
+      focus: '用户问题 → 产品策略 → 体验设计 → 0→1 交付 → 数据迭代',
+      intentLabel: '求职意向 / Career focus',
+      intent: '产品经理 · Product Manager',
+      intentBody: '希望继续在 AI 产品方向工作，把研究、设计与工程协作起来，做出真正有人愿意使用的产品。',
+    },
     work: {
-      kicker: '02 / SELECTED WORK',
+      kicker: '03 / SELECTED WORK',
       title: '把想法推到真实世界里。',
       intro: '两个已经上线的产品，记录我如何从需求、交互一路做到上线和迭代。',
       visit: '访问项目 ↗',
@@ -74,7 +87,7 @@ const content = {
       ],
     },
     journey: {
-      kicker: '03 / JOURNEY',
+      kicker: '04 / JOURNEY',
       title: '沿着问题走，也沿着人走。',
       intro: '每一段经历都让我更接近同一个问题：如何让技术更有用，也更像人在使用。',
       items: [
@@ -87,7 +100,7 @@ const content = {
       credentials: 'GCCCE 2025 · ICIC 2026 · EMNLP 2025 · 优秀本科毕业论文 · 4 项软件著作权',
     },
     contact: {
-      kicker: '04 / CONTACT',
+      kicker: '05 / CONTACT',
       title: '如果你也在把一个好想法变成现实，欢迎来聊。',
       body: '我对 AI 产品、教育科技、旅行体验和真实用户反馈保持长期兴趣。',
       cta: '发一封邮件',
@@ -105,19 +118,22 @@ const content = {
     nav: [
       ['intro', 'Intro'],
       ['about', 'About'],
+      ['path', 'AI Path'],
       ['work', 'Work'],
       ['journey', 'Journey'],
       ['contact', 'Contact'],
     ],
     brandRole: 'AI Product Manager · Builder',
     hero: {
-      eyebrow: 'AI PRODUCT MANAGER / BUILDER',
-      title: 'I turn complex AI into products people want to use.',
-      subtitle: 'Bruce Tu · 屠炳豪',
+      eyebrow: 'BRUCE TU / 2026',
+      title: 'Bruce Tu',
+      nameCn: '屠炳豪',
+      motto: 'I turn complex AI into products people want to use.',
+      subtitle: 'AI Product Manager · Independent Builder',
       body: 'I work between research, design, and launch: starting with an ambiguous problem, shaping it into a testable experience, then building the experience into something real.',
       note: 'Currently in Hangzhou · Open to thoughtful collaborations',
       primary: 'See selected work',
-      secondary: 'Download CV',
+      secondary: 'Let’s talk',
       portraitAlt: 'Portrait of Bruce Tu',
       floating: ['AI × Product', 'Hangzhou / Hong Kong', 'Build · Test · Refine'],
     },
@@ -134,8 +150,18 @@ const content = {
       ],
       chips: ['AI product design', 'User research', 'Full-stack prototyping', 'Learning sciences', 'Growth & conversion'],
     },
+    path: {
+      kicker: '02 / AI PRODUCT PATH',
+      title: 'Starting with a real problem, ending with a product people can use.',
+      body: 'I see AI product work as a complete path: understand a person’s context, find the problem worth solving, shape a clear interaction, then ship and learn from real use.',
+      focusLabel: 'AI product path',
+      focus: 'User problem → Product strategy → Experience design → 0→1 delivery → Data iteration',
+      intentLabel: 'Career focus / 求职意向',
+      intent: 'Product Manager · 产品经理',
+      intentBody: 'I want to keep working on AI products, connecting research, design, and engineering to make things people genuinely choose to use.',
+    },
     work: {
-      kicker: '02 / SELECTED WORK',
+      kicker: '03 / SELECTED WORK',
       title: 'Taking ideas into the real world.',
       intro: 'Two live products that show how I move from needs and interaction design to launch and iteration.',
       visit: 'Visit project ↗',
@@ -174,7 +200,7 @@ const content = {
       ],
     },
     journey: {
-      kicker: '03 / JOURNEY',
+      kicker: '04 / JOURNEY',
       title: 'Following the problem, and the people around it.',
       intro: 'Every chapter brings me closer to the same question: how can technology become more useful, and more human in use?',
       items: [
@@ -187,7 +213,7 @@ const content = {
       credentials: 'GCCCE 2025 · ICIC 2026 · EMNLP 2025 · Outstanding Undergraduate Thesis · 4 software copyrights',
     },
     contact: {
-      kicker: '04 / CONTACT',
+      kicker: '05 / CONTACT',
       title: 'If you are turning a good idea into something real, let’s talk.',
       body: 'I stay curious about AI products, education technology, travel experiences, and the honest signal that comes from real users.',
       cta: 'Send an email',
@@ -216,10 +242,6 @@ function render() {
       <div class="ambient ambient-one"></div>
       <div class="ambient ambient-two"></div>
       <header class="site-header">
-        <a class="brand" href="#intro" aria-label="Bruce Tu home">
-          <span class="brand-mark">BT</span>
-          <span class="brand-text"><strong>Bruce Tu</strong><small>${copy.brandRole}</small></span>
-        </a>
         <nav class="site-nav" aria-label="Primary navigation">
           ${copy.nav.map(([id, label]) => `<a href="#${id}">${label}</a>`).join('')}
         </nav>
@@ -230,12 +252,13 @@ function render() {
         <section class="hero section-pad" id="intro">
           <div class="hero-copy">
             <div class="eyebrow"><span class="eyebrow-dot"></span>${copy.hero.eyebrow}</div>
-            <h1>${copy.hero.title}</h1>
+            <h1>${copy.hero.title}<small>${copy.hero.nameCn}</small></h1>
+            <p class="hero-motto">${copy.hero.motto}</p>
             <p class="hero-subtitle">${copy.hero.subtitle}</p>
             <p class="hero-body">${copy.hero.body}</p>
             <div class="hero-actions">
               <a class="button button-primary" href="#work">${copy.hero.primary}<span>↘</span></a>
-              <a class="button button-quiet" href="/assets/bruce-tu-resume.pdf" download>${copy.hero.secondary}<span>↓</span></a>
+              <a class="button button-quiet" href="#contact">${copy.hero.secondary}<span>↗</span></a>
             </div>
             <div class="hero-note"><span class="status-dot"></span>${copy.hero.note}</div>
           </div>
@@ -260,6 +283,14 @@ function render() {
           </div>
         </section>
 
+        <section class="section-pad path-section" id="path">
+          <div class="section-heading"><span class="section-kicker">${copy.path.kicker}</span><h2>${copy.path.title}</h2><p>${copy.path.body}</p></div>
+          <div class="path-grid">
+            <div class="path-card path-flow"><span class="path-label">${copy.path.focusLabel}</span><p>${copy.path.focus}</p><div class="path-line"><i></i><i></i><i></i><i></i></div></div>
+            <div class="path-card path-intent"><span class="path-label">${copy.path.intentLabel}</span><h3>${copy.path.intent}</h3><p>${copy.path.intentBody}</p></div>
+          </div>
+        </section>
+
         <section class="work-section" id="work">
           <div class="section-pad work-inner">
             <div class="section-heading light"><span class="section-kicker">${copy.work.kicker}</span><h2>${copy.work.title}</h2><p>${copy.work.intro}</p></div>
@@ -267,14 +298,16 @@ function render() {
               ${copy.work.cards.map(card => `
                 <article class="project-card ${card.id}">
                   <div class="project-image-wrap">
-                    <img src="${card.image}" alt="${card.alt}" loading="lazy" />
-                    <div class="image-overlay"><span>${card.label}</span><span>↗</span></div>
+                    <a class="project-image-link" href="${card.url}" target="_blank" rel="noreferrer" aria-label="${copy.work.visit}: ${card.title}">
+                      <img src="${card.image}" alt="${card.alt}" loading="lazy" />
+                      <div class="image-overlay"><span>${card.label}</span><span>↗</span></div>
+                    </a>
                     ${card.logo ? `<img class="project-logo" src="/assets/xiooh-logo.png" alt="XioohTravel logo" />` : ''}
                   </div>
                   <div class="project-body">
                     <div class="project-title-row"><div><h3>${card.title}</h3><span>${card.titleEn}</span></div><a href="${card.url}" target="_blank" rel="noreferrer" aria-label="${copy.work.visit}: ${card.title}">↗</a></div>
                     <p>${card.body}</p>
-                    <div class="project-meta"><span>${card.metric}</span><span>${copy.work.visit}</span></div>
+                    <div class="project-meta"><span>${card.metric}</span><a href="${card.url}" target="_blank" rel="noreferrer">${copy.work.visit}</a></div>
                     <div class="project-tags">${card.tags.map(tag => `<span>${tag}</span>`).join('')}</div>
                   </div>
                 </article>`).join('')}
