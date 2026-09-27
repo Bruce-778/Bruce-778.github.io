@@ -60,7 +60,7 @@ const content = {
           titleEn: 'Japan airport transfers',
           body: '日本机场接送与点对点交通预订平台。把服务展示、需求确认、车型解释和线索收集串成一条清晰的转化路径。',
           metric: '150+ travel orders · ¥120k+ GMV',
-          image: '/assets/xioohtravel.png',
+          image: './assets/xioohtravel.png',
           url: 'https://xioohtravel.com/',
           tags: ['产品负责人', '独立开发', 'Next.js / Supabase'],
           logo: true,
@@ -73,7 +73,7 @@ const content = {
           titleEn: 'AI Japan trip planner',
           body: '用 AI 生成更顺路、更像自己的日本旅行计划。支持多城市路线、地点推荐、地图与交通安排。',
           metric: '2,800+ visitors · 7,600+ page views',
-          image: '/assets/xioohplanner.png',
+          image: './assets/xioohplanner.png',
           url: 'https://xioohplanner.vercel.app/',
           tags: ['AI 旅行规划', '用户体验', 'Vercel / Maps'],
           logo: false,
@@ -173,7 +173,7 @@ const content = {
           titleEn: 'Japan airport transfers',
           body: 'An airport transfer and point-to-point booking platform for Japan. I shaped a clear path from service display to needs confirmation, vehicle explanation, and lead capture.',
           metric: '150+ travel orders · ¥120k+ GMV',
-          image: '/assets/xioohtravel.png',
+          image: './assets/xioohtravel.png',
           url: 'https://xioohtravel.com/',
           tags: ['Product lead', 'Independent build', 'Next.js / Supabase'],
           logo: true,
@@ -186,7 +186,7 @@ const content = {
           titleEn: 'AI Japan trip planner',
           body: 'An AI planner for routes that feel more connected and more personal, with multi-city itineraries, place recommendations, maps, and transport planning.',
           metric: '2,800+ visitors · 7,600+ page views',
-          image: '/assets/xioohplanner.png',
+          image: './assets/xioohplanner.png',
           url: 'https://xioohplanner.vercel.app/',
           tags: ['AI travel planning', 'Experience design', 'Vercel / Maps'],
           logo: false,
@@ -266,7 +266,7 @@ function render() {
             <div class="portrait-orbit orbit-one"></div>
             <div class="portrait-orbit orbit-two"></div>
             <div class="portrait-card">
-              <img src="/assets/profile.jpg" alt="${copy.hero.portraitAlt}" />
+              <img src="./assets/profile.jpg" alt="${copy.hero.portraitAlt}" />
               <div class="portrait-caption"><span>PORTRAIT / 2026</span><span>杭州 · HANGZHOU</span></div>
             </div>
             <div class="floating-card floating-top"><span class="card-label">CURRENTLY</span><strong>${copy.hero.floating[0]}</strong></div>
@@ -302,7 +302,7 @@ function render() {
                       <img src="${card.image}" alt="${card.alt}" loading="lazy" />
                       <div class="image-overlay"><span>${card.label}</span><span>↗</span></div>
                     </a>
-                    ${card.logo ? `<img class="project-logo" src="/assets/xiooh-logo.png" alt="XioohTravel logo" />` : ''}
+                    ${card.logo ? `<img class="project-logo" src="./assets/xiooh-logo.png" alt="XioohTravel logo" />` : ''}
                   </div>
                   <div class="project-body">
                     <div class="project-title-row"><div><h3>${card.title}</h3><span>${card.titleEn}</span></div><a href="${card.url}" target="_blank" rel="noreferrer" aria-label="${copy.work.visit}: ${card.title}">↗</a></div>
@@ -325,7 +325,7 @@ function render() {
         <section class="section-pad contact-section" id="contact">
           <div class="contact-card">
             <div class="contact-copy"><span class="section-kicker">${copy.contact.kicker}</span><h2>${copy.contact.title}</h2><p>${copy.contact.body}</p><a class="button button-light" href="mailto:tubinghao11103@163.com">${copy.contact.cta}<span>↗</span></a></div>
-            <div class="contact-details"><img src="/assets/xiooh-logo.png" alt="${copy.contact.logoAlt}" /><div class="detail-row"><span>${copy.contact.emailLabel}</span><a href="mailto:tubinghao11103@163.com">tubinghao11103@163.com</a></div><div class="detail-row"><span>GitHub</span><a href="https://github.com/Bruce-778" target="_blank" rel="noreferrer">github.com/Bruce-778 ↗</a></div><div class="detail-row"><span>Based in</span><span>${copy.contact.location}</span></div></div>
+            <div class="contact-details"><img src="./assets/xiooh-logo.png" alt="${copy.contact.logoAlt}" /><div class="detail-row"><span>${copy.contact.emailLabel}</span><a href="mailto:tubinghao11103@163.com">tubinghao11103@163.com</a></div><div class="detail-row"><span>GitHub</span><a href="https://github.com/Bruce-778" target="_blank" rel="noreferrer">github.com/Bruce-778 ↗</a></div><div class="detail-row"><span>Based in</span><span>${copy.contact.location}</span></div></div>
           </div>
         </section>
       </main>
