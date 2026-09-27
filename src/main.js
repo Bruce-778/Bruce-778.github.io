@@ -50,7 +50,7 @@ const content = {
     work: {
       kicker: '03 / SELECTED WORK',
       title: '把想法推到真实世界里。',
-      intro: '两个已经上线的产品，记录我如何从需求、交互一路做到上线和迭代。',
+      intro: '两个已经上线的产品，记录我如何从问题走到可用体验。',
       visit: '访问项目 ↗',
       cards: [
         {
@@ -58,8 +58,8 @@ const content = {
           label: '01 / LIVE PRODUCT',
           title: 'XioohTravel',
           titleEn: 'Japan airport transfers',
-          body: '日本机场接送与点对点交通预订平台。把服务展示、需求确认、车型解释和线索收集串成一条清晰的转化路径。',
-          metric: '150+ travel orders · ¥120k+ GMV',
+          body: '日本机场接送预订的完整转化体验，从服务展示到需求确认、车型解释和线索收集。',
+          metric: '150+ orders · ¥120k+ GMV',
           image: './assets/xioohtravel.png',
           url: 'https://xioohtravel.com/',
           tags: ['产品负责人', '独立开发', 'Next.js / Supabase'],
@@ -71,8 +71,8 @@ const content = {
           label: '02 / AI PRODUCT',
           title: 'XioohPlanner',
           titleEn: 'AI Japan trip planner',
-          body: '用 AI 生成更顺路、更像自己的日本旅行计划。支持多城市路线、地点推荐、地图与交通安排。',
-          metric: '2,800+ visitors · 7,600+ page views',
+          body: '把多城市路线、地点推荐与交通安排，整理成一条更顺路的 AI 旅行体验。',
+          metric: '2,800+ visitors · 7,600+ views',
           image: './assets/xioohplanner.png',
           url: 'https://xioohplanner.vercel.app/',
           tags: ['AI 旅行规划', '用户体验', 'Vercel / Maps'],
@@ -91,11 +91,11 @@ const content = {
       title: '沿着问题走，也沿着人走。',
       intro: '每一段经历都让我更接近同一个问题：如何让技术更有用，也更像人在使用。',
       items: [
-        ['2026.09 — 2027.06', '香港城市大学', '计算机与信息工程硕士 · MSc Computer and Information Engineering', '学习计算机系统、智能应用与工程化落地。'],
-        ['2025.12 — 至今', 'XioohTravel / XioohPlanner', '产品负责人 · 独立开发者 · Product Lead & Independent Developer', '从 0 到 1 设计、开发并上线两个面向真实用户的 AI / 旅行产品。'],
-        ['2025.11 — 至今', '多智能体在线协作系统', '项目负责人 · Project Lead', '用 COZE、提示工程与本地 RAG 设计协作引导和偏离监测机制。'],
-        ['2022.09 — 2026.06', '浙江工业大学', '教育技术学（师范）· Educational Technology', '专业综合排名第 4，获优秀毕业生、一等奖学金与学术创新奖学金。'],
-        ['2023.08 — 2024.04', '宁波希诺旅行有限公司', '产品与客户服务 · Product & Customer Service', '日均处理 70+ 日本 / 韩国用车订单，持续用数据改进服务流程与转化。'],
+        ['2026.09 — 2027.06', '香港城市大学', '计算机与信息工程硕士 · MSc Computer and Information Engineering', '攻读计算机与信息工程硕士，聚焦智能应用与工程实践。', './assets/profile.jpg', 'CityU study portrait'],
+        ['2025.12 — 至今', 'XioohTravel / XioohPlanner', '产品负责人 · 独立开发者 · Product Lead & Independent Developer', '从 0 到 1 设计、开发并上线两个真实产品。', './assets/xioohtravel.png', 'XioohTravel first screen'],
+        ['2025.11 — 至今', '多智能体在线协作系统', '项目负责人 · Project Lead', '用协作代理、提示工程与本地 RAG 设计学习支持系统。', './assets/xioohplanner.png', 'XioohPlanner first screen'],
+        ['2022.09 — 2026.06', '浙江工业大学', '教育技术学（师范）· Educational Technology', '教育技术学本科，专业综合排名第 4。', './assets/profile.jpg', 'Bruce Tu portrait'],
+        ['2023.08 — 2024.04', '宁波希诺旅行有限公司', '产品与客户服务 · Product & Customer Service', '日均处理 70+ 日本 / 韩国用车订单，持续优化服务流程。', './assets/xioohtravel.png', 'Travel product experience'],
       ],
       credentials: 'GCCCE 2025 · ICIC 2026 · EMNLP 2025 · 优秀本科毕业论文 · 4 项软件著作权',
     },
@@ -163,7 +163,7 @@ const content = {
     work: {
       kicker: '03 / SELECTED WORK',
       title: 'Taking ideas into the real world.',
-      intro: 'Two live products that show how I move from needs and interaction design to launch and iteration.',
+      intro: 'Two live products that show how I move from a problem to a usable experience.',
       visit: 'Visit project ↗',
       cards: [
         {
@@ -171,8 +171,8 @@ const content = {
           label: '01 / LIVE PRODUCT',
           title: 'XioohTravel',
           titleEn: 'Japan airport transfers',
-          body: 'An airport transfer and point-to-point booking platform for Japan. I shaped a clear path from service display to needs confirmation, vehicle explanation, and lead capture.',
-          metric: '150+ travel orders · ¥120k+ GMV',
+          body: 'A complete conversion experience for Japan airport transfers, from service display to needs confirmation and lead capture.',
+          metric: '150+ orders · ¥120k+ GMV',
           image: './assets/xioohtravel.png',
           url: 'https://xioohtravel.com/',
           tags: ['Product lead', 'Independent build', 'Next.js / Supabase'],
@@ -184,8 +184,8 @@ const content = {
           label: '02 / AI PRODUCT',
           title: 'XioohPlanner',
           titleEn: 'AI Japan trip planner',
-          body: 'An AI planner for routes that feel more connected and more personal, with multi-city itineraries, place recommendations, maps, and transport planning.',
-          metric: '2,800+ visitors · 7,600+ page views',
+          body: 'An AI travel experience that connects multi-city routes, place recommendations, maps, and transport planning.',
+          metric: '2,800+ visitors · 7,600+ views',
           image: './assets/xioohplanner.png',
           url: 'https://xioohplanner.vercel.app/',
           tags: ['AI travel planning', 'Experience design', 'Vercel / Maps'],
@@ -204,11 +204,11 @@ const content = {
       title: 'Following the problem, and the people around it.',
       intro: 'Every chapter brings me closer to the same question: how can technology become more useful, and more human in use?',
       items: [
-        ['2026.09 — 2027.06', 'City University of Hong Kong', 'MSc Computer and Information Engineering', 'Exploring computing systems, intelligent applications, and engineering in practice.'],
-        ['2025.12 — Present', 'XioohTravel / XioohPlanner', 'Product Lead & Independent Developer', 'Designed, built, launched, and iterated two products for real users from zero to one.'],
-        ['2025.11 — Present', 'Multi-agent Online Collaboration System', 'Project Lead', 'Designed collaboration guidance and deviation monitoring with COZE, prompt engineering, and local RAG.'],
-        ['2022.09 — 2026.06', 'Zhejiang University of Technology', 'Educational Technology', 'Ranked 4th overall; recognized as an outstanding graduate with top scholarships.'],
-        ['2023.08 — 2024.04', 'Ningbo Xinuo Travel Co., Ltd.', 'Product & Customer Service', 'Handled 70+ Japan / Korea vehicle orders per day and improved service flows through data.'],
+        ['2026.09 — 2027.06', 'City University of Hong Kong', 'MSc Computer and Information Engineering', 'Pursuing an MSc focused on intelligent applications and engineering in practice.', './assets/profile.jpg', 'CityU study portrait'],
+        ['2025.12 — Present', 'XioohTravel / XioohPlanner', 'Product Lead & Independent Developer', 'Designed, built, launched, and iterated two products for real users.', './assets/xioohtravel.png', 'XioohTravel first screen'],
+        ['2025.11 — Present', 'Multi-agent Online Collaboration System', 'Project Lead', 'Designed a learning support system with agents, prompt engineering, and local RAG.', './assets/xioohplanner.png', 'XioohPlanner first screen'],
+        ['2022.09 — 2026.06', 'Zhejiang University of Technology', 'Educational Technology', 'Studied Educational Technology and ranked 4th overall.', './assets/profile.jpg', 'Bruce Tu portrait'],
+        ['2023.08 — 2024.04', 'Ningbo Xinuo Travel Co., Ltd.', 'Product & Customer Service', 'Handled 70+ Japan / Korea vehicle orders per day and improved service flows.', './assets/xioohtravel.png', 'Travel product experience'],
       ],
       credentials: 'GCCCE 2025 · ICIC 2026 · EMNLP 2025 · Outstanding Undergraduate Thesis · 4 software copyrights',
     },
@@ -318,7 +318,7 @@ function render() {
 
         <section class="section-pad journey-section" id="journey">
           <div class="section-heading"><span class="section-kicker">${copy.journey.kicker}</span><h2>${copy.journey.title}</h2><p>${copy.journey.intro}</p></div>
-          <div class="timeline">${copy.journey.items.map(([date, place, role, detail], index) => `<article class="timeline-item"><div class="timeline-marker"><span>0${index + 1}</span></div><div class="timeline-date">${date}</div><div class="timeline-content"><h3>${place}</h3><strong>${role}</strong><p>${detail}</p></div></article>`).join('')}</div>
+          <div class="timeline">${copy.journey.items.map(([date, place, role, detail, image, imageAlt], index) => `<article class="timeline-item"><div class="timeline-marker"><span>0${index + 1}</span></div><div class="timeline-date">${date}</div><div class="timeline-content"><h3>${place}</h3><strong>${role}</strong><p>${detail}</p></div><div class="timeline-visual"><img src="${image}" alt="${imageAlt}" loading="lazy" /></div></article>`).join('')}</div>
           <div class="credential-strip"><span class="credential-label">RECOGNITION</span><span>${copy.journey.credentials}</span></div>
         </section>
 
