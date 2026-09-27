@@ -56,8 +56,9 @@ const content = {
       intro: '实习、研究与毕业设计共同构成我的产品方法：先理解现场，再把流程、数据和体验连起来。',
       items: [
         ['实习 / INTERNSHIP', '2023.08 — 2024.04', '宁波希诺旅行有限公司', '产品与客户服务 · Product & Customer Service', '日均处理 70+ 日本 / 韩国用车订单，协助优化服务流程与用户转化。', '70+ orders / day · 60% first conversion'],
-        ['实习 / INTERNSHIP', '2025.04 — 2025.05', '整智智能信息技术（杭州）有限公司', '数据标注员 · Data Annotator', '完成 120+ 教育文本的清洗、分类与质量复核，推动返工率下降 30%。', '120+ texts · 30% fewer errors'],
-        ['项目研究 / RESEARCH', '2026.02 — 2026.04', '北京大学', '复杂学习任务与智能体协同研究', '参与实验设计、眼动数据处理与结果分析，建立清洗、指标可视化与结论链路。', '40 participants · 3,500+ records'],
+        ['实习 / INTERNSHIP', '2025.04 — 2025.05', '整智智能信息技术（杭州）有限公司', '数据标注员 · Data Annotator', '清洗、分类与复核 120+ 教育文本，标注通过率达 85%+，推动返工率下降 30%。', '120+ texts · 85%+ pass rate'],
+        ['项目实习 / RESEARCH', '2025.08 — 2025.08', '华东师范大学智能教育学院', '项目研究实习生 · Research Intern', '调研 K-12 学生不同阶段的学习特征，并辅助 Agent 设计与开发。', 'K-12 learning · Agent design'],
+        ['项目研究 / RESEARCH', '2026.02 — 2026.04', '北京大学', '复杂学习任务与智能体协同研究', '参与实验设计、眼动数据处理与结果分析，建立清洗—指标—可视化—结论链路。', '40 participants · 3,500+ records'],
         ['毕业设计 / THESIS', '2025 — 2026', '浙江工业大学', '基于 SSRL 与 COZE 的智能协作共同体应用研究', '围绕多智能体、学习分析与协作反馈完成优秀本科毕业论文。', 'Outstanding thesis · 4 copyrights'],
       ],
     },
@@ -71,9 +72,9 @@ const content = {
           id: 'travel',
           label: '01 / LIVE PRODUCT',
           title: 'XioohTravel',
-          titleEn: 'Japan airport transfers',
-          body: '日本机场接送预订的完整转化体验，从服务展示到需求确认、车型解释和线索收集。',
-          metric: '150+ orders · ¥120k+ GMV',
+          titleEn: 'Japan airport transfers · 2025.12 — 2026.07',
+          body: '围绕日本机场接送、点对点用车等场景，设计从服务展示、需求确认到在线咨询的转化路径。',
+          metric: '2,800+ visitors · 150+ orders · 40% conversion',
           image: './assets/xioohtravel.png',
           url: 'https://xioohtravel.com/',
           tags: ['产品负责人', '独立开发', 'Next.js / Supabase'],
@@ -84,9 +85,9 @@ const content = {
           id: 'planner',
           label: '02 / AI PRODUCT',
           title: 'XioohPlanner',
-          titleEn: 'AI Japan trip planner',
-          body: '把多城市路线、地点推荐与交通安排，整理成一条更顺路的 AI 旅行体验。',
-          metric: '2,800+ visitors · 7,600+ views',
+          titleEn: 'AI Japan trip planner · 2025.10 — 2026.07',
+          body: '从 0 设计并开发日本自由行 AI 个性化路线规划平台，连接地点、交通、预算与行程执行。',
+          metric: '7,600+ views · AI itinerary · MVP shipped',
           image: './assets/xioohplanner.png',
           url: 'https://xioohplanner.vercel.app/',
           tags: ['AI 旅行规划', '用户体验', 'Vercel / Maps'],
@@ -96,6 +97,7 @@ const content = {
       ],
       moreLabel: 'MORE FROM THE RESUME',
       more: [
+        ['国家级创新创业项目', '主持 2024 / 2025 两项国家级项目，围绕知识图谱、多模态智能体与协同文本创作展开研究。'],
         ['研究论文', 'GCCCE 2025 · ICIC 2026 · EMNLP 2025 · BJET 2026，覆盖 AI 教育、认知负荷与协作学习。'],
         ['产品与数据', '从服务订单、页面浏览到有效线索，持续用数据验证体验与转化。'],
       ],
@@ -105,10 +107,17 @@ const content = {
       title: '学习经历，最后都会回到真实问题。',
       intro: '两段教育经历构成我的技术与产品底色；研究论文则让我持续练习如何提出问题、验证假设。',
       items: [
-        ['2026.09 — 2027.06', '香港城市大学', '计算机与信息工程硕士 · MSc Computer and Information Engineering', '聚焦计算机系统、智能应用与工程实践。', './assets/cityu-campus.jpg', 'Official City University of Hong Kong campus photo'],
-        ['2022.09 — 2026.06', '浙江工业大学', '教育技术学（师范）· Educational Technology', '专业综合排名第 4，获优秀毕业生与奖学金。', './assets/zjut-campus.jpg', 'Official Zhejiang University of Technology campus photo'],
+        ['2026.09 — 2027.06', '香港城市大学', '硕士 · 工程学院 · MSc Computer and Information Engineering', '智能体构建与设计 · 人机交互 · 数据分析 · 导师：许玮。', './assets/cityu-campus.jpg', 'Official City University of Hong Kong campus photo'],
+        ['2022.09 — 2026.06', '浙江工业大学', '本科 · 教育学院 · 教育技术学（师范）', '专业综合排名第 4，获优秀毕业生与奖学金。', './assets/zjut-campus.jpg', 'Official Zhejiang University of Technology campus photo'],
       ],
       credentials: 'GCCCE 2025 · ICIC 2026 · EMNLP 2025 · BJET 2026 · 优秀本科毕业论文 · 4 项软件著作权',
+      papers: [
+        ['Do Large Language Models Suffer from Cognitive Overload?', 'CCF-C · 一作 · Benchmark and Orchestration Framework'],
+        ['新课标视域下信息科技课程游戏化教学模式设计与应用', 'GCCCE 2025 · 一作'],
+        ['Educator-role Moral and Normative Large Language Models Profiling', 'EMNLP 2025 · CCF-B'],
+        ['Cultivating Collaborative Problem-Solving Skills in the Era of Human-AI Interaction', 'EI · 一作'],
+      ],
+      awards: ['浙江工业大学优秀毕业生', '浙江工业大学二等奖学金', '浙江工业大学创新奖学金', 'NECCS 三等奖', '浙江省大学生金融创新大赛金奖', '全国大学生数学竞赛二等奖'],
     },
     contact: {
       kicker: '05 / CONTACT',
@@ -179,7 +188,8 @@ const content = {
       intro: 'Internships, research, and a thesis shaped the way I work: understand the setting first, then connect process, data, and experience.',
       items: [
         ['INTERNSHIP / 实习', 'Aug 2023 — Apr 2024', 'Ningbo Xinuo Travel Co., Ltd.', 'Product & Customer Service', 'Handled 70+ Japan / Korea vehicle orders per day and improved service flows and conversion.', '70+ orders / day · 60% first conversion'],
-        ['INTERNSHIP / 实习', 'Apr 2025 — May 2025', 'Zhengzhi Intelligent Information Technology', 'Data Annotator', 'Cleaned, classified, and reviewed 120+ educational texts, reducing rework by 30%.', '120+ texts · 30% fewer errors'],
+        ['INTERNSHIP / 实习', 'Apr 2025 — May 2025', 'Zhengzhi Intelligent Information Technology', 'Data Annotator', 'Cleaned and reviewed 120+ educational texts with an 85%+ pass rate, reducing rework by 30%.', '120+ texts · 85%+ pass rate'],
+        ['RESEARCH / 项目实习', 'Aug 2025', 'East China Normal University', 'Research Intern, Institute of Intelligent Education', 'Studied K-12 learning characteristics and supported Agent design and development.', 'K-12 learning · Agent design'],
         ['RESEARCH / 项目研究', 'Feb 2026 — Apr 2026', 'Peking University', 'Complex Learning Tasks & Agent Collaboration', 'Supported experiment design, eye-tracking data processing, visualization, and analysis.', '40 participants · 3,500+ records'],
         ['THESIS / 毕业设计', '2025 — 2026', 'Zhejiang University of Technology', 'SSRL + COZE Collaborative Learning Community', 'Built an applied study around multi-agent support, learning analytics, and collaborative feedback.', 'Outstanding thesis · 4 copyrights'],
       ],
@@ -194,9 +204,9 @@ const content = {
           id: 'travel',
           label: '01 / LIVE PRODUCT',
           title: 'XioohTravel',
-          titleEn: 'Japan airport transfers',
-          body: 'A complete conversion experience for Japan airport transfers, from service display to needs confirmation and lead capture.',
-          metric: '150+ orders · ¥120k+ GMV',
+          titleEn: 'Japan airport transfers · 2025.12 — 2026.07',
+          body: 'A conversion path for Japan airport transfers and point-to-point rides, from service display to needs confirmation and consultation.',
+          metric: '2,800+ visitors · 150+ orders · 40% conversion',
           image: './assets/xioohtravel.png',
           url: 'https://xioohtravel.com/',
           tags: ['Product lead', 'Independent build', 'Next.js / Supabase'],
@@ -207,9 +217,9 @@ const content = {
           id: 'planner',
           label: '02 / AI PRODUCT',
           title: 'XioohPlanner',
-          titleEn: 'AI Japan trip planner',
-          body: 'An AI travel experience that connects multi-city routes, place recommendations, maps, and transport planning.',
-          metric: '2,800+ visitors · 7,600+ views',
+          titleEn: 'AI Japan trip planner · 2025.10 — 2026.07',
+          body: 'An AI itinerary product designed from zero, connecting places, transport, budgets, and an executable trip plan.',
+          metric: '7,600+ views · AI itinerary · MVP shipped',
           image: './assets/xioohplanner.png',
           url: 'https://xioohplanner.vercel.app/',
           tags: ['AI travel planning', 'Experience design', 'Vercel / Maps'],
@@ -219,6 +229,7 @@ const content = {
       ],
       moreLabel: 'MORE FROM THE RESUME',
       more: [
+        ['National innovation projects', 'Led two national projects on knowledge graphs, multimodal agents, and collaborative text creation.'],
         ['Research papers', 'GCCCE 2025 · ICIC 2026 · EMNLP 2025 · BJET 2026 across AI in education, cognitive load, and collaborative learning.'],
         ['Product & data', 'Using orders, page views, and qualified leads to validate experience and conversion.'],
       ],
@@ -228,10 +239,17 @@ const content = {
       title: 'Learning that keeps returning to real questions.',
       intro: 'Two education chapters shaped my technical and product foundation; research keeps me practicing how to frame and test a question.',
       items: [
-        ['2026.09 — 2027.06', 'City University of Hong Kong', 'MSc Computer and Information Engineering', 'Studying computing systems, intelligent applications, and engineering in practice.', './assets/cityu-campus.jpg', 'Official City University of Hong Kong campus photo'],
-        ['2022.09 — 2026.06', 'Zhejiang University of Technology', 'Educational Technology', 'Ranked 4th overall; recognized as an outstanding graduate with scholarships.', './assets/zjut-campus.jpg', 'Official Zhejiang University of Technology campus photo'],
+        ['2026.09 — 2027.06', 'City University of Hong Kong', 'MSc · College of Engineering · Computer and Information Engineering', 'Focus: agent building & design, human-computer interaction, and data analysis. Advisor: Wei Xu.', './assets/cityu-campus.jpg', 'Official City University of Hong Kong campus photo'],
+        ['2022.09 — 2026.06', 'Zhejiang University of Technology', 'BEd · School of Education · Educational Technology', 'Ranked 4th overall; recognized as an outstanding graduate with scholarships.', './assets/zjut-campus.jpg', 'Official Zhejiang University of Technology campus photo'],
       ],
       credentials: 'GCCCE 2025 · ICIC 2026 · EMNLP 2025 · BJET 2026 · Outstanding Thesis · 4 software copyrights',
+      papers: [
+        ['Do Large Language Models Suffer from Cognitive Overload?', 'CCF-C · First author · Benchmark and Orchestration Framework'],
+        ['Gamified Teaching Models for Information Technology under the New Curriculum', 'GCCCE 2025 · First author'],
+        ['Educator-role Moral and Normative Large Language Models Profiling', 'EMNLP 2025 · CCF-B'],
+        ['Cultivating Collaborative Problem-Solving Skills in the Era of Human-AI Interaction', 'EI · First author'],
+      ],
+      awards: ['Outstanding Graduate, ZJUT', 'ZJUT Second-class Scholarship', 'ZJUT Innovation Scholarship', 'NECCS Third Prize', 'Zhejiang Financial Innovation Gold Award', 'National Mathematics Contest Second Prize'],
     },
     contact: {
       kicker: '05 / CONTACT',
@@ -371,6 +389,7 @@ function render() {
           <div class="section-heading"><span class="section-kicker">${copy.journey.kicker}</span><h2>${copy.journey.title}</h2><p>${copy.journey.intro}</p></div>
           <div class="education-grid">${copy.journey.items.map(([date, place, role, detail, image, imageAlt]) => `<article class="education-card"><div class="education-image"><img src="${image}" alt="${imageAlt}" loading="lazy" /></div><div class="education-copy"><span class="education-date">${date}</span><h3>${place}</h3><strong>${role}</strong><p>${detail}</p></div></article>`).join('')}</div>
           <div class="research-strip"><span class="credential-label">RESEARCH & RECOGNITION</span><span>${copy.journey.credentials}</span></div>
+          <div class="research-grid"><div><span class="mini-kicker">PAPERS / 论文</span>${copy.journey.papers.map(([title, meta], index) => `<article class="paper-item"><span>0${index + 1}</span><div><h3>${title}</h3><p>${meta}</p></div></article>`).join('')}</div><div><span class="mini-kicker">AWARDS / 获奖</span><div class="award-list">${copy.journey.awards.map(award => `<span>${award}</span>`).join('')}</div></div></div>
         </section>
 
         <section class="section-pad contact-section" id="contact">
