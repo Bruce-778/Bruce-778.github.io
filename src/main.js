@@ -5,9 +5,9 @@ const content = {
     nav: [
       ['intro', '首页'],
       ['about', '关于'],
-      ['path', 'AI 路径'],
+      ['experience', '经历'],
       ['work', '作品'],
-      ['journey', '轨迹'],
+      ['education', '教育'],
       ['contact', '联系'],
     ],
     brandRole: 'AI 产品经理 · 独立构建者',
@@ -29,11 +29,14 @@ const content = {
       title: '我关心的，是产品如何真正改变一个人的下一步。',
       body: '我的背景横跨教育技术、AI 产品和一线服务体验。现在，我一边在香港城市大学攻读计算机与信息工程硕士，一边持续构建面向真实用户的 AI 产品。',
       body2: '我喜欢把复杂流程变得清楚，把技术能力变成可感知的价值，也相信每个好产品都应该经得起真实使用。',
+      careerLabel: '求职意向 / CAREER FOCUS',
+      career: '产品经理 · Product Manager',
+      careerBody: '希望在 AI 产品方向工作，把研究、设计与工程协作起来。',
       metrics: [
-        ['2,800+', '独立访客 / unique visitors'],
-        ['100+', '有效线索 / qualified leads'],
-        ['40%', '咨询到下单转化 / conversion'],
-        ['4', '软件著作权 / software copyrights'],
+        { value: 2800, suffix: '+', label: '独立访客 / unique visitors' },
+        { value: 100, suffix: '+', label: '有效线索 / qualified leads' },
+        { value: 40, suffix: '%', label: '咨询到下单转化 / conversion' },
+        { value: 4, suffix: '', label: '软件著作权 / software copyrights' },
       ],
       chips: ['AI 产品设计', '用户研究', '全栈原型', '学习科学', '增长与转化'],
     },
@@ -46,6 +49,17 @@ const content = {
       intentLabel: '求职意向 / Career focus',
       intent: '产品经理 · Product Manager',
       intentBody: '希望继续在 AI 产品方向工作，把研究、设计与工程协作起来，做出真正有人愿意使用的产品。',
+    },
+    experience: {
+      kicker: '02 / EXPERIENCE',
+      title: '在真实场景里，把问题做成结果。',
+      intro: '实习、研究与毕业设计共同构成我的产品方法：先理解现场，再把流程、数据和体验连起来。',
+      items: [
+        ['实习 / INTERNSHIP', '2023.08 — 2024.04', '宁波希诺旅行有限公司', '产品与客户服务 · Product & Customer Service', '日均处理 70+ 日本 / 韩国用车订单，协助优化服务流程与用户转化。', '70+ orders / day · 60% first conversion'],
+        ['实习 / INTERNSHIP', '2025.04 — 2025.05', '整智智能信息技术（杭州）有限公司', '数据标注员 · Data Annotator', '完成 120+ 教育文本的清洗、分类与质量复核，推动返工率下降 30%。', '120+ texts · 30% fewer errors'],
+        ['项目研究 / RESEARCH', '2026.02 — 2026.04', '北京大学', '复杂学习任务与智能体协同研究', '参与实验设计、眼动数据处理与结果分析，建立清洗、指标可视化与结论链路。', '40 participants · 3,500+ records'],
+        ['毕业设计 / THESIS', '2025 — 2026', '浙江工业大学', '基于 SSRL 与 COZE 的智能协作共同体应用研究', '围绕多智能体、学习分析与协作反馈完成优秀本科毕业论文。', 'Outstanding thesis · 4 copyrights'],
+      ],
     },
     work: {
       kicker: '03 / SELECTED WORK',
@@ -80,24 +94,21 @@ const content = {
           alt: 'XioohPlanner 网站界面截图',
         },
       ],
-      moreLabel: 'MORE IN THE LAB',
+      moreLabel: 'MORE FROM THE RESUME',
       more: [
-        ['多智能体协作学习系统', 'Guide Agent + Deviation Monitoring Agent，围绕阅读、识别、策略、反馈构建协作干预机制。'],
-        ['复杂学习任务研究', '参与北京大学项目，处理 40+ 名学生的眼动与行为数据，完成从清洗到结论的分析链路。'],
+        ['研究论文', 'GCCCE 2025 · ICIC 2026 · EMNLP 2025 · BJET 2026，覆盖 AI 教育、认知负荷与协作学习。'],
+        ['产品与数据', '从服务订单、页面浏览到有效线索，持续用数据验证体验与转化。'],
       ],
     },
     journey: {
-      kicker: '04 / JOURNEY',
-      title: '沿着问题走，也沿着人走。',
-      intro: '每一段经历都让我更接近同一个问题：如何让技术更有用，也更像人在使用。',
+      kicker: '04 / EDUCATION & RESEARCH',
+      title: '学习经历，最后都会回到真实问题。',
+      intro: '两段教育经历构成我的技术与产品底色；研究论文则让我持续练习如何提出问题、验证假设。',
       items: [
-        ['2026.09 — 2027.06', '香港城市大学', '计算机与信息工程硕士 · MSc Computer and Information Engineering', '攻读计算机与信息工程硕士，聚焦智能应用与工程实践。', './assets/profile.jpg', 'CityU study portrait'],
-        ['2025.12 — 至今', 'XioohTravel / XioohPlanner', '产品负责人 · 独立开发者 · Product Lead & Independent Developer', '从 0 到 1 设计、开发并上线两个真实产品。', './assets/xioohtravel.png', 'XioohTravel first screen'],
-        ['2025.11 — 至今', '多智能体在线协作系统', '项目负责人 · Project Lead', '用协作代理、提示工程与本地 RAG 设计学习支持系统。', './assets/xioohplanner.png', 'XioohPlanner first screen'],
-        ['2022.09 — 2026.06', '浙江工业大学', '教育技术学（师范）· Educational Technology', '教育技术学本科，专业综合排名第 4。', './assets/profile.jpg', 'Bruce Tu portrait'],
-        ['2023.08 — 2024.04', '宁波希诺旅行有限公司', '产品与客户服务 · Product & Customer Service', '日均处理 70+ 日本 / 韩国用车订单，持续优化服务流程。', './assets/xioohtravel.png', 'Travel product experience'],
+        ['2026.09 — 2027.06', '香港城市大学', '计算机与信息工程硕士 · MSc Computer and Information Engineering', '聚焦计算机系统、智能应用与工程实践。', './assets/cityu-campus.jpg', 'Official City University of Hong Kong campus photo'],
+        ['2022.09 — 2026.06', '浙江工业大学', '教育技术学（师范）· Educational Technology', '专业综合排名第 4，获优秀毕业生与奖学金。', './assets/zjut-campus.jpg', 'Official Zhejiang University of Technology campus photo'],
       ],
-      credentials: 'GCCCE 2025 · ICIC 2026 · EMNLP 2025 · 优秀本科毕业论文 · 4 项软件著作权',
+      credentials: 'GCCCE 2025 · ICIC 2026 · EMNLP 2025 · BJET 2026 · 优秀本科毕业论文 · 4 项软件著作权',
     },
     contact: {
       kicker: '05 / CONTACT',
@@ -106,8 +117,7 @@ const content = {
       cta: '发一封邮件',
       github: '查看 GitHub',
       emailLabel: 'Email',
-      location: 'Hangzhou / Hong Kong',
-      logoAlt: 'XioohTravel logo',
+      location: 'Ningbo',
     },
     footer: '© 2026 Bruce Tu. Built with curiosity and care.',
     toggle: 'EN',
@@ -118,9 +128,9 @@ const content = {
     nav: [
       ['intro', 'Intro'],
       ['about', 'About'],
-      ['path', 'AI Path'],
+      ['experience', 'Experience'],
       ['work', 'Work'],
-      ['journey', 'Journey'],
+      ['education', 'Education'],
       ['contact', 'Contact'],
     ],
     brandRole: 'AI Product Manager · Builder',
@@ -142,11 +152,14 @@ const content = {
       title: 'I care about how a product changes someone’s next step.',
       body: 'My background sits across educational technology, AI products, and frontline service experience. I am now pursuing an MSc in Computer and Information Engineering at City University of Hong Kong while continuing to ship products for real users.',
       body2: 'I like making complex flows legible, turning technical capability into felt value, and building products that hold up in real use.',
+      careerLabel: 'CAREER FOCUS / 求职意向',
+      career: 'Product Manager · 产品经理',
+      careerBody: 'I want to connect research, design, and engineering while building AI products people choose to use.',
       metrics: [
-        ['2,800+', 'unique visitors'],
-        ['100+', 'qualified leads'],
-        ['40%', 'inquiry-to-order conversion'],
-        ['4', 'software copyrights'],
+        { value: 2800, suffix: '+', label: 'unique visitors' },
+        { value: 100, suffix: '+', label: 'qualified leads' },
+        { value: 40, suffix: '%', label: 'inquiry-to-order conversion' },
+        { value: 4, suffix: '', label: 'software copyrights' },
       ],
       chips: ['AI product design', 'User research', 'Full-stack prototyping', 'Learning sciences', 'Growth & conversion'],
     },
@@ -159,6 +172,17 @@ const content = {
       intentLabel: 'Career focus / 求职意向',
       intent: 'Product Manager · 产品经理',
       intentBody: 'I want to keep working on AI products, connecting research, design, and engineering to make things people genuinely choose to use.',
+    },
+    experience: {
+      kicker: '02 / EXPERIENCE',
+      title: 'Turning real situations into useful outcomes.',
+      intro: 'Internships, research, and a thesis shaped the way I work: understand the setting first, then connect process, data, and experience.',
+      items: [
+        ['INTERNSHIP / 实习', 'Aug 2023 — Apr 2024', 'Ningbo Xinuo Travel Co., Ltd.', 'Product & Customer Service', 'Handled 70+ Japan / Korea vehicle orders per day and improved service flows and conversion.', '70+ orders / day · 60% first conversion'],
+        ['INTERNSHIP / 实习', 'Apr 2025 — May 2025', 'Zhengzhi Intelligent Information Technology', 'Data Annotator', 'Cleaned, classified, and reviewed 120+ educational texts, reducing rework by 30%.', '120+ texts · 30% fewer errors'],
+        ['RESEARCH / 项目研究', 'Feb 2026 — Apr 2026', 'Peking University', 'Complex Learning Tasks & Agent Collaboration', 'Supported experiment design, eye-tracking data processing, visualization, and analysis.', '40 participants · 3,500+ records'],
+        ['THESIS / 毕业设计', '2025 — 2026', 'Zhejiang University of Technology', 'SSRL + COZE Collaborative Learning Community', 'Built an applied study around multi-agent support, learning analytics, and collaborative feedback.', 'Outstanding thesis · 4 copyrights'],
+      ],
     },
     work: {
       kicker: '03 / SELECTED WORK',
@@ -193,24 +217,21 @@ const content = {
           alt: 'XioohPlanner website screenshot',
         },
       ],
-      moreLabel: 'MORE IN THE LAB',
+      moreLabel: 'MORE FROM THE RESUME',
       more: [
-        ['Multi-agent collaboration system', 'A Guide Agent + Deviation Monitoring Agent workflow for reading, identifying, strategizing, and feeding back in collaborative learning.'],
-        ['Complex learning tasks research', 'A research project with Peking University, analyzing eye-tracking and behavioral data from 40+ students.'],
+        ['Research papers', 'GCCCE 2025 · ICIC 2026 · EMNLP 2025 · BJET 2026 across AI in education, cognitive load, and collaborative learning.'],
+        ['Product & data', 'Using orders, page views, and qualified leads to validate experience and conversion.'],
       ],
     },
     journey: {
-      kicker: '04 / JOURNEY',
-      title: 'Following the problem, and the people around it.',
-      intro: 'Every chapter brings me closer to the same question: how can technology become more useful, and more human in use?',
+      kicker: '04 / EDUCATION & RESEARCH',
+      title: 'Learning that keeps returning to real questions.',
+      intro: 'Two education chapters shaped my technical and product foundation; research keeps me practicing how to frame and test a question.',
       items: [
-        ['2026.09 — 2027.06', 'City University of Hong Kong', 'MSc Computer and Information Engineering', 'Pursuing an MSc focused on intelligent applications and engineering in practice.', './assets/profile.jpg', 'CityU study portrait'],
-        ['2025.12 — Present', 'XioohTravel / XioohPlanner', 'Product Lead & Independent Developer', 'Designed, built, launched, and iterated two products for real users.', './assets/xioohtravel.png', 'XioohTravel first screen'],
-        ['2025.11 — Present', 'Multi-agent Online Collaboration System', 'Project Lead', 'Designed a learning support system with agents, prompt engineering, and local RAG.', './assets/xioohplanner.png', 'XioohPlanner first screen'],
-        ['2022.09 — 2026.06', 'Zhejiang University of Technology', 'Educational Technology', 'Studied Educational Technology and ranked 4th overall.', './assets/profile.jpg', 'Bruce Tu portrait'],
-        ['2023.08 — 2024.04', 'Ningbo Xinuo Travel Co., Ltd.', 'Product & Customer Service', 'Handled 70+ Japan / Korea vehicle orders per day and improved service flows.', './assets/xioohtravel.png', 'Travel product experience'],
+        ['2026.09 — 2027.06', 'City University of Hong Kong', 'MSc Computer and Information Engineering', 'Studying computing systems, intelligent applications, and engineering in practice.', './assets/cityu-campus.jpg', 'Official City University of Hong Kong campus photo'],
+        ['2022.09 — 2026.06', 'Zhejiang University of Technology', 'Educational Technology', 'Ranked 4th overall; recognized as an outstanding graduate with scholarships.', './assets/zjut-campus.jpg', 'Official Zhejiang University of Technology campus photo'],
       ],
-      credentials: 'GCCCE 2025 · ICIC 2026 · EMNLP 2025 · Outstanding Undergraduate Thesis · 4 software copyrights',
+      credentials: 'GCCCE 2025 · ICIC 2026 · EMNLP 2025 · BJET 2026 · Outstanding Thesis · 4 software copyrights',
     },
     contact: {
       kicker: '05 / CONTACT',
@@ -219,8 +240,7 @@ const content = {
       cta: 'Send an email',
       github: 'View GitHub',
       emailLabel: 'Email',
-      location: 'Hangzhou / Hong Kong',
-      logoAlt: 'XioohTravel logo',
+      location: 'Ningbo',
     },
     footer: '© 2026 Bruce Tu. Built with curiosity and care.',
     toggle: '中',
@@ -232,6 +252,40 @@ const content = {
 let lang = localStorage.getItem('bruce-lang') || 'zh';
 
 const app = document.querySelector('#app');
+
+function animateCounters() {
+  const counters = document.querySelectorAll('[data-counter]');
+  const run = (element) => {
+    const target = Number(element.dataset.target || 0);
+    const suffix = element.dataset.suffix || '';
+    const start = performance.now();
+    const duration = 1250;
+    const tick = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      element.textContent = `${Math.round(target * eased).toLocaleString()}${suffix}`;
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  if (!('IntersectionObserver' in window)) {
+    counters.forEach((counter) => {
+      counter.textContent = `${Number(counter.dataset.target || 0).toLocaleString()}${counter.dataset.suffix || ''}`;
+    });
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        run(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.35 });
+  counters.forEach((counter) => observer.observe(counter));
+}
 
 function render() {
   const copy = content[lang];
@@ -278,17 +332,14 @@ function render() {
         <section class="section-pad about-section" id="about">
           <div class="section-heading"><span class="section-kicker">${copy.about.kicker}</span><h2>${copy.about.title}</h2></div>
           <div class="about-grid">
-            <div class="about-story"><p>${copy.about.body}</p><p>${copy.about.body2}</p><div class="chip-row">${copy.about.chips.map(chip => `<span>${chip}</span>`).join('')}</div></div>
-            <div class="metric-grid">${copy.about.metrics.map(([value, label]) => `<div class="metric"><strong>${value}</strong><span>${label}</span></div>`).join('')}</div>
+            <div class="about-story"><p>${copy.about.body}</p><p>${copy.about.body2}</p><div class="career-intent"><span>${copy.about.careerLabel}</span><strong>${copy.about.career}</strong><p>${copy.about.careerBody}</p></div><div class="chip-row">${copy.about.chips.map(chip => `<span>${chip}</span>`).join('')}</div></div>
+            <div class="metric-grid">${copy.about.metrics.map(metric => `<div class="metric"><strong class="metric-value" data-counter data-target="${metric.value}" data-suffix="${metric.suffix}">0</strong><span>${metric.label}</span></div>`).join('')}</div>
           </div>
         </section>
 
-        <section class="section-pad path-section" id="path">
-          <div class="section-heading"><span class="section-kicker">${copy.path.kicker}</span><h2>${copy.path.title}</h2><p>${copy.path.body}</p></div>
-          <div class="path-grid">
-            <div class="path-card path-flow"><span class="path-label">${copy.path.focusLabel}</span><p>${copy.path.focus}</p><div class="path-line"><i></i><i></i><i></i><i></i></div></div>
-            <div class="path-card path-intent"><span class="path-label">${copy.path.intentLabel}</span><h3>${copy.path.intent}</h3><p>${copy.path.intentBody}</p></div>
-          </div>
+        <section class="section-pad experience-section" id="experience">
+          <div class="section-heading"><span class="section-kicker">${copy.experience.kicker}</span><h2>${copy.experience.title}</h2><p>${copy.experience.intro}</p></div>
+          <div class="experience-list">${copy.experience.items.map(([type, date, place, role, detail, result], index) => `<article class="experience-item"><div class="experience-index">0${index + 1}<span>${type}</span></div><div class="experience-date">${date}</div><div class="experience-content"><h3>${place}</h3><strong>${role}</strong><p>${detail}</p></div><div class="experience-result">${result}</div></article>`).join('')}</div>
         </section>
 
         <section class="work-section" id="work">
@@ -316,16 +367,16 @@ function render() {
           </div>
         </section>
 
-        <section class="section-pad journey-section" id="journey">
+        <section class="section-pad journey-section" id="education">
           <div class="section-heading"><span class="section-kicker">${copy.journey.kicker}</span><h2>${copy.journey.title}</h2><p>${copy.journey.intro}</p></div>
-          <div class="timeline">${copy.journey.items.map(([date, place, role, detail, image, imageAlt], index) => `<article class="timeline-item"><div class="timeline-marker"><span>0${index + 1}</span></div><div class="timeline-date">${date}</div><div class="timeline-content"><h3>${place}</h3><strong>${role}</strong><p>${detail}</p></div><div class="timeline-visual"><img src="${image}" alt="${imageAlt}" loading="lazy" /></div></article>`).join('')}</div>
-          <div class="credential-strip"><span class="credential-label">RECOGNITION</span><span>${copy.journey.credentials}</span></div>
+          <div class="education-grid">${copy.journey.items.map(([date, place, role, detail, image, imageAlt]) => `<article class="education-card"><div class="education-image"><img src="${image}" alt="${imageAlt}" loading="lazy" /></div><div class="education-copy"><span class="education-date">${date}</span><h3>${place}</h3><strong>${role}</strong><p>${detail}</p></div></article>`).join('')}</div>
+          <div class="research-strip"><span class="credential-label">RESEARCH & RECOGNITION</span><span>${copy.journey.credentials}</span></div>
         </section>
 
         <section class="section-pad contact-section" id="contact">
           <div class="contact-card">
             <div class="contact-copy"><span class="section-kicker">${copy.contact.kicker}</span><h2>${copy.contact.title}</h2><p>${copy.contact.body}</p><a class="button button-light" href="mailto:tubinghao11103@163.com">${copy.contact.cta}<span>↗</span></a></div>
-            <div class="contact-details"><img src="./assets/xiooh-logo.png" alt="${copy.contact.logoAlt}" /><div class="detail-row"><span>${copy.contact.emailLabel}</span><a href="mailto:tubinghao11103@163.com">tubinghao11103@163.com</a></div><div class="detail-row"><span>GitHub</span><a href="https://github.com/Bruce-778" target="_blank" rel="noreferrer">github.com/Bruce-778 ↗</a></div><div class="detail-row"><span>Based in</span><span>${copy.contact.location}</span></div></div>
+            <div class="contact-details"><div class="detail-row"><span>${copy.contact.emailLabel}</span><a href="mailto:tubinghao11103@163.com">tubinghao11103@163.com</a></div><div class="detail-row"><span>GitHub</span><a href="https://github.com/Bruce-778" target="_blank" rel="noreferrer">github.com/Bruce-778 ↗</a></div><div class="detail-row"><span>Based in</span><span>${copy.contact.location}</span></div></div>
           </div>
         </section>
       </main>
@@ -339,6 +390,8 @@ function render() {
     render();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
+  animateCounters();
 }
 
 render();
