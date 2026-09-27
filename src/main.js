@@ -369,7 +369,7 @@ function render() {
           <div class="section-heading"><span class="section-kicker">${copy.path.kicker}</span><h2>${copy.path.title}</h2><p>${copy.path.body}</p></div>
           <div class="path-grid">
             <article class="path-card path-flow"><span class="path-label">${copy.path.focusLabel}</span><p>${copy.path.focus}</p><img class="path-visual" src="./assets/ai-path-flow.png" alt="" aria-hidden="true" /></article>
-            <article class="path-card path-intent"><span class="path-label">${copy.path.intentLabel}</span><h3>${copy.path.intent}</h3><p>${copy.path.intentBody}</p></article>
+            <article class="path-card path-intent"><img class="path-card-art" src="./assets/ai-product-map.jpg" alt="" aria-hidden="true" /><span class="path-label">${copy.path.intentLabel}</span><h3>${copy.path.intent}</h3><p>${copy.path.intentBody}</p></article>
           </div>
         </section>
 
@@ -407,7 +407,7 @@ function render() {
           <div class="section-heading"><span class="section-kicker">${copy.journey.kicker}</span><h2>${copy.journey.title}</h2><p>${copy.journey.intro}</p></div>
           <div class="education-grid">${copy.journey.items.map(([date, place, role, detail, image, imageAlt]) => `<article class="education-card"><div class="education-image"><img src="${image}" alt="${imageAlt}" loading="lazy" /></div><div class="education-copy"><span class="education-date">${date}</span><h3>${place}</h3><strong>${role}</strong><p>${detail}</p></div></article>`).join('')}</div>
           <div class="research-strip"><span class="credential-label">RESEARCH & RECOGNITION</span><div class="credential-groups">${copy.journey.credentials.map(([label, ...items]) => `<div class="credential-group"><strong>${label}</strong><div>${items.map(item => `<span>${item}</span>`).join('')}</div></div>`).join('')}</div></div>
-          <div class="research-grid"><div><span class="mini-kicker">PAPERS / 论文</span>${copy.journey.papers.map(([title, meta], index) => `<article class="paper-item"><span>0${index + 1}</span><div><h3>${title}</h3><p>${meta}</p></div></article>`).join('')}</div><div><span class="mini-kicker">AWARDS / 获奖</span><div class="award-list">${copy.journey.awards.map(award => `<span>${award}</span>`).join('')}</div></div></div>
+          <div class="research-grid"><div><span class="mini-kicker">PAPERS / 论文</span>${copy.journey.papers.map(([title, meta], index) => `<article class="paper-item"><span>0${index + 1}</span><div><h3>${title}</h3><p>${meta}</p></div></article>`).join('')}</div><div><span class="mini-kicker">AWARDS / 获奖</span><img class="research-visual" src="./assets/research-workbench.jpg" alt="Editorial research workbench with notes and data sketches" loading="lazy" /><div class="award-list">${copy.journey.awards.map(award => `<span>${award}</span>`).join('')}</div></div></div>
         </section>
 
         <section class="section-pad contact-section" id="contact">
