@@ -28,7 +28,7 @@ const content = {
     },
     about: {
       kicker: '01 / ABOUT',
-      title: '让产品，改变下一步。',
+      title: '让产品改变下一步',
       body: '我在香港城市大学攻读计算机与信息工程硕士，持续探索教育技术、AI 产品与真实用户体验。',
       body2: '把复杂流程讲清楚，把想法做成有人愿意使用的作品。',
       metrics: [
@@ -41,7 +41,7 @@ const content = {
     },
     path: {
       kicker: '02 / AI PRODUCT PATH',
-      title: '把问题，做成产品。',
+      title: '把问题做成产品',
       body: '理解处境，找到重点，设计交互，再快速迭代。',
       focusLabel: 'AI 产品路径',
       focus: '用户问题 → 产品策略 → 体验设计 → 0→1 交付 → 数据迭代',
@@ -51,7 +51,7 @@ const content = {
     },
     experience: {
       kicker: '03 / EXPERIENCE',
-      title: '把问题，做成结果。',
+      title: '把问题做成结果',
       intro: '从教育研究到旅行服务，把流程、数据与体验连起来。',
       items: [
         ['实习 / INTERNSHIP', '2023.08 — 2024.04', '希游旅行有限公司', '产品与客户服务 · Product & Customer Service', '70+ 日均订单，持续优化服务与转化。', '70+ orders / day · 60% conversion'],
@@ -63,7 +63,7 @@ const content = {
     },
     work: {
       kicker: '04 / SELECTED WORK',
-      title: '把想法，带到真实世界。',
+      title: '把想法带到真实世界',
       intro: '两个上线产品，展示我的 0→1 实践。',
       visit: '访问项目 ↗',
       cards: [
@@ -103,10 +103,10 @@ const content = {
     },
     journey: {
       kicker: '05 / GROWTH & EDUCATION',
-      title: '学习，最终回到真实问题。',
+      title: '学习最终回到真实问题',
       intro: '教育经历与研究训练，构成我的产品底色。',
       growthLabel: '成长轨迹 / GROWTH PATH',
-      growthTitle: '一步一步，把兴趣变成能力。',
+      growthTitle: '一步一步把兴趣变成能力',
       growthIntro: '从教育技术到 AI 产品，沿着真实问题持续升级。',
       growth: [['2022', '教育技术', 'Education technology'], ['2024', '服务现场', 'Real-world service'], ['2025', 'AI 研究', 'AI research'], ['2026', '真实产品', 'Live products']],
       items: [
@@ -124,7 +124,7 @@ const content = {
     },
     contact: {
       kicker: '06 / CONTACT',
-      title: '把好想法，做成真实产品。',
+      title: '把好想法做成真实产品',
       body: 'AI 产品、教育科技、旅行体验，欢迎交流。',
       cta: '发一封邮件',
       github: '查看 GitHub',
