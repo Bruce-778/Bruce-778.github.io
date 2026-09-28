@@ -362,7 +362,7 @@ function render() {
         <section class="section-pad about-section" id="about">
           <div class="about-layout">
             <div class="about-lead"><span class="section-kicker">${copy.about.kicker}</span><h2>${copy.about.title}</h2></div>
-            <div class="about-story"><p>${copy.about.body}</p><p>${copy.about.body2}</p><div class="chip-row">${copy.about.chips.map(chip => `<span>${chip}</span>`).join('')}</div></div>
+            <div class="about-story"><p>${copy.about.body}</p><p>${copy.about.body2}</p><div class="chip-row">${copy.about.chips.map(chip => `<span>${chip}</span>`).join('')}</div><figure class="about-visual"><img src="./assets/maker-studio.jpg" alt="A calm maker workspace with notes, maps, and product ideas" /><figcaption>MADE WITH CURIOSITY / 保持好奇</figcaption></figure></div>
             <div class="metric-grid">${copy.about.metrics.map(metric => `<div class="metric"><strong class="metric-value" data-counter data-target="${metric.value}" data-suffix="${metric.suffix}">${metric.value.toLocaleString()}${metric.suffix}</strong><span>${metric.label}</span></div>`).join('')}</div>
           </div>
         </section>
