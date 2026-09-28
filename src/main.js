@@ -363,7 +363,7 @@ function render() {
           <div class="about-layout">
             <div class="about-lead"><span class="section-kicker">${copy.about.kicker}</span><h2>${copy.about.title}</h2></div>
             <div class="about-story"><p>${copy.about.body}</p><p>${copy.about.body2}</p><div class="chip-row">${copy.about.chips.map(chip => `<span>${chip}</span>`).join('')}</div></div>
-            <div class="metric-grid">${copy.about.metrics.map(metric => `<div class="metric"><strong class="metric-value" data-counter data-target="${metric.value}" data-suffix="${metric.suffix}">0</strong><span>${metric.label}</span></div>`).join('')}</div>
+            <div class="metric-grid">${copy.about.metrics.map(metric => `<div class="metric"><strong class="metric-value" data-counter data-target="${metric.value}" data-suffix="${metric.suffix}">${metric.value.toLocaleString()}${metric.suffix}</strong><span>${metric.label}</span></div>`).join('')}</div>
           </div>
         </section>
 
@@ -413,9 +413,9 @@ function render() {
             <div class="growth-track-head"><span class="mini-kicker">${copy.journey.growthLabel}</span><h3>${copy.journey.growthTitle}</h3><p>${copy.journey.growthIntro}</p></div>
             <div class="growth-steps">${copy.journey.growth.map(([year, title, label], index) => `<div class="growth-step"><span class="growth-step-dot">0${index + 1}</span><strong>${year}</strong><span>${lang === 'zh' ? title : label}</span></div>`).join('')}</div>
           </div>
-          <div class="education-grid">${copy.journey.items.map(([date, place, role, detail, image, imageAlt]) => `<article class="education-card"><div class="education-image"><img src="${image}" alt="${imageAlt}" loading="lazy" /></div><div class="education-copy"><span class="education-date">${date}</span><h3>${place}</h3><strong>${role}</strong><p>${detail}</p></div></article>`).join('')}</div>
+          <div class="education-grid">${copy.journey.items.map(([date, place, role, detail, image, imageAlt]) => `<article class="education-card"><div class="education-image"><img src="${image}" alt="${imageAlt}" /></div><div class="education-copy"><span class="education-date">${date}</span><h3>${place}</h3><strong>${role}</strong><p>${detail}</p></div></article>`).join('')}</div>
           <div class="research-strip"><span class="credential-label">RESEARCH & RECOGNITION</span><div class="credential-groups">${copy.journey.credentials.map(([label, ...items]) => `<div class="credential-group"><strong>${label}</strong><div>${items.map(item => `<span>${item}</span>`).join('')}</div></div>`).join('')}</div></div>
-          <div class="research-grid"><div><span class="mini-kicker">PAPERS / 论文</span>${copy.journey.papers.map(([title, meta], index) => `<article class="paper-item"><span>0${index + 1}</span><div><h3>${title}</h3><p>${meta}</p></div></article>`).join('')}</div><div><span class="mini-kicker">AWARDS / 获奖</span><img class="research-visual" src="./assets/research-workbench.jpg" alt="Editorial research workbench with notes and data sketches" loading="lazy" /><div class="award-list">${copy.journey.awards.map(award => `<span>${award}</span>`).join('')}</div></div></div>
+          <div class="research-grid"><div><span class="mini-kicker">PAPERS / 论文</span>${copy.journey.papers.map(([title, meta], index) => `<article class="paper-item"><span>0${index + 1}</span><div><h3>${title}</h3><p>${meta}</p></div></article>`).join('')}</div><div><span class="mini-kicker">AWARDS / 获奖</span><img class="research-visual" src="./assets/research-workbench.jpg" alt="Editorial research workbench with notes and data sketches" /><div class="award-list">${copy.journey.awards.map(award => `<span>${award}</span>`).join('')}</div></div></div>
         </section>
 
         <section class="section-pad contact-section" id="contact">
