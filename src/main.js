@@ -317,6 +317,28 @@ function animateCounters() {
   counters.forEach((counter) => observer.observe(counter));
 }
 
+function setupActiveNavigation() {
+  const links = [...document.querySelectorAll('.site-nav a')];
+  const sections = links
+    .map((link) => document.getElementById(link.getAttribute('href').slice(1)))
+    .filter(Boolean);
+  const setActive = (id) => {
+    links.forEach((link) => {
+      const active = link.getAttribute('href') === `#${id}`;
+      link.classList.toggle('is-active', active);
+      if (active) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
+  };
+  setActive('intro');
+  if (!('IntersectionObserver' in window)) return;
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (visible) setActive(visible.target.id);
+  }, { rootMargin: '-18% 0px -58% 0px', threshold: [0.1, 0.35, 0.65] });
+  sections.forEach((section) => observer.observe(section));
+}
+
 function render() {
   const copy = content[lang];
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
@@ -371,7 +393,7 @@ function render() {
           <div class="section-heading"><span class="section-kicker">${copy.path.kicker}</span><h2>${copy.path.title}</h2><p>${copy.path.body}</p></div>
           <div class="path-grid">
             <article class="path-card path-flow"><span class="path-label">${copy.path.focusLabel}</span><p>${copy.path.focus}</p><img class="path-visual" src="./assets/ai-path-flow.png" alt="" aria-hidden="true" /></article>
-            <article class="path-card path-intent"><img class="path-card-art" src="./assets/ai-product-map.jpg" alt="" aria-hidden="true" /><span class="path-label">${copy.path.intentLabel}</span><h3>${copy.path.intent}</h3><p>${copy.path.intentBody}</p></article>
+            <article class="path-card path-intent"><img class="path-card-art" src="./assets/product-route-studio.jpg" alt="" aria-hidden="true" /><span class="path-label">${copy.path.intentLabel}</span><h3>${copy.path.intent}</h3><p>${copy.path.intentBody}</p></article>
           </div>
         </section>
 
@@ -437,6 +459,7 @@ function render() {
   });
 
   animateCounters();
+  setupActiveNavigation();
 }
 
 render();

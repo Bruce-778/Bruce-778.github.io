@@ -25,6 +25,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 104px; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6; text-rendering: optimizeLegibility; }
 body::selection { background: var(--pink-light); color: var(--ink); }
 a { color: inherit; text-decoration: none; }
@@ -44,6 +45,9 @@ img { display: block; max-width: 100%; }
 .brand-text small { color: var(--ink-soft); font-size: 10px; margin-top: 4px; }
 .site-nav { display: flex; align-items: center; justify-content: center; gap: 30px; font-size: 13px; color: var(--ink-soft); }
 .site-nav a { flex: 0 0 auto; white-space: nowrap; transition: color .2s ease; }
+.site-nav a::after { content: ''; display: block; width: 0; height: 2px; margin: 3px auto 0; border-radius: 999px; background: var(--pink); transition: width .22s ease; }
+.site-nav a.is-active { color: var(--blue-deep); font-weight: 600; }
+.site-nav a.is-active::after, .site-nav a:hover::after { width: 15px; }
 .site-nav a:hover { color: var(--blue); }
 .lang-toggle { position: absolute; right: 10px; display: grid; place-items: center; min-width: 38px; height: 32px; border: 1px solid rgba(86,161,184,.3); border-radius: 999px; background: rgba(255,255,255,.45); color: var(--blue-deep); font-size: 11px; font-weight: 700; cursor: pointer; transition: transform .2s ease, background .2s ease; }
 .lang-toggle:hover { transform: translateY(-2px); background: rgba(255,255,255,.88); }
@@ -107,7 +111,7 @@ img { display: block; max-width: 100%; }
 .path-flow > p { max-width: 520px; color: var(--ink); font-family: var(--serif); font-size: 26px; font-weight: 500; letter-spacing: -.03em; line-height: 1.2; }
 .path-visual { width: 100%; height: auto; margin-top: 21px; opacity: .72; mix-blend-mode: multiply; }
 .path-intent { position: relative; overflow: hidden; background: linear-gradient(130deg, rgba(220,232,247,.82), rgba(255,255,255,.52)); }
-.path-card-art { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: .2; mix-blend-mode: multiply; }
+.path-card-art { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: .27; mix-blend-mode: multiply; }
 .path-card > *:not(.path-card-art) { position: relative; z-index: 1; }
 .path-intent h3 { margin: 21px 0 0; color: var(--ink); font-family: var(--serif); font-size: 31px; font-weight: 600; letter-spacing: -.04em; }
 .path-intent p { margin-top: 12px; font-size: 14px; }
