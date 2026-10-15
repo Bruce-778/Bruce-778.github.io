@@ -8,6 +8,7 @@ const content = {
       ['experience', '实习'],
       ['work', '项目'],
       ['education', '学习'],
+      ['research', '论文'],
       ['contact', '联系'],
     ],
     hero: {
@@ -33,12 +34,12 @@ const content = {
         { value: 40, suffix: '%', label: '咨询到下单转化' },
         { value: 4, suffix: '', label: '软件著作权' },
       ],
-      chips: ['AI 产品设计', '用户研究', '全栈原型', '学习科学', '增长与转化'],
-      galleryLabel: '产品与研究方向',
+      chips: ['人机交互', 'AI 应用', '教育技术'],
+      galleryLabel: '学习、项目与论文',
       gallery: [
-        { label: '产品', title: '产品设计与开发', image: 'maker-studio.jpg', alt: '蓝色笔记本与旅行明信片的产品设计主题静物插画' },
-        { label: '研究', title: 'AI 与教育研究', image: 'research-workbench.jpg', alt: '研究笔记与数据草图的静物插画' },
-        { label: '旅行', title: '旅行服务与规划', image: 'product-route-studio.jpg', alt: '淡蓝色纸面上的路线规划主题插画' },
+        { label: '校园', title: '香港城市大学', detail: 'MSc Computer and Information Engineering', image: 'cityu-campus.jpg', alt: '香港城市大学校园实景', kind: 'photo', url: '#education', link: '学习经历' },
+        { label: '项目', title: 'Xiooh Travel', detail: '独立开发的日本机场接送平台', image: 'xioohtravel.png', alt: 'Xiooh Travel 已上线网站的首页截图', kind: 'screen', url: 'https://xioohtravel.com/', link: '访问网站' },
+        { label: '论文', title: 'CogniLoad · ICIC 2026', detail: '大语言模型认知负荷与协同框架', image: 'papers/cogniload-framework.webp', alt: 'CogniLoad 项目原图：认知负荷基准与 COF 协同框架', kind: 'figure', url: 'https://link.springer.com/chapter/10.1007/978-981-92-3557-5_2', link: '阅读论文' },
       ],
     },
     experience: {
@@ -88,8 +89,7 @@ const content = {
       moreLabel: '相关项目与研究',
       more: [
         ['国家级创新创业项目', '主持 2024 / 2025 两项国家级项目，围绕知识图谱、多模态智能体与协同文本创作展开研究。'],
-        ['研究论文', 'GCCCE 2025 · ICIC 2026 · EMNLP 2025，覆盖 AI 教育、认知负荷与协作学习。'],
-        ['产品与数据', '从服务订单、页面浏览到有效线索，持续用数据验证体验与转化。'],
+        ['人机协同研究', '关注智能体协作、认知负荷与教育场景中的 AI 应用。'],
       ],
     },
     journey: {
@@ -119,15 +119,15 @@ const content = {
       ],
       credentials: [['会议论文', 'GCCCE 2025', 'ICIC 2026', 'EMNLP 2025'], ['毕业成果', '优秀本科毕业论文', '4 项软件著作权']],
       papers: [
-        ['Do Large Language Models Suffer from Cognitive Overload?', 'CCF-C · 一作 · Benchmark and Orchestration Framework'],
-        ['新课标视域下信息科技课程游戏化教学模式设计与应用', 'GCCCE 2025 · 一作'],
-        ['Educator-role Moral and Normative Large Language Models Profiling', 'EMNLP 2025 · CCF-B'],
-        ['Cultivating Collaborative Problem-Solving Skills in the Era of Human-AI Interaction', 'EI · 一作'],
+        ['Do Large Language Models Suffer from Cognitive Overload?', 'ICIC 2026 · 第一作者'],
+        ['新课标视域下信息科技课程游戏化教学模式设计与应用', 'GCCCE 2025 · 第一作者'],
+        ['Educator-role Moral and Normative Large Language Models Profiling', 'EMNLP 2025 · 共同作者'],
+        ['Cultivating Collaborative Problem-Solving Skills in the Era of Human-AI Interaction', 'CITERS 2025 · 第一作者'],
       ],
       awards: ['浙江工业大学优秀毕业生', '浙江工业大学二等奖学金', '浙江工业大学创新奖学金', 'NECCS 三等奖', '浙江省大学生金融创新大赛金奖', '全国大学生数学竞赛二等奖'],
     },
     contact: {
-      kicker: '05 / CONTACT',
+      kicker: '06 / CONTACT',
       title: '联系我',
       body: '欢迎交流与项目合作。',
       cta: '发一封邮件',
@@ -152,6 +152,7 @@ const content = {
       ['experience', 'Experience'],
       ['work', 'Projects'],
       ['education', 'Education'],
+      ['research', 'Papers'],
       ['contact', 'Contact'],
     ],
     hero: {
@@ -176,12 +177,12 @@ const content = {
         { value: 40, suffix: '%', label: 'Conversion' },
         { value: 4, suffix: '', label: 'Copyrights' },
       ],
-      chips: ['AI product design', 'User research', 'Full-stack prototyping', 'Learning sciences', 'Growth & conversion'],
-      galleryLabel: 'Product and research interests',
+      chips: ['Human–computer interaction', 'AI applications', 'Educational technology'],
+      galleryLabel: 'Education, projects, and publications',
       gallery: [
-        { label: 'Products', title: 'Product design & development', image: 'maker-studio.jpg', alt: 'Illustrated still life with a blue notebook and travel postcard' },
-        { label: 'Research', title: 'AI & education research', image: 'research-workbench.jpg', alt: 'Illustrated research notes and data sketches on a workbench' },
-        { label: 'Travel', title: 'Travel services & planning', image: 'product-route-studio.jpg', alt: 'An illustrated route connecting milestones on paper' },
+        { label: 'Campus', title: 'City University of Hong Kong', detail: 'MSc Computer and Information Engineering', image: 'cityu-campus.jpg', alt: 'Photograph of the City University of Hong Kong campus', kind: 'photo', url: '#education', link: 'Education' },
+        { label: 'Project', title: 'Xiooh Travel', detail: 'A Japan airport transfer platform I built', image: 'xioohtravel.png', alt: 'Homepage screenshot of the live Xiooh Travel website', kind: 'screen', url: 'https://xioohtravel.com/', link: 'Visit website' },
+        { label: 'Paper', title: 'CogniLoad · ICIC 2026', detail: 'Cognitive load and orchestration in LLMs', image: 'papers/cogniload-framework.webp', alt: 'Original CogniLoad project figure showing its benchmark and COF workflow', kind: 'figure', url: 'https://link.springer.com/chapter/10.1007/978-981-92-3557-5_2', link: 'Read paper' },
       ],
     },
     experience: {
@@ -231,8 +232,7 @@ const content = {
       moreLabel: 'RELATED WORK',
       more: [
         ['National innovation projects', 'Led two national projects on knowledge graphs, multimodal agents, and collaborative text creation.'],
-        ['Research papers', 'GCCCE 2025 · ICIC 2026 · EMNLP 2025 across AI in education, cognitive load, and collaborative learning.'],
-        ['Product & data', 'Using orders, page views, and qualified leads to validate experience and conversion.'],
+        ['Human–AI research', 'Agent collaboration, cognitive load, and AI in education.'],
       ],
     },
     journey: {
@@ -261,15 +261,15 @@ const content = {
       ],
       credentials: [['Conferences', 'GCCCE 2025', 'ICIC 2026', 'EMNLP 2025'], ['Graduation', 'Outstanding undergraduate thesis', '4 software copyrights']],
       papers: [
-        ['Do Large Language Models Suffer from Cognitive Overload?', 'CCF-C · First author · Benchmark and Orchestration Framework'],
+        ['Do Large Language Models Suffer from Cognitive Overload?', 'ICIC 2026 · First author'],
         ['Gamified Teaching Models for Information Technology under the New Curriculum', 'GCCCE 2025 · First author'],
-        ['Educator-role Moral and Normative Large Language Models Profiling', 'EMNLP 2025 · CCF-B'],
-        ['Cultivating Collaborative Problem-Solving Skills in the Era of Human-AI Interaction', 'EI · First author'],
+        ['Educator-role Moral and Normative Large Language Models Profiling', 'EMNLP 2025 · Co-author'],
+        ['Cultivating Collaborative Problem-Solving Skills in the Era of Human-AI Interaction', 'CITERS 2025 · First author'],
       ],
       awards: ['Outstanding Graduate, ZJUT', 'ZJUT Second-class Scholarship', 'ZJUT Innovation Scholarship', 'NECCS Third Prize', 'Zhejiang Financial Innovation Gold Award', 'National Mathematics Contest Second Prize'],
     },
     contact: {
-      kicker: '05 / CONTACT',
+      kicker: '06 / CONTACT',
       title: 'Contact',
       body: 'For inquiries and project collaborations.',
       cta: 'Send an email',
@@ -289,6 +289,14 @@ const content = {
   },
 };
 
+// Published figures remain linked to their original paper or project source.
+const publications = [
+  { image: 'cogniload-framework.webp', url: 'https://link.springer.com/chapter/10.1007/978-981-92-3557-5_2', source: 'https://cogniload.github.io/', figure: 'Fig. 3', alt: { zh: 'CogniLoad 基准与 COF 协同框架原图', en: 'Original CogniLoad benchmark and COF framework figure' } },
+  { image: 'gccce-teaching.webp', url: 'https://gccce2025.jiangnan.edu.cn/dfiles/18334/doc/pdf/jiaoshi.pdf#page=311', source: 'https://gccce2025.jiangnan.edu.cn/dfiles/18334/doc/pdf/jiaoshi.pdf#page=315', figure: 'Fig. 3', alt: { zh: 'GCCCE 论文原图：游戏化教学的设计与应用', en: 'Original GCCCE figure on gamified teaching design and application' } },
+  { image: 'emnlp-personality.webp', url: 'https://aclanthology.org/2025.emnlp-main.42/', source: 'https://aclanthology.org/2025.emnlp-main.42.pdf#page=6', figure: 'Fig. 4', alt: { zh: 'EMNLP 论文原图：教师角色大模型与人类教师的人格维度比较', en: 'Original EMNLP radar chart comparing teacher-role LLMs and human teachers' } },
+  { image: 'citers-results.webp', url: 'https://citers2025.cite.hku.hk/wp-content/uploads/Conference_Proceedings_of_CITERS_2025.pdf#page=73', source: 'https://citers2025.cite.hku.hk/wp-content/uploads/Conference_Proceedings_of_CITERS_2025.pdf#page=77', figure: 'Fig. 2', alt: { zh: 'CITERS 论文原图：知识图谱支持下的人机协作学习结果比较', en: 'Original CITERS comparison of ChatGPT with and without knowledge-graph support' } },
+];
+
 let lang = localStorage.getItem('bruce-lang') === 'en' ? 'en' : 'zh';
 let cleanupView = [];
 let countersSeen = false;
@@ -302,10 +310,10 @@ function protectLineEndings() {
   const segmenter = typeof Intl.Segmenter === 'function' ? new Intl.Segmenter('zh-CN', { granularity: 'word' }) : null;
   const selectors = [
     'h2', '.hero-motto', '.hero-note > span:last-child', '.section-heading p',
-    '.about-story p', '.gallery-caption',
+    '.bt-profile-story p', '.gallery-caption h3', '.gallery-caption p',
     '.experience-content h3', '.experience-content strong', '.experience-content p',
     '.project-body > p', '.lab-item h3', '.lab-item p',
-    '.growth-track-head h3', '.growth-track-head p', '.paper-item h3', '.paper-item p',
+    '.growth-track-head h3', '.growth-track-head p', '.publication-copy h3 a',
     '.award-list > span', '.contact-copy p', '.site-footer > span:first-child',
   ].join(',');
   document.querySelectorAll(selectors).forEach(element => {
@@ -330,20 +338,8 @@ function protectLineEndings() {
     }
     if (!tail) return;
     const prefix = text.slice(0, -tail.length);
-    const nodes = [];
-    if (chinese && segmenter) {
-      // Keep Chinese words intact and closing punctuation with the preceding word.
-      const tokens = [];
-      for (const { segment } of segmenter.segment(prefix)) {
-        if (/^[，。！？：；、）》」』]+$/u.test(segment) && tokens.length) tokens[tokens.length - 1] += segment;
-        else tokens.push(segment);
-      }
-      tokens.forEach(token => {
-        const word = /\p{Script=Han}/u.test(token) ? document.createElement('span') : document.createTextNode(token);
-        if (word.nodeType === Node.ELEMENT_NODE) { word.className = 'word-unit'; word.textContent = token; }
-        nodes.push(word);
-      });
-    } else nodes.push(document.createTextNode(prefix));
+    // Keep prose as a continuous text node for natural spacing and screen readers.
+    const nodes = [document.createTextNode(prefix)];
     const unit = document.createElement('span');
     unit.className = 'text-tail';
     unit.textContent = tail;
@@ -362,6 +358,7 @@ function setupGallery(copy) {
     slides.forEach((slide, i) => {
       slide.classList.toggle('is-current', i === galleryIndex);
       slide.setAttribute('aria-hidden', String(i !== galleryIndex));
+      slide.inert = i !== galleryIndex;
     });
     selectors.forEach((button, i) => button.setAttribute('aria-pressed', String(i === galleryIndex)));
     counter.textContent = `0${galleryIndex + 1} / 0${slides.length}`;
@@ -381,7 +378,7 @@ function setupGallery(copy) {
   const stage = gallery.querySelector('.gallery-stage');
   let start = null;
   stage.addEventListener('pointerdown', event => {
-    if (event.button !== 0 || event.target.closest('button')) return;
+    if (event.button !== 0 || event.target.closest('button, a')) return;
     start = { x: event.clientX, y: event.clientY };
     stage.setPointerCapture(event.pointerId);
   });
@@ -435,7 +432,7 @@ function animateCounters() {
       observer.disconnect();
     }
   }, { threshold: 0.35 });
-  observer.observe(document.querySelector('.metric-grid'));
+  observer.observe(document.querySelector('.bt-profile-metrics'));
   cleanupView.push(() => {
     observer.disconnect();
     frames.forEach(cancelAnimationFrame);
@@ -483,7 +480,8 @@ function render() {
       <div class="ambient ambient-one"></div>
       <div class="ambient ambient-two"></div>
       <header class="site-header">
-        <nav class="site-nav" aria-label="${lang === 'zh' ? '页面导航' : 'Page navigation'}">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation"><span aria-hidden="true">☰</span>${lang === 'zh' ? '页面导航' : 'Navigation'}</button>
+        <nav class="site-nav" id="main-navigation" aria-label="${lang === 'zh' ? '页面导航' : 'Page navigation'}">
           ${copy.nav.map(([id, label]) => `<a href="#${id}">${label}</a>`).join('')}
         </nav>
         <button class="lang-toggle" type="button" aria-label="${copy.ariaToggle}" title="${copy.ariaToggle}">${copy.toggle}</button>
@@ -514,25 +512,24 @@ function render() {
           <a class="scroll-cue" href="#about"><span class="scroll-line"></span>${copy.scrollHint}</a>
         </section>
 
-        <section class="section-pad about-section" id="about">
-          <div class="about-layout">
-            <div class="about-story"><div class="about-lead"><span class="section-kicker">${copy.about.kicker}</span><h2>${copy.about.title}</h2></div><p>${copy.about.body}</p><p>${copy.about.body2}</p><div class="chip-row">${copy.about.chips.map(chip => `<span>${chip}</span>`).join('')}</div></div>
+        <section class="section-pad bt-profile-section" id="about">
+          <div class="bt-profile-layout">
+            <div class="bt-profile-story"><div class="about-lead"><span class="section-kicker">${copy.about.kicker}</span><h2>${copy.about.title}</h2></div><p>${copy.about.body}</p><p>${copy.about.body2}</p><div class="chip-row">${copy.about.chips.map(chip => `<span>${chip}</span>`).join('')}</div></div>
             <div class="interest-gallery" role="region" aria-roledescription="${lang === 'zh' ? '图片轮播' : 'carousel'}" aria-label="${copy.about.galleryLabel}">
               <div class="gallery-stage">
-                ${copy.about.gallery.map((slide, index) => `<figure class="gallery-slide${index === galleryIndex ? ' is-current' : ''}" aria-hidden="${index !== galleryIndex}"><img src="./assets/${slide.image}" alt="${slide.alt}" loading="lazy" draggable="false" /><figcaption class="gallery-caption">${slide.title}</figcaption></figure>`).join('')}
-                <span class="gallery-counter" aria-hidden="true">0${galleryIndex + 1} / 03</span>
-                <div class="gallery-arrows"><button type="button" data-gallery-step="-1" aria-label="${lang === 'zh' ? '上一张图片' : 'Previous image'}">←</button><button type="button" data-gallery-step="1" aria-label="${lang === 'zh' ? '下一张图片' : 'Next image'}">→</button></div>
+                ${copy.about.gallery.map((slide, index) => `<figure class="gallery-slide gallery-${slide.kind}${index === galleryIndex ? ' is-current' : ''}" aria-hidden="${index !== galleryIndex}" ${index !== galleryIndex ? 'inert' : ''}><img src="./assets/${slide.image}" alt="${slide.alt}" loading="lazy" draggable="false" /><figcaption class="gallery-caption"><div><h3>${slide.title}</h3><p>${slide.detail}</p></div><a href="${slide.url}" ${slide.url.startsWith('https:') ? 'target="_blank" rel="noopener noreferrer"' : ''} aria-label="${slide.link}: ${slide.title}"><span>${slide.link}</span><span aria-hidden="true">↗</span></a></figcaption></figure>`).join('')}
               </div>
-              <div class="gallery-selectors" role="group" aria-label="${lang === 'zh' ? '选择图片' : 'Choose an image'}">${copy.about.gallery.map((slide,index) => `<button type="button" data-gallery-select="${index}" aria-pressed="${index === galleryIndex}"><span aria-hidden="true">0${index + 1}</span>${slide.label}</button>`).join('')}</div>
+              <div class="gallery-footer"><div class="gallery-selectors" role="group" aria-label="${lang === 'zh' ? '选择图片' : 'Choose an image'}">${copy.about.gallery.map((slide,index) => `<button type="button" data-gallery-select="${index}" aria-pressed="${index === galleryIndex}"><span aria-hidden="true">0${index + 1}</span>${slide.label}</button>`).join('')}</div><div class="gallery-arrows"><button type="button" data-gallery-step="-1" aria-label="${lang === 'zh' ? '上一张图片' : 'Previous image'}">←</button><button type="button" data-gallery-step="1" aria-label="${lang === 'zh' ? '下一张图片' : 'Next image'}">→</button></div></div>
+              <span class="gallery-counter sr-only" aria-hidden="true">0${galleryIndex + 1} / 03</span>
               <span class="gallery-status sr-only" role="status" aria-live="polite" aria-atomic="true"></span>
             </div>
           </div>
-          <div class="metric-grid" aria-label="${lang === 'zh' ? '作品与研究成果' : 'Project and research highlights'}">${copy.about.metrics.map(metric => `<div class="metric"><strong class="metric-value" data-counter data-target="${metric.value}" data-suffix="${metric.suffix}" aria-label="${metric.value.toLocaleString('en-US')}${metric.suffix}">${metric.value.toLocaleString('en-US')}${metric.suffix}</strong><span>${metric.label}</span></div>`).join('')}</div>
+          <div class="bt-profile-metrics" aria-label="${lang === 'zh' ? '作品与研究成果' : 'Project and research highlights'}">${copy.about.metrics.map(metric => `<div class="bt-profile-metric"><strong class="metric-value" data-counter data-target="${metric.value}" data-suffix="${metric.suffix}" aria-label="${metric.value.toLocaleString('en-US')}${metric.suffix}">${metric.value.toLocaleString('en-US')}${metric.suffix}</strong><span>${metric.label}</span></div>`).join('')}</div>
         </section>
 
         <section class="section-pad experience-section" id="experience">
           <div class="section-heading"><span class="section-kicker">${copy.experience.kicker}</span><h2>${copy.experience.title}</h2><p>${copy.experience.intro}</p></div>
-          <div class="experience-list">${copy.experience.items.map(([type, date, place, role, detail, result], index) => `<article class="experience-item" data-reading-anchor="experience-${index}"><div class="experience-meta"><span class="experience-type">${type}</span><span class="experience-date">${date}</span></div><div class="experience-content"><h3>${place}</h3><strong>${role}</strong><p>${detail}</p></div><div class="experience-result">${result.map(item => `<span>${item}</span>`).join('')}</div></article>`).join('')}</div>
+          <div class="experience-list">${copy.experience.items.slice().reverse().map(([type, date, place, role, detail, result], index) => `<article class="experience-item" data-reading-anchor="experience-${index}"><div class="experience-meta"><span class="experience-type">${type}</span><span class="experience-date">${date}</span></div><div class="experience-content"><h3>${place}</h3><strong>${role}</strong><p>${detail}</p></div><div class="experience-result">${result.map(item => `<span>${item}</span>`).join('')}</div></article>`).join('')}</div>
         </section>
 
         <section class="work-section" id="work">
@@ -544,9 +541,7 @@ function render() {
                   <div class="project-image-wrap">
                     <a class="project-image-link" href="${card.url}" target="_blank" rel="noreferrer" aria-label="${copy.work.visit}: ${card.title}">
                       <img src="${card.image}" alt="${card.alt}" loading="lazy" />
-                      <div class="image-overlay"><span>${card.label}</span><span>↗</span></div>
                     </a>
-                    ${card.logo ? `<img class="project-logo" src="./assets/xiooh-logo.png" alt="Xiooh Travel logo" />` : ''}
                   </div>
                   <div class="project-body">
                     <div class="project-title-row"><div><h3>${card.title}</h3><span>${card.titleEn}</span></div><a href="${card.url}" target="_blank" rel="noreferrer" aria-label="${copy.work.visit}: ${card.title}">↗</a></div>
@@ -563,7 +558,6 @@ function render() {
         <section class="section-pad journey-section" id="education">
           <div class="section-heading"><span class="section-kicker">${copy.journey.kicker}</span><h2>${copy.journey.title}</h2><p>${copy.journey.intro}</p></div>
           <div class="growth-track" aria-label="${copy.journey.growthLabel}" data-reading-anchor="growth-path">
-            <img class="growth-track-art" src="./assets/growth-trajectory.jpg" alt="" aria-hidden="true" loading="lazy" />
             <div class="growth-track-head"><span class="mini-kicker">${copy.journey.growthLabel}</span><h3>${copy.journey.growthTitle}</h3><p>${copy.journey.growthIntro}</p></div>
             <div class="growth-steps">${copy.journey.growth.map(([year, title, label], index) => `<div class="growth-step"><span class="growth-step-dot">0${index + 1}</span><strong>${year}</strong><span>${lang === 'zh' ? title : label}</span></div>`).join('')}</div>
           </div>
@@ -579,8 +573,16 @@ function render() {
                 ${school.focus ? `<ul class="education-focus">${school.focus.map(item => `<li>${item}</li>`).join('')}</ul><p class="education-advisor">${school.advisor}</p><div class="education-achievements">${school.achievements.map(item => `<span>${item}</span>`).join('')}</div>` : ''}
               </div>
             </article>`).join('')}</div>
-          <div class="research-strip"><span class="credential-label">RESEARCH & RECOGNITION</span><div class="credential-groups">${copy.journey.credentials.map(([label, ...items]) => `<div class="credential-group"><strong>${label}</strong><div>${items.map(item => `<span>${item}</span>`).join('')}</div></div>`).join('')}</div></div>
-          <div class="research-grid"><div><span class="mini-kicker">${lang === 'zh' ? '论文' : 'PAPERS'}</span>${copy.journey.papers.map(([title, meta], index) => `<article class="paper-item"><span>0${index + 1}</span><div><h3>${title}</h3><p>${meta}</p></div></article>`).join('')}</div><div><span class="mini-kicker">${lang === 'zh' ? '获奖' : 'AWARDS'}</span><img class="research-visual" src="./assets/research-workbench.jpg" alt="Editorial research workbench with notes and data sketches" /><div class="award-list">${copy.journey.awards.map(award => `<span>${award}</span>`).join('')}</div></div></div>
+          <div class="recognition-row"><h3>${lang === 'zh' ? '荣誉与成果' : 'Honors & awards'}</h3><div class="award-list">${[...copy.journey.awards, ...copy.journey.credentials[1].slice(1)].map(award => `<span>${award}</span>`).join('')}</div></div>
+        </section>
+
+        <section class="section-pad publications-section" id="research">
+          <div class="section-heading"><span class="section-kicker">05 / PUBLICATIONS</span><h2>${lang === 'zh' ? '论文发表' : 'Publications'}</h2></div>
+          <div class="publication-list">${copy.journey.papers.map(([title, meta], index) => {
+            const paper = publications[index];
+            return `<article class="publication-item" data-reading-anchor="paper-${index}"><a class="publication-image" href="${paper.source}" target="_blank" rel="noopener noreferrer" aria-label="${lang === 'zh' ? '查看论文原图' : 'View original figure'}: ${title}"><img src="./assets/papers/${paper.image}" alt="${paper.alt[lang]}" loading="lazy" /><span>${paper.figure} <span aria-hidden="true">↗</span></span></a><div class="publication-copy"><p class="publication-venue">${meta}</p><h3><a href="${paper.url}" target="_blank" rel="noopener noreferrer">${title}</a></h3><div class="publication-links"><a href="${paper.url}" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '阅读论文' : 'Read paper'} <span aria-hidden="true">↗</span></a></div></div></article>`;
+          }).join('')}</div>
+          <p class="publication-credits"><a href="https://github.com/Bruce-778/Bruce-778.github.io/blob/main/ASSET_SOURCES.md" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '图片来源与署名' : 'Image sources & credits'} ↗</a></p>
         </section>
 
         <section class="section-pad contact-section" id="contact">
@@ -614,6 +616,20 @@ function render() {
   });
 
   protectLineEndings();
+  const menu = document.querySelector('.menu-toggle');
+  const header = document.querySelector('.site-header');
+  const setMenu = (open) => {
+    menu.setAttribute('aria-expanded', String(open));
+    header.classList.toggle('is-menu-open', open);
+  };
+  menu.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
+  header.querySelectorAll('.site-nav a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+  header.addEventListener('keydown', event => {
+    if (event.key === 'Escape') { setMenu(false); menu.focus(); }
+  });
+  const closeMenu = event => { if (!header.contains(event.target)) setMenu(false); };
+  document.addEventListener('click', closeMenu);
+  cleanupView.push(() => document.removeEventListener('click', closeMenu));
   setupGallery(copy.about);
   animateCounters();
   setupActiveNavigation();
