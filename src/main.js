@@ -295,7 +295,7 @@ const content = {
 const publications = [
   { venue: 'ICIC 2026', image: 'icic-2026.webp', url: 'https://link.springer.com/chapter/10.1007/978-981-92-3557-5_2', source: 'https://link.springer.com/book/10.1007/978-981-92-3557-5', alt: { zh: 'ICIC 2026 会议论文集第七卷官方封面', en: 'Official ICIC 2026 proceedings cover, Part VII' } },
   { venue: 'GCCCE 2025', image: 'gccce-2025.webp', url: 'https://gccce2025.jiangnan.edu.cn/dfiles/18334/doc/pdf/jiaoshi.pdf#page=311', source: 'https://gccce2025.jiangnan.edu.cn/dfiles/18334/doc/pdf/jiaoshi.pdf#page=1', alt: { zh: 'GCCCE 2025 教师论坛论文集官方封面', en: 'Official GCCCE 2025 Teacher Forum proceedings cover' } },
-  { venue: 'EMNLP 2025', image: 'emnlp-2025.webp', url: 'https://aclanthology.org/2025.emnlp-main.42/', source: 'https://aclanthology.org/2025.emnlp-main.0.pdf#page=1', alt: { zh: 'EMNLP 2025 官方会议论文集封面', en: 'Official EMNLP 2025 conference proceedings cover' } },
+  { venue: 'EMNLP 2025', image: 'emnlp-2025-official-hero.webp', url: 'https://aclanthology.org/2025.emnlp-main.42/', source: 'https://2025.emnlp.org/', alt: { zh: 'EMNLP 2025 官网宣传主视觉：30 周年标识与苏州夜景', en: 'EMNLP 2025 official website hero with the 30th anniversary logo and Suzhou skyline' } },
   { venue: 'CITERS 2025', image: 'citers-2025.webp', url: 'https://citers2025.cite.hku.hk/wp-content/uploads/Conference_Proceedings_of_CITERS_2025.pdf#page=73', source: 'https://citers2025.cite.hku.hk/', alt: { zh: 'CITERS 2025 官方会议封面', en: 'Official CITERS 2025 conference cover' } },
 ];
 
@@ -698,9 +698,22 @@ function render() {
     const url = new URL(location.href);
     url.searchParams.set('lang', lang);
     history.replaceState(null, '', url);
+    // Native scroll anchoring must not compete with the reading-position restore.
+    document.documentElement.classList.add('is-switching-language');
     render();
     const replacement = key ? document.querySelector(`[data-reading-anchor="${key}"]`) : document.getElementById(id);
-    window.scrollBy({ top: replacement.getBoundingClientRect().top - previousTop, behavior: 'instant' });
+    const restorePosition = () => {
+      if (!replacement.isConnected) return;
+      window.scrollBy({ top: replacement.getBoundingClientRect().top - previousTop, behavior: 'instant' });
+    };
+    restorePosition();
+    requestAnimationFrame(() => {
+      restorePosition();
+      requestAnimationFrame(() => {
+        restorePosition();
+        document.documentElement.classList.remove('is-switching-language');
+      });
+    });
     document.querySelector('.lang-toggle').focus({ preventScroll: true });
   });
 

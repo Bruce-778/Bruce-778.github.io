@@ -4,3 +4,4 @@ dist/
 *.log
 *.zip
 output/ui-review-*/
+output/conference-refresh-*/
