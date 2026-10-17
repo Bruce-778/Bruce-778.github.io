@@ -35,11 +35,12 @@ const content = {
         { value: 4, suffix: '', label: '软件著作权' },
       ],
       chips: ['人机交互', 'AI 应用', '教育技术'],
+      metricsNote: '前三项为 Xiooh Travel 项目数据',
       galleryLabel: '学习、项目与论文',
       gallery: [
         { label: '校园', title: '香港城市大学', detail: 'MSc Computer and Information Engineering', image: 'cityu-campus.jpg', alt: '香港城市大学校园实景', kind: 'photo', url: '#education', link: '学习经历' },
         { label: '项目', title: 'Xiooh Travel', detail: '独立开发的日本机场接送平台', image: 'xioohtravel.png', alt: 'Xiooh Travel 已上线网站的首页截图', kind: 'screen', url: 'https://xioohtravel.com/', link: '访问网站' },
-        { label: '论文', title: 'CogniLoad · ICIC 2026', detail: '大语言模型认知负荷与协同框架', image: 'papers/cogniload-framework.webp', alt: 'CogniLoad 项目原图：认知负荷基准与 COF 协同框架', kind: 'figure', url: 'https://link.springer.com/chapter/10.1007/978-981-92-3557-5_2', link: '阅读论文' },
+        { label: '会议', title: 'ICIC 2026', detail: 'CogniLoad 研究收录于会议论文集', image: 'conferences/icic-2026.webp', alt: 'ICIC 2026 会议论文集第七卷官方封面', kind: 'cover', url: '#research', link: '论文发表' },
       ],
     },
     experience: {
@@ -47,7 +48,7 @@ const content = {
       title: '实习经历',
       intro: '产品服务、数据标注与学术研究。',
       items: [
-        ['实习', '2023.08 — 2024.04', '希游旅行有限公司', '产品与客户服务', '优化用车服务流程与用户转化', ['70+ 日均订单', '60% 转化率']],
+        ['实习', '2023.08 — 2024.04', '希游旅行有限公司', '产品与客户服务', '优化用车服务流程与用户转化', ['70+ 日均订单', '60% 二销转化率']],
         ['实习', '2025.04 — 2025.05', '整智智能信息技术（杭州）有限公司', '数据标注员', '复核教育文本，推动返工率下降 30%', ['120+ 教育文本', '85%+ 通过率']],
         ['项目实习', '2025.08', '华东师范大学智能教育学院', '项目研究实习生', '研究 K–12 学习特征，参与智能体设计', ['学习研究', '智能体设计']],
         ['项目研究', '2026.02 — 2026.04', '北京大学', '复杂学习任务与智能体协同研究', '完成眼动数据清洗、分析与可视化', ['40 位学生', '3,500+ 条记录']],
@@ -64,7 +65,7 @@ const content = {
           label: '01 / LIVE PRODUCT',
           title: 'Xiooh Travel',
           titleEn: '日本机场接送服务',
-          body: '从服务选择到预订咨询，让日本用车更简单。',
+          body: '独立完成需求、交互与开发，覆盖预订和订单查询。',
           metric: ['150+ 订单', '¥12 万+ GMV'],
           image: './assets/xioohtravel.png',
           url: 'https://xioohtravel.com/',
@@ -77,7 +78,7 @@ const content = {
           label: '02 / AI PRODUCT',
           title: 'XioohPlanner',
           titleEn: 'AI 日本旅行规划',
-          body: '连接目的地、交通与预算，规划适合自己的旅程。',
+          body: '根据目的地、预算与偏好生成行程，支持多城市规划。',
           metric: ['多城市规划', '行程分享'],
           image: './assets/xioohplanner.png',
           url: 'https://xioohplanner.vercel.app/',
@@ -88,8 +89,8 @@ const content = {
       ],
       moreLabel: '相关项目与研究',
       more: [
-        ['国家级创新创业项目', '主持 2024 / 2025 两项国家级项目，围绕知识图谱、多模态智能体与协同文本创作展开研究。'],
-        ['人机协同研究', '关注智能体协作、认知负荷与教育场景中的 AI 应用。'],
+        ['知识图谱与协作学习', '2024 国家级大创项目主持人，研究知识图谱与协作问题解决。'],
+        ['多模态智能体与协同创作', '2025 国家级大创项目主持人，研究人机协同文本创作。'],
       ],
     },
     journey: {
@@ -103,7 +104,7 @@ const content = {
       items: [
         {
           id: 'cityu', date: '2026.09 — 2027.06', name: ['香港城市大学'],
-          degree: '硕士', faculty: '工程学院', status: '在读',
+          degree: '硕士', faculty: '工程学院', status: '在读 · 预计 2027 毕业',
           program: ['计算机与信息工程'],
           programEn: ['MSc Computer and', 'Information Engineering'],
           image: './assets/cityu-campus.jpg', imageAlt: '香港城市大学校园',
@@ -178,11 +179,12 @@ const content = {
         { value: 4, suffix: '', label: 'Copyrights' },
       ],
       chips: ['Human–computer interaction', 'AI applications', 'Educational technology'],
+      metricsNote: 'First three metrics: Xiooh Travel project results',
       galleryLabel: 'Education, projects, and publications',
       gallery: [
         { label: 'Campus', title: 'City University of Hong Kong', detail: 'MSc Computer and Information Engineering', image: 'cityu-campus.jpg', alt: 'Photograph of the City University of Hong Kong campus', kind: 'photo', url: '#education', link: 'Education' },
         { label: 'Project', title: 'Xiooh Travel', detail: 'A Japan airport transfer platform I built', image: 'xioohtravel.png', alt: 'Homepage screenshot of the live Xiooh Travel website', kind: 'screen', url: 'https://xioohtravel.com/', link: 'Visit website' },
-        { label: 'Paper', title: 'CogniLoad · ICIC 2026', detail: 'Cognitive load and orchestration in LLMs', image: 'papers/cogniload-framework.webp', alt: 'Original CogniLoad project figure showing its benchmark and COF workflow', kind: 'figure', url: 'https://link.springer.com/chapter/10.1007/978-981-92-3557-5_2', link: 'Read paper' },
+        { label: 'Papers', title: 'ICIC 2026', detail: 'Conference proceedings featuring CogniLoad', image: 'conferences/icic-2026.webp', alt: 'Official cover of the ICIC 2026 proceedings, Part VII', kind: 'cover', url: '#research', link: 'Publications' },
       ],
     },
     experience: {
@@ -190,7 +192,7 @@ const content = {
       title: 'Work experience',
       intro: 'Product services, data annotation, and academic research.',
       items: [
-        ['Internship', 'Aug 2023 — Apr 2024', 'Xiooh Travel', 'Product & Customer Service', 'Improved ride services and customer conversion', ['70+ daily orders', '60% conversion']],
+        ['Internship', 'Aug 2023 — Apr 2024', 'Xiooh Travel', 'Product & Customer Service', 'Improved ride services and customer conversion', ['70+ daily orders', '60% upsell conversion']],
         ['Internship', 'Apr — May 2025', 'Zhengzhi Intelligent Information Technology', 'Data Annotator', 'Reviewed educational texts and reduced rework by 30%', ['120+ texts', '85%+ pass rate']],
         ['Research intern', 'Aug 2025', 'East China Normal University', 'Research Intern · Intelligent Education', 'Studied K–12 learning and supported agent design', ['Learning research', 'Agent design']],
         ['Research', 'Feb — Apr 2026', 'Peking University', 'Complex Learning & Agent Collaboration', 'Cleaned, analysed, and visualised eye-tracking data', ['40 students', '3,500+ records']],
@@ -207,7 +209,7 @@ const content = {
           label: '01 / LIVE PRODUCT',
           title: 'Xiooh Travel',
           titleEn: 'Japan airport transfers',
-          body: 'Simpler rides in Japan, from choosing a service to booking.',
+          body: 'Designed and built the booking flow and order lookup.',
           metric: ['150+ orders', '¥120k+ GMV'],
           image: './assets/xioohtravel.png',
           url: 'https://xioohtravel.com/',
@@ -220,7 +222,7 @@ const content = {
           label: '02 / AI PRODUCT',
           title: 'XioohPlanner',
           titleEn: 'AI Japan trip planner',
-          body: 'A personal itinerary connecting places, transport, and budget.',
+          body: 'Multi-city itineraries tailored to destinations, budget, and preferences.',
           metric: ['Multi-city routes', 'Shareable itineraries'],
           image: './assets/xioohplanner.png',
           url: 'https://xioohplanner.vercel.app/',
@@ -231,8 +233,8 @@ const content = {
       ],
       moreLabel: 'RELATED WORK',
       more: [
-        ['National innovation projects', 'Led two national projects on knowledge graphs, multimodal agents, and collaborative text creation.'],
-        ['Human–AI research', 'Agent collaboration, cognitive load, and AI in education.'],
+        ['Knowledge graphs & learning', 'Led a 2024 national innovation project on collaborative problem-solving.'],
+        ['Multimodal agents & writing', 'Led a 2025 national innovation project on human–AI collaborative writing.'],
       ],
     },
     journey: {
@@ -246,13 +248,13 @@ const content = {
       items: [
         {
           id: 'cityu', date: 'Sep 2026 — Jun 2027', name: ['City University', 'of Hong Kong'],
-          degree: 'MSc', faculty: 'College of Engineering', status: 'Current',
+          degree: 'MSc', faculty: 'College of Engineering', status: 'Current · Expected 2027',
           program: ['Computer and', 'Information Engineering'],
           image: './assets/cityu-campus.jpg', imageAlt: 'City University of Hong Kong campus',
         },
         {
           id: 'zjut', date: 'Sep 2022 — Jun 2026', name: ['Zhejiang University', 'of Technology'],
-          degree: 'BEd', faculty: 'School of Education',
+          degree: 'Bachelor’s', faculty: 'School of Education',
           program: ['Educational Technology'],
           focus: ['Agent building & design', 'Human–computer interaction', 'Data analysis'],
           advisor: 'Advisor: Xu Wei', achievements: ['Ranked 4th', 'Outstanding graduate', 'Scholarships'],
@@ -280,7 +282,7 @@ const content = {
       basedLabel: 'Based in',
       location: 'Ningbo',
       resumeLabel: 'Résumé',
-      resumeLink: 'View résumé PDF ↗',
+      resumeLink: 'View PDF (Chinese) ↗',
     },
     footer: '© 2026 Binghao Tu (Bruce)',
     toggle: '中',
@@ -289,15 +291,18 @@ const content = {
   },
 };
 
-// Published figures remain linked to their original paper or project source.
+// Official conference covers are separate from the links to the author's papers.
 const publications = [
-  { image: 'cogniload-framework.webp', url: 'https://link.springer.com/chapter/10.1007/978-981-92-3557-5_2', source: 'https://cogniload.github.io/', figure: 'Fig. 3', alt: { zh: 'CogniLoad 基准与 COF 协同框架原图', en: 'Original CogniLoad benchmark and COF framework figure' } },
-  { image: 'gccce-teaching.webp', url: 'https://gccce2025.jiangnan.edu.cn/dfiles/18334/doc/pdf/jiaoshi.pdf#page=311', source: 'https://gccce2025.jiangnan.edu.cn/dfiles/18334/doc/pdf/jiaoshi.pdf#page=315', figure: 'Fig. 3', alt: { zh: 'GCCCE 论文原图：游戏化教学的设计与应用', en: 'Original GCCCE figure on gamified teaching design and application' } },
-  { image: 'emnlp-personality.webp', url: 'https://aclanthology.org/2025.emnlp-main.42/', source: 'https://aclanthology.org/2025.emnlp-main.42.pdf#page=6', figure: 'Fig. 4', alt: { zh: 'EMNLP 论文原图：教师角色大模型与人类教师的人格维度比较', en: 'Original EMNLP radar chart comparing teacher-role LLMs and human teachers' } },
-  { image: 'citers-results.webp', url: 'https://citers2025.cite.hku.hk/wp-content/uploads/Conference_Proceedings_of_CITERS_2025.pdf#page=73', source: 'https://citers2025.cite.hku.hk/wp-content/uploads/Conference_Proceedings_of_CITERS_2025.pdf#page=77', figure: 'Fig. 2', alt: { zh: 'CITERS 论文原图：知识图谱支持下的人机协作学习结果比较', en: 'Original CITERS comparison of ChatGPT with and without knowledge-graph support' } },
+  { venue: 'ICIC 2026', image: 'icic-2026.webp', url: 'https://link.springer.com/chapter/10.1007/978-981-92-3557-5_2', source: 'https://link.springer.com/book/10.1007/978-981-92-3557-5', alt: { zh: 'ICIC 2026 会议论文集第七卷官方封面', en: 'Official ICIC 2026 proceedings cover, Part VII' } },
+  { venue: 'GCCCE 2025', image: 'gccce-2025.webp', url: 'https://gccce2025.jiangnan.edu.cn/dfiles/18334/doc/pdf/jiaoshi.pdf#page=311', source: 'https://gccce2025.jiangnan.edu.cn/dfiles/18334/doc/pdf/jiaoshi.pdf#page=1', alt: { zh: 'GCCCE 2025 教师论坛论文集官方封面', en: 'Official GCCCE 2025 Teacher Forum proceedings cover' } },
+  { venue: 'EMNLP 2025', image: 'emnlp-2025.webp', url: 'https://aclanthology.org/2025.emnlp-main.42/', source: 'https://aclanthology.org/2025.emnlp-main.0.pdf#page=1', alt: { zh: 'EMNLP 2025 官方会议论文集封面', en: 'Official EMNLP 2025 conference proceedings cover' } },
+  { venue: 'CITERS 2025', image: 'citers-2025.webp', url: 'https://citers2025.cite.hku.hk/wp-content/uploads/Conference_Proceedings_of_CITERS_2025.pdf#page=73', source: 'https://citers2025.cite.hku.hk/', alt: { zh: 'CITERS 2025 官方会议封面', en: 'Official CITERS 2025 conference cover' } },
 ];
 
-let lang = localStorage.getItem('bruce-lang') === 'en' ? 'en' : 'zh';
+let savedLanguage;
+try { savedLanguage = localStorage.getItem('bruce-lang'); } catch { /* Storage is optional. */ }
+const requestedLanguage = new URLSearchParams(location.search).get('lang');
+let lang = ['zh', 'en'].includes(requestedLanguage) ? requestedLanguage : savedLanguage === 'en' ? 'en' : 'zh';
 let cleanupView = [];
 let countersSeen = false;
 let galleryIndex = 0;
@@ -455,6 +460,10 @@ function setupActiveNavigation() {
   let frame = 0;
   const update = () => {
     frame = 0;
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+      setActive(sections.at(-1).id);
+      return;
+    }
     const active = sections.filter(section => section.getBoundingClientRect().top <= 150).at(-1);
     setActive(active?.id || 'intro');
   };
@@ -462,11 +471,72 @@ function setupActiveNavigation() {
     if (!frame) frame = requestAnimationFrame(update);
   };
   window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
   update();
   cleanupView.push(() => {
     window.removeEventListener('scroll', onScroll);
+    window.removeEventListener('resize', onScroll);
     cancelAnimationFrame(frame);
   });
+}
+
+function setupCoverPreview(copy) {
+  const dialog = document.querySelector('.cover-dialog');
+  let selected = 0;
+  let trigger;
+  const show = index => {
+    selected = (index + publications.length) % publications.length;
+    const paper = publications[selected];
+    dialog.querySelector('h2').textContent = paper.venue;
+    const image = dialog.querySelector('img');
+    image.src = `./assets/conferences/${paper.image}`;
+    image.alt = paper.alt[lang];
+    dialog.querySelector('.cover-description').textContent = copy.journey.papers[selected][0];
+    dialog.querySelector('.cover-count').textContent = `${selected + 1} / ${publications.length}`;
+    dialog.querySelector('[data-cover-source]').href = paper.source;
+    dialog.querySelector('[data-cover-paper]').href = paper.url;
+  };
+  document.querySelectorAll('[data-cover-index]').forEach(button => button.addEventListener('click', () => {
+    trigger = button;
+    show(Number(button.dataset.coverIndex));
+    dialog.showModal();
+    document.documentElement.classList.add('has-dialog');
+  }));
+  dialog.querySelectorAll('[data-cover-step]').forEach(button => button.addEventListener('click', () => show(selected + Number(button.dataset.coverStep))));
+  dialog.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+    event.preventDefault();
+    show(selected + (event.key === 'ArrowRight' ? 1 : -1));
+  });
+  dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+  dialog.addEventListener('close', () => {
+    document.documentElement.classList.remove('has-dialog');
+    trigger?.focus({ preventScroll: true });
+  });
+  cleanupView.push(() => document.documentElement.classList.remove('has-dialog'));
+}
+
+function setupEmailCopy() {
+  const status = document.querySelector('.contact-status');
+  const timers = new Set();
+  document.querySelectorAll('[data-copy-email]').forEach(button => button.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(button.dataset.copyEmail);
+      button.textContent = lang === 'zh' ? '已复制' : 'Copied';
+      status.textContent = lang === 'zh' ? '邮箱已复制' : 'Email address copied';
+      button.disabled = true;
+      const timer = setTimeout(() => {
+        button.textContent = lang === 'zh' ? '复制' : 'Copy';
+        button.disabled = false;
+        status.textContent = '';
+        timers.delete(timer);
+      }, 2500);
+      timers.add(timer);
+    } catch {
+      status.textContent = lang === 'zh' ? '未能自动复制，请选择邮箱地址手动复制' : 'Select the email address to copy it manually';
+    }
+  }));
+  cleanupView.push(() => timers.forEach(clearTimeout));
 }
 
 function render() {
@@ -477,6 +547,7 @@ function render() {
   document.title = lang === 'zh' ? '屠炳豪 Bruce Tu — 个人主页' : 'Binghao Tu (Bruce) — Personal Site';
   app.innerHTML = `
     <div class="site-shell">
+      <a class="skip-link" href="#main-content">${lang === 'zh' ? '跳至正文' : 'Skip to content'}</a>
       <div class="ambient ambient-one"></div>
       <div class="ambient ambient-two"></div>
       <header class="site-header">
@@ -487,7 +558,7 @@ function render() {
         <button class="lang-toggle" type="button" aria-label="${copy.ariaToggle}" title="${copy.ariaToggle}">${copy.toggle}</button>
       </header>
 
-      <main>
+      <main id="main-content" tabindex="-1">
         <section class="hero section-pad" id="intro">
           <div class="hero-copy">
             <div class="eyebrow"><span class="eyebrow-dot"></span>${copy.hero.eyebrow}</div>
@@ -495,7 +566,7 @@ function render() {
             <p class="hero-motto">${copy.hero.motto}</p>
             <div class="hero-actions">
               <a class="button button-primary" href="#work">${copy.hero.primary}<span>↘</span></a>
-              <a class="button button-quiet" href="./assets/bruce-tu-resume.pdf" target="_blank" rel="noopener noreferrer" type="application/pdf" aria-label="${lang === 'zh' ? '查看简历（PDF，新标签页打开）' : 'View résumé (PDF, opens in a new tab)'}">${copy.hero.secondary}<span aria-hidden="true">↗</span></a>
+              <a class="button button-quiet" href="./assets/bruce-tu-resume.pdf" target="_blank" rel="noopener noreferrer" type="application/pdf" aria-label="${lang === 'zh' ? '查看简历（PDF，新标签页打开）' : 'View résumé (Chinese PDF, opens in a new tab)'}">${copy.hero.secondary}<span aria-hidden="true">↗</span></a>
             </div>
             <div class="hero-note"><span class="status-dot"></span><span>${copy.hero.note}</span></div>
           </div>
@@ -525,6 +596,7 @@ function render() {
             </div>
           </div>
           <div class="bt-profile-metrics" aria-label="${lang === 'zh' ? '作品与研究成果' : 'Project and research highlights'}">${copy.about.metrics.map(metric => `<div class="bt-profile-metric"><strong class="metric-value" data-counter data-target="${metric.value}" data-suffix="${metric.suffix}" aria-label="${metric.value.toLocaleString('en-US')}${metric.suffix}">${metric.value.toLocaleString('en-US')}${metric.suffix}</strong><span>${metric.label}</span></div>`).join('')}</div>
+          <p class="metrics-note">${copy.about.metricsNote}</p>
         </section>
 
         <section class="section-pad experience-section" id="experience">
@@ -580,7 +652,7 @@ function render() {
           <div class="section-heading"><span class="section-kicker">05 / PUBLICATIONS</span><h2>${lang === 'zh' ? '论文发表' : 'Publications'}</h2></div>
           <div class="publication-list">${copy.journey.papers.map(([title, meta], index) => {
             const paper = publications[index];
-            return `<article class="publication-item" data-reading-anchor="paper-${index}"><a class="publication-image" href="${paper.source}" target="_blank" rel="noopener noreferrer" aria-label="${lang === 'zh' ? '查看论文原图' : 'View original figure'}: ${title}"><img src="./assets/papers/${paper.image}" alt="${paper.alt[lang]}" loading="lazy" /><span>${paper.figure} <span aria-hidden="true">↗</span></span></a><div class="publication-copy"><p class="publication-venue">${meta}</p><h3><a href="${paper.url}" target="_blank" rel="noopener noreferrer">${title}</a></h3><div class="publication-links"><a href="${paper.url}" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '阅读论文' : 'Read paper'} <span aria-hidden="true">↗</span></a></div></div></article>`;
+            return `<article class="publication-item" data-reading-anchor="paper-${index}"><button class="publication-image" type="button" data-cover-index="${index}" aria-haspopup="dialog" aria-label="${lang === 'zh' ? '查看会议封面' : 'View conference cover'}: ${paper.venue}"><img src="./assets/conferences/${paper.image}" alt="${paper.alt[lang]}" loading="lazy" /><span aria-hidden="true">${lang === 'zh' ? '查看封面' : 'View cover'} ⤢</span></button><div class="publication-copy"><p class="publication-venue">${meta}</p><h3><a href="${paper.url}" target="_blank" rel="noopener noreferrer">${title}</a></h3><div class="publication-links"><a href="${paper.url}" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '阅读论文' : 'Read paper'} <span aria-hidden="true">↗</span></a><a href="${paper.source}" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '会议资料' : 'Conference'} <span aria-hidden="true">↗</span></a></div></div></article>`;
           }).join('')}</div>
           <p class="publication-credits"><a href="https://github.com/Bruce-778/Bruce-778.github.io/blob/main/ASSET_SOURCES.md" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '图片来源与署名' : 'Image sources & credits'} ↗</a></p>
         </section>
@@ -588,12 +660,26 @@ function render() {
         <section class="section-pad contact-section" id="contact">
           <div class="contact-card">
             <div class="contact-copy"><span class="section-kicker">${copy.contact.kicker}</span><h2>${copy.contact.title}</h2><p>${copy.contact.body}</p><a class="button button-light" href="mailto:tubinghao11103@163.com">${copy.contact.cta}<span>↗</span></a></div>
-            <div class="contact-details"><div class="detail-row"><span>${copy.contact.emailLabel}</span><a href="mailto:tubinghao11103@163.com">tubinghao11103@163.com</a></div><div class="detail-row"><span>${copy.contact.emailAltLabel}</span><a href="mailto:${copy.contact.emailAlt}">${copy.contact.emailAlt}</a></div><div class="detail-row"><span>GitHub</span><a href="https://github.com/Bruce-778" target="_blank" rel="noreferrer">github.com/Bruce-778 ↗</a></div><div class="detail-row"><span>${copy.contact.resumeLabel}</span><a href="./assets/bruce-tu-resume.pdf" target="_blank" rel="noopener noreferrer" type="application/pdf">${copy.contact.resumeLink}</a></div><div class="detail-row"><span>${copy.contact.basedLabel}</span><span>${copy.contact.location}</span></div></div>
+            <div class="contact-details">
+              ${[[copy.contact.emailLabel, 'tubinghao11103@163.com'], [copy.contact.emailAltLabel, copy.contact.emailAlt]].map(([label, email]) => `<div class="detail-row"><span>${label}</span><div class="contact-value"><a href="mailto:${email}">${email}</a><button class="copy-email" type="button" data-copy-email="${email}" aria-label="${lang === 'zh' ? '复制邮箱' : 'Copy email'} ${email}">${lang === 'zh' ? '复制' : 'Copy'}</button></div></div>`).join('')}
+              <div class="detail-row"><span>GitHub</span><a href="https://github.com/Bruce-778" target="_blank" rel="noreferrer">github.com/Bruce-778 ↗</a></div>
+              <div class="detail-row"><span>${copy.contact.resumeLabel}</span><div class="resume-links"><a href="./assets/bruce-tu-resume.pdf" target="_blank" rel="noopener noreferrer" type="application/pdf">${copy.contact.resumeLink}</a><a href="./assets/bruce-tu-resume.pdf" download="Binghao-Tu-Resume.pdf">${lang === 'zh' ? '下载 ↓' : 'Download ↓'}</a></div></div>
+              <div class="detail-row"><span>${copy.contact.basedLabel}</span><span>${copy.contact.location}</span></div>
+              <p class="contact-status" role="status" aria-live="polite"></p>
+            </div>
           </div>
         </section>
       </main>
-      <footer class="site-footer"><span>${copy.footer}</span><span>BT / 2026</span></footer>
+      <footer class="site-footer"><span>${copy.footer}</span><a href="#intro">${lang === 'zh' ? '回到顶部 ↑' : 'Back to top ↑'}</a></footer>
     </div>
+    <dialog class="cover-dialog" aria-labelledby="cover-title" aria-describedby="cover-description">
+      <div class="cover-panel">
+        <div class="cover-heading"><div><p>${lang === 'zh' ? '会议封面' : 'CONFERENCE COVER'}</p><h2 id="cover-title"></h2></div><form method="dialog"><button class="cover-close" aria-label="${lang === 'zh' ? '关闭封面预览' : 'Close cover preview'}" autofocus>×</button></form></div>
+        <div class="cover-art"><img alt="" /></div>
+        <p class="cover-description" id="cover-description"></p>
+        <div class="cover-bottom"><div class="cover-links"><a data-cover-paper target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '阅读论文 ↗' : 'Read paper ↗'}</a><a data-cover-source target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '官方来源 ↗' : 'Official source ↗'}</a></div><div class="cover-controls"><button type="button" data-cover-step="-1" aria-label="${lang === 'zh' ? '上一张封面' : 'Previous cover'}">←</button><span class="cover-count" role="status"></span><button type="button" data-cover-step="1" aria-label="${lang === 'zh' ? '下一张封面' : 'Next cover'}">→</button></div></div>
+      </div>
+    </dialog>
   `;
 
   document.querySelector('.lang-toggle').addEventListener('click', () => {
@@ -608,7 +694,10 @@ function render() {
     const previousTop = current.getBoundingClientRect().top;
     const id = current.id;
     lang = lang === 'zh' ? 'en' : 'zh';
-    localStorage.setItem('bruce-lang', lang);
+    try { localStorage.setItem('bruce-lang', lang); } catch { /* The language switch also works without storage. */ }
+    const url = new URL(location.href);
+    url.searchParams.set('lang', lang);
+    history.replaceState(null, '', url);
     render();
     const replacement = key ? document.querySelector(`[data-reading-anchor="${key}"]`) : document.getElementById(id);
     window.scrollBy({ top: replacement.getBoundingClientRect().top - previousTop, behavior: 'instant' });
@@ -623,14 +712,23 @@ function render() {
     header.classList.toggle('is-menu-open', open);
   };
   menu.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
-  header.querySelectorAll('.site-nav a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+  header.querySelectorAll('.site-nav a').forEach(link => link.addEventListener('click', () => {
+    if (menu.getAttribute('aria-expanded') === 'true') {
+      const target = document.querySelector(link.getAttribute('href'));
+      target.tabIndex = -1;
+      target.focus({ preventScroll: true });
+    }
+    setMenu(false);
+  }));
   header.addEventListener('keydown', event => {
-    if (event.key === 'Escape') { setMenu(false); menu.focus(); }
+    if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') { setMenu(false); menu.focus(); }
   });
   const closeMenu = event => { if (!header.contains(event.target)) setMenu(false); };
   document.addEventListener('click', closeMenu);
   cleanupView.push(() => document.removeEventListener('click', closeMenu));
   setupGallery(copy.about);
+  setupCoverPreview(copy);
+  setupEmailCopy();
   animateCounters();
   setupActiveNavigation();
 }

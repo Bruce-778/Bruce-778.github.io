@@ -1,17 +1,17 @@
 # Image sources
 
-The page uses the owner's portrait, actual product screenshots, campus photos, and figures from the owner's co-authored publications. Generated still lifes and generic research illustrations are no longer rendered.
+The page uses the owner's portrait, actual product screenshots, campus photographs, and official conference covers. Paper-interior figures and generated decorative illustrations are not rendered.
 
-## Publication figures added on 2026-10-15
+## Conference covers — updated 2026-10-18
 
-| Local asset | Source | Figure and treatment |
+| Local asset | Official source | Displayed material |
 | --- | --- | --- |
-| `public/assets/papers/cogniload-framework.webp` | [CogniLoad project](https://cogniload.github.io/) — [original image](https://cogniload.github.io/static/images/3.png) | Figure 3, CogniLoad benchmark and COF workflow. Converted to WebP without altering content. The project site specifies CC BY-SA 4.0; this figure retains that license. [Published paper and authors](https://link.springer.com/chapter/10.1007/978-981-92-3557-5_2). |
-| `public/assets/papers/gccce-teaching.webp` | [GCCCE 2025 proceedings](https://gccce2025.jiangnan.edu.cn/dfiles/18334/doc/pdf/jiaoshi.pdf#page=315) | Figure 3, PDF page 315 / printed page 304. Extracted from Binghao Tu, Hongchao Sun and Wei Xu's paper. Cropped around the existing figure and encoded as WebP; no data or labels changed. |
-| `public/assets/papers/emnlp-personality.webp` | [Jiang et al., EMNLP 2025](https://aclanthology.org/2025.emnlp-main.42/) — [PDF](https://aclanthology.org/2025.emnlp-main.42.pdf#page=6) | Figure 4, PDF page 6 / printed page 820. Cropped with all axes and legend preserved; no data or labels changed. © 2025 ACL, CC BY 4.0. |
-| `public/assets/papers/citers-results.webp` | [CITERS 2025 proceedings](https://citers2025.cite.hku.hk/wp-content/uploads/Conference_Proceedings_of_CITERS_2025.pdf#page=77) | Figure 2, PDF page 77 / printed page 73, from Binghao Tu and Zengyi Yu's paper. Cropped with axes and legend preserved; no data or labels changed. |
+| `public/assets/conferences/icic-2026.webp` | [Springer proceedings, Part VII](https://link.springer.com/book/10.1007/978-981-92-3557-5) · [Publisher's full-resolution cover](https://media.springernature.com/full/springer-static/cover-hires/book/978-981-92-3557-5) | Official cover of *Advanced Intelligent Computing Technology and Applications*, ICIC 2026, Part VII, CCIS volume 3040. This is the volume containing Binghao Tu's [CogniLoad paper](https://link.springer.com/chapter/10.1007/978-981-92-3557-5_2). Converted to WebP with the complete design retained. © Springer Nature. |
+| `public/assets/conferences/gccce-2025.webp` | [GCCCE 2025 Teacher Forum proceedings](https://gccce2025.jiangnan.edu.cn/dfiles/18334/doc/pdf/jiaoshi.pdf#page=1) | Complete first-page conference proceedings cover, rendered directly from the official PDF. Source: GCCCE 2025 / Jiangnan University. |
+| `public/assets/conferences/emnlp-2025.webp` | [EMNLP 2025 proceedings front matter](https://aclanthology.org/2025.emnlp-main.0.pdf#page=1) · [Conference website](https://2025.emnlp.org/) | Official first-page cover of *The 2025 Conference on Empirical Methods in Natural Language Processing*, rendered directly from ACL Anthology's proceedings PDF. © Association for Computational Linguistics. |
+| `public/assets/conferences/citers-2025.webp` | [CITERS 2025](https://citers2025.cite.hku.hk/) · [Official conference poster](https://citers2025.cite.hku.hk/wp-content/uploads/citers2025_poster.jpg) | Complete official symposium poster, “Touching Hearts and Inspiring Minds with Emerging Digital Technologies.” Converted to WebP without changing its design. Source: Centre for Information Technology in Education, The University of Hong Kong. |
 
-Original papers and figures remain accessible from each publication entry. The figures illustrate the cited research, and are not presented as new artwork or as personal conference attendance photographs.
+Each cover is presented beside its corresponding publication. Clicking it opens an in-page preview with links to the official source and the author's paper. The images identify the conferences; they are not represented as photographs of the owner's attendance or as original artwork. Rights remain with their respective owners.
 
 ## Existing assets retained
 
@@ -19,3 +19,5 @@ Original papers and figures remain accessible from each publication entry. The f
 - `xioohtravel.png`, `xioohplanner.png`: screenshots of the owner's live products at [Xiooh Travel](https://xioohtravel.com/) and [XioohPlanner](https://xioohplanner.vercel.app/).
 - `cityu-campus.jpg`, `zjut-campus.jpg`: existing campus photographs retained from the previous site. These are campus illustrations, not photographs claiming the owner's participation in an event.
 - `bruce-tu-resume.pdf`: the exact résumé supplied by the owner on 2026-10-15, published at their request.
+
+The older `public/assets/papers/` figure files are retained in the repository for history but are not referenced by the page or carousel.
