@@ -21,7 +21,7 @@ const content = {
       secondary: '查看简历',
       portraitAlt: '屠炳豪的肖像照片',
       portraitPlace: '宁波 · NINGBO',
-      floating: ['MSc CIE @ CityU', '香港 / 宁波', 'AI 产品创作者'],
+      floating: ['MSc CIE @ CityU', '杭州 / 宁波'],
     },
     about: {
       kicker: '01 / ABOUT',
@@ -165,7 +165,7 @@ const content = {
       secondary: 'View résumé',
       portraitAlt: 'Portrait of Binghao Tu, also known as Bruce',
       portraitPlace: 'NINGBO',
-      floating: ['MSc CIE @ CityU', 'Hong Kong / Ningbo', 'Independent maker'],
+      floating: ['MSc CIE @ CityU', 'Hangzhou / Ningbo'],
     },
     about: {
       kicker: '01 / ABOUT',
@@ -578,7 +578,7 @@ function render() {
               <div class="portrait-caption"><span>${copy.hero.portraitPlace}</span></div>
             </div>
             <div class="floating-card floating-top"><span class="card-label">CURRENTLY</span><strong>${copy.hero.floating[0]}</strong></div>
-            <div class="floating-card floating-bottom"><span>${copy.hero.floating[1]}</span><span>${copy.hero.floating[2]}</span></div>
+            <div class="floating-card floating-bottom"><span>${copy.hero.floating[1]}</span></div>
           </div>
           <a class="scroll-cue" href="#about"><span class="scroll-line"></span>${copy.scrollHint}</a>
         </section>
