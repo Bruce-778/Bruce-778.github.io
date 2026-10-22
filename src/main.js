@@ -97,10 +97,6 @@ const content = {
       kicker: '04 / EDUCATION',
       title: '学习经历',
       intro: '香港城市大学 · 浙江工业大学',
-      growthLabel: '成长轨迹',
-      growthTitle: '学习与实践',
-      growthIntro: '2022 — 2026',
-      growth: [['2022', '教育技术', 'Education technology'], ['2024', '服务现场', 'Real-world service'], ['2025', 'AI 研究', 'AI research'], ['2026', '真实产品', 'Live products']],
       items: [
         {
           id: 'cityu', date: '2026.09 — 2027.06', name: ['香港城市大学'],
@@ -137,7 +133,7 @@ const content = {
       emailAltLabel: 'Gmail',
       emailAlt: 'bruce031103@gmail.com',
       basedLabel: '所在地',
-      location: 'Ningbo',
+      location: '宁波',
       resumeLabel: '简历',
       resumeLink: '查看简历 PDF ↗',
     },
@@ -241,10 +237,6 @@ const content = {
       kicker: '04 / EDUCATION',
       title: 'Learning experience',
       intro: 'City University of Hong Kong · Zhejiang University of Technology',
-      growthLabel: 'GROWTH PATH',
-      growthTitle: 'Education & practice',
-      growthIntro: '2022 — 2026',
-      growth: [['2022', '教育技术', 'Education'], ['2024', '服务现场', 'Service'], ['2025', 'AI 研究', 'AI research'], ['2026', '真实产品', 'Products']],
       items: [
         {
           id: 'cityu', date: 'Sep 2026 — Jun 2027', name: ['City University', 'of Hong Kong'],
@@ -318,7 +310,7 @@ function protectLineEndings() {
     '.bt-profile-story p', '.gallery-caption h3', '.gallery-caption p',
     '.experience-content h3', '.experience-content strong', '.experience-content p',
     '.project-body > p', '.lab-item h3', '.lab-item p',
-    '.growth-track-head h3', '.growth-track-head p', '.publication-copy h3 a',
+    '.publication-copy h3 a',
     '.award-list > span', '.contact-copy p', '.site-footer > span:first-child',
   ].join(',');
   document.querySelectorAll(selectors).forEach(element => {
@@ -629,10 +621,6 @@ function render() {
 
         <section class="section-pad journey-section" id="education">
           <div class="section-heading"><span class="section-kicker">${copy.journey.kicker}</span><h2>${copy.journey.title}</h2><p>${copy.journey.intro}</p></div>
-          <div class="growth-track" aria-label="${copy.journey.growthLabel}" data-reading-anchor="growth-path">
-            <div class="growth-track-head"><span class="mini-kicker">${copy.journey.growthLabel}</span><h3>${copy.journey.growthTitle}</h3><p>${copy.journey.growthIntro}</p></div>
-            <div class="growth-steps">${copy.journey.growth.map(([year, title, label], index) => `<div class="growth-step"><span class="growth-step-dot">0${index + 1}</span><strong>${year}</strong><span>${lang === 'zh' ? title : label}</span></div>`).join('')}</div>
-          </div>
           <div class="education-grid">${copy.journey.items.map(school => `
             <article class="education-card" data-reading-anchor="education-${school.id}">
               <div class="education-image"><img src="${school.image}" alt="${school.imageAlt}" loading="lazy" /></div>

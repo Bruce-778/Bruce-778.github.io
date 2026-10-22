@@ -172,15 +172,6 @@ main:focus { outline:none; }
 .lab-item p { margin:7px 0 0; color:var(--ink-soft); font-size:14px; }
 
 .journey-section { padding-block:52px 48px; }
-.growth-track { display:grid; grid-template-columns:210px minmax(0,1fr); gap:28px; align-items:center; margin-top:28px; padding:24px 26px; border:1px solid var(--line); border-radius:18px; background:#edf4f2; }
-.growth-track-head,.growth-steps { min-width:0; }
-.growth-track-head h3 { margin:6px 0 0; font-size:22px; font-weight:500; letter-spacing:-.025em; }
-.growth-track-head p { margin:8px 0 0; color:var(--ink-soft); font-size:14px; }
-.growth-steps { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
-.growth-step { display:grid; gap:8px; padding:13px 14px; border-left:2px solid #b6d1c6; }
-.growth-step-dot { color:var(--sage); font-size:11px; }
-.growth-step strong { color:var(--ink); font-size:24px; line-height:1; font-weight:500; }
-.growth-step > span:last-child { color:var(--ink-soft); font-size:14px; white-space:nowrap; }
 
 /* Each campus photo belongs to its own record; richer details never create an empty parallel card. */
 .education-grid { display:grid; gap:20px; margin-top:28px; }
@@ -291,11 +282,6 @@ main:focus { outline:none; }
   .experience-item { grid-template-columns:160px minmax(0,1fr); gap:8px 24px; }
   .experience-meta { grid-row:1 / span 2; }
   .experience-result { grid-column:2; flex-direction:row; flex-wrap:wrap; padding:0; }
-  .growth-track { grid-template-columns:minmax(0,1fr); gap:18px; }
-  .growth-track-head { max-width:520px; }
-  .growth-steps { padding-top:20px; }
-  .growth-step { padding:14px 18px; }
-  .growth-step:nth-child(n) { transform:none; }
   .education-card { grid-template-columns:28% minmax(0,1fr); }
   .education-copy { padding:22px 24px; }
   .contact-card { gap:32px; padding:32px; }
@@ -407,12 +393,6 @@ main:focus { outline:none; }
   .lab-index { padding-top:3px; }
   .work-inner { padding-block:40px; }
   .journey-section { padding-block:40px; }
-  .growth-track { padding:23px; gap:20px; margin-top:24px; }
-  .growth-track-head h3 { font-size:28px; }
-  .growth-track-head p { font-size:14px; }
-  .growth-steps { grid-template-columns:repeat(2,minmax(0,1fr)); padding:0; gap:10px; }
-  .growth-step { padding:13px; gap:7px; }
-  .growth-step > span:last-child { font-size:13px; }
   .education-card { grid-template-columns:minmax(0,1fr); }
   .education-image { height:170px; min-height:0; }
   .education-copy { padding:21px; }
