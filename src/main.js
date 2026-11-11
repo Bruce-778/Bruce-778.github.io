@@ -131,7 +131,7 @@ const content = {
       basedLabel: '所在地',
       location: '宁波',
       resumeLabel: '简历',
-      resumeLink: '查看简历 PDF ↗',
+      resumeLink: '查看 PDF',
     },
     footer: '© 2026 屠炳豪 Bruce Tu',
     toggle: 'EN',
@@ -266,7 +266,7 @@ const content = {
       basedLabel: 'Based in',
       location: 'Ningbo',
       resumeLabel: 'Résumé',
-      resumeLink: 'View PDF (Chinese) ↗',
+      resumeLink: 'View PDF · Chinese',
     },
     footer: '© 2026 Binghao Tu (Bruce)',
     toggle: '中',
@@ -425,6 +425,9 @@ function animateCounters() {
 
 function setupActiveNavigation() {
   const links = [...document.querySelectorAll('.site-nav a')];
+  const menu = document.querySelector('.menu-toggle');
+  const currentLabel = menu.querySelector('.menu-current');
+  const progress = document.querySelector('.reading-progress');
   const sections = links
     .map((link) => document.getElementById(link.getAttribute('href').slice(1)))
     .filter(Boolean);
@@ -435,10 +438,18 @@ function setupActiveNavigation() {
       if (active) link.setAttribute('aria-current', 'location');
       else link.removeAttribute('aria-current');
     });
+    const label = links.find(link => link.getAttribute('href') === `#${id}`)?.textContent;
+    if (label && currentLabel.textContent !== label) {
+      currentLabel.textContent = label;
+      menu.setAttribute('aria-label', `${lang === 'zh' ? '页面导航：' : 'Page navigation: '}${label}`);
+    }
   };
   let frame = 0;
   const update = () => {
     frame = 0;
+    const distance = document.documentElement.scrollHeight - window.innerHeight;
+    const fraction = distance > 0 ? Math.min(1, Math.max(0, window.scrollY / distance)) : 0;
+    progress.style.transform = `scaleX(${fraction})`;
     if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
       setActive(sections.at(-1).id);
       return;
@@ -527,10 +538,11 @@ function render() {
   app.innerHTML = `
     <div class="site-shell">
       <a class="skip-link" href="#main-content">${lang === 'zh' ? '跳至正文' : 'Skip to content'}</a>
+      <div class="reading-progress" aria-hidden="true"></div>
       <div class="ambient ambient-one"></div>
       <div class="ambient ambient-two"></div>
       <header class="site-header">
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation"><span aria-hidden="true">☰</span>${lang === 'zh' ? '页面导航' : 'Navigation'}</button>
+        <button class="menu-toggle" type="button" aria-label="${lang === 'zh' ? '页面导航：首页' : 'Page navigation: Intro'}" aria-expanded="false" aria-controls="main-navigation"><span class="menu-icon" aria-hidden="true"></span><span class="menu-current">${copy.nav[0][1]}</span></button>
         <nav class="site-nav" id="main-navigation" aria-label="${lang === 'zh' ? '页面导航' : 'Page navigation'}">
           ${copy.nav.map(([id, label]) => `<a href="#${id}">${label}</a>`).join('')}
         </nav>
@@ -626,25 +638,25 @@ function render() {
           <div class="section-heading"><span class="section-kicker">05 / PUBLICATIONS</span><h2>${lang === 'zh' ? '论文发表' : 'Publications'}</h2></div>
           <div class="publication-list">${copy.journey.papers.map(([title, meta], index) => {
             const paper = publications[index];
-            return `<article class="publication-item" data-reading-anchor="paper-${index}"><button class="publication-image" type="button" data-cover-index="${index}" aria-haspopup="dialog" aria-label="${lang === 'zh' ? '查看会议封面' : 'View conference cover'}: ${paper.venue}"><img src="./assets/conferences/${paper.image}" alt="${paper.alt[lang]}" loading="lazy" /><span aria-hidden="true">${lang === 'zh' ? '查看封面' : 'View cover'} ⤢</span></button><div class="publication-copy"><p class="publication-venue">${meta}</p><h3><a href="${paper.url}" target="_blank" rel="noopener noreferrer">${title}</a></h3><div class="publication-links"><a href="${paper.url}" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '阅读论文' : 'Read paper'} <span aria-hidden="true">↗</span></a><a href="${paper.source}" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '会议资料' : 'Conference'} <span aria-hidden="true">↗</span></a></div></div></article>`;
+            return `<article class="publication-item" data-reading-anchor="paper-${index}"><button class="publication-image" type="button" data-cover-index="${index}" aria-haspopup="dialog" aria-label="${lang === 'zh' ? '查看会议封面' : 'View conference cover'}: ${paper.venue}"><img src="./assets/conferences/${paper.image}" alt="${paper.alt[lang]}" loading="lazy" /><span aria-hidden="true">${lang === 'zh' ? '查看封面' : 'View cover'} ⤢</span></button><div class="publication-copy"><p class="publication-venue">${meta}</p><h3><a href="${paper.url}" target="_blank" rel="noopener noreferrer">${title}</a></h3><div class="publication-links"><a class="content-link" href="${paper.url}" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '阅读论文' : 'Read paper'}</a><a class="content-link" href="${paper.source}" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '会议资料' : 'Conference'}</a></div></div></article>`;
           }).join('')}</div>
           <p class="publication-credits"><a href="https://github.com/Bruce-778/Bruce-778.github.io/blob/main/ASSET_SOURCES.md" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '图片来源与署名' : 'Image sources & credits'} ↗</a></p>
         </section>
 
         <section class="section-pad contact-section" id="contact">
           <div class="contact-card">
-            <div class="contact-copy"><span class="section-kicker">${copy.contact.kicker}</span><h2>${copy.contact.title}</h2><a class="button button-light" href="mailto:tubinghao11103@163.com">${copy.contact.cta}<span>↗</span></a></div>
+            <div class="contact-copy"><span class="section-kicker">${copy.contact.kicker}</span><h2>${copy.contact.title}</h2><a class="button button-light" href="mailto:tubinghao11103@163.com">${copy.contact.cta}</a></div>
             <div class="contact-details">
-              ${[[copy.contact.emailLabel, 'tubinghao11103@163.com'], [copy.contact.emailAltLabel, copy.contact.emailAlt]].map(([label, email]) => `<div class="detail-row"><span>${label}</span><div class="contact-value"><a href="mailto:${email}">${email}</a><button class="copy-email" type="button" data-copy-email="${email}" aria-label="${lang === 'zh' ? '复制邮箱' : 'Copy email'} ${email}">${lang === 'zh' ? '复制' : 'Copy'}</button></div></div>`).join('')}
-              <div class="detail-row"><span>GitHub</span><a href="https://github.com/Bruce-778" target="_blank" rel="noreferrer">github.com/Bruce-778 ↗</a></div>
-              <div class="detail-row"><span>${copy.contact.resumeLabel}</span><div class="resume-links"><a href="./assets/bruce-tu-resume.pdf" target="_blank" rel="noopener noreferrer" type="application/pdf">${copy.contact.resumeLink}</a><a href="./assets/bruce-tu-resume.pdf" download="Binghao-Tu-Resume.pdf">${lang === 'zh' ? '下载 ↓' : 'Download ↓'}</a></div></div>
+              ${[[copy.contact.emailLabel, 'tubinghao11103@163.com'], [copy.contact.emailAltLabel, copy.contact.emailAlt]].map(([label, email]) => `<div class="detail-row"><span>${label}</span><div class="contact-value"><a href="mailto:${email}">${email}</a><button class="content-link copy-email" type="button" data-copy-email="${email}" aria-label="${lang === 'zh' ? '复制邮箱' : 'Copy email'} ${email}">${lang === 'zh' ? '复制' : 'Copy'}</button></div></div>`).join('')}
+              <div class="detail-row"><span>GitHub</span><a class="content-link" href="https://github.com/Bruce-778" target="_blank" rel="noopener noreferrer">github.com/Bruce-778</a></div>
+              <div class="detail-row"><span>${copy.contact.resumeLabel}</span><div class="resume-links"><a class="content-link" href="./assets/bruce-tu-resume.pdf" target="_blank" rel="noopener noreferrer" type="application/pdf">${copy.contact.resumeLink}</a><a class="content-link" href="./assets/bruce-tu-resume.pdf" download="Binghao-Tu-Resume.pdf">${lang === 'zh' ? '下载' : 'Download'}</a></div></div>
               <div class="detail-row"><span>${copy.contact.basedLabel}</span><span>${copy.contact.location}</span></div>
               <p class="contact-status" role="status" aria-live="polite"></p>
             </div>
           </div>
         </section>
       </main>
-      <footer class="site-footer"><span>${copy.footer}</span><a href="#intro">${lang === 'zh' ? '回到顶部 ↑' : 'Back to top ↑'}</a></footer>
+      <footer class="site-footer"><span>${copy.footer}</span><a href="#intro">${lang === 'zh' ? '回到顶部' : 'Back to top'}</a></footer>
     </div>
     <dialog class="cover-dialog" aria-labelledby="cover-title" aria-describedby="cover-description">
       <div class="cover-panel">
