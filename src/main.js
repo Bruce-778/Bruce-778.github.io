@@ -38,7 +38,7 @@ const content = {
       metricsNote: '前三项为 Xiooh Travel 项目数据',
       galleryLabel: '学习、项目与论文',
       gallery: [
-        { label: '校园', title: '香港城市大学', detail: 'MSc Computer and Information Engineering', image: 'cityu-campus.jpg', alt: '香港城市大学校园实景', kind: 'photo', url: '#education', link: '学习经历' },
+        { label: '校园', title: '香港城市大学', detail: '计算机与信息工程硕士在读', image: 'cityu-campus.jpg', alt: '香港城市大学校园实景', kind: 'photo', url: '#education', link: '学习经历' },
         { label: '项目', title: 'Xiooh Travel', detail: '独立开发的日本机场接送平台', image: 'xioohtravel.png', alt: 'Xiooh Travel 已上线网站的首页截图', kind: 'screen', url: 'https://xioohtravel.com/', link: '访问网站' },
         { label: '会议', title: 'ICIC 2026', detail: 'CogniLoad 研究收录于会议论文集', image: 'conferences/icic-2026.webp', alt: 'ICIC 2026 会议论文集第七卷官方封面', kind: 'cover', url: '#research', link: '论文发表' },
       ],
@@ -56,7 +56,7 @@ const content = {
     work: {
       kicker: '03 / PROJECTS',
       title: '项目经历',
-      visit: '访问项目 ↗',
+      visit: '访问网站',
       cards: [
         {
           id: 'travel',
@@ -192,7 +192,7 @@ const content = {
     work: {
       kicker: '03 / PROJECTS',
       title: 'Projects',
-      visit: 'Visit project ↗',
+      visit: 'Visit website',
       cards: [
         {
           id: 'travel',
@@ -341,7 +341,6 @@ function setupGallery(copy) {
   const slides = [...gallery.querySelectorAll('.gallery-slide')];
   const selectors = [...gallery.querySelectorAll('[data-gallery-select]')];
   const status = gallery.querySelector('.gallery-status');
-  const counter = gallery.querySelector('.gallery-counter');
   const show = (index, announce = true) => {
     galleryIndex = (index + slides.length) % slides.length;
     slides.forEach((slide, i) => {
@@ -350,12 +349,8 @@ function setupGallery(copy) {
       slide.inert = i !== galleryIndex;
     });
     selectors.forEach((button, i) => button.setAttribute('aria-pressed', String(i === galleryIndex)));
-    counter.textContent = `0${galleryIndex + 1} / 0${slides.length}`;
     if (announce) status.textContent = `${galleryIndex + 1} / ${slides.length} · ${copy.gallery[galleryIndex].title}`;
   };
-  gallery.querySelectorAll('[data-gallery-step]').forEach(button => {
-    button.addEventListener('click', () => show(galleryIndex + Number(button.dataset.galleryStep)));
-  });
   selectors.forEach((button, i) => button.addEventListener('click', () => show(i)));
   gallery.addEventListener('keydown', event => {
     const target = { ArrowLeft: galleryIndex - 1, ArrowRight: galleryIndex + 1, Home: 0, End: slides.length - 1 }[event.key];
@@ -572,10 +567,9 @@ function render() {
             <div class="bt-profile-story"><div class="about-lead"><span class="section-kicker">${copy.about.kicker}</span><h2>${copy.about.title}</h2></div><p>${copy.about.body}</p><p>${copy.about.body2}</p><div class="chip-row">${copy.about.chips.map(chip => `<span>${chip}</span>`).join('')}</div></div>
             <div class="interest-gallery" role="region" aria-roledescription="${lang === 'zh' ? '图片轮播' : 'carousel'}" aria-label="${copy.about.galleryLabel}">
               <div class="gallery-stage">
-                ${copy.about.gallery.map((slide, index) => `<figure class="gallery-slide gallery-${slide.kind}${index === galleryIndex ? ' is-current' : ''}" aria-hidden="${index !== galleryIndex}" ${index !== galleryIndex ? 'inert' : ''}><img src="./assets/${slide.image}" alt="${slide.alt}" loading="lazy" draggable="false" /><figcaption class="gallery-caption"><div><h3>${slide.title}</h3><p>${slide.detail}</p></div><a href="${slide.url}" ${slide.url.startsWith('https:') ? 'target="_blank" rel="noopener noreferrer"' : ''} aria-label="${slide.link}: ${slide.title}"><span>${slide.link}</span><span aria-hidden="true">↗</span></a></figcaption></figure>`).join('')}
+                ${copy.about.gallery.map((slide, index) => `<figure class="gallery-slide gallery-${slide.kind}${index === galleryIndex ? ' is-current' : ''}" aria-hidden="${index !== galleryIndex}" ${index !== galleryIndex ? 'inert' : ''}><img src="./assets/${slide.image}" alt="${slide.alt}" loading="lazy" draggable="false" /><figcaption class="gallery-caption"><div><h3>${slide.title}</h3><p>${slide.detail}</p></div><a class="content-link" href="${slide.url}" ${slide.url.startsWith('https:') ? 'target="_blank" rel="noopener noreferrer"' : ''} aria-label="${slide.link}: ${slide.title}">${slide.link}</a></figcaption></figure>`).join('')}
               </div>
-              <div class="gallery-footer"><div class="gallery-selectors" role="group" aria-label="${lang === 'zh' ? '选择图片' : 'Choose an image'}">${copy.about.gallery.map((slide,index) => `<button type="button" data-gallery-select="${index}" aria-pressed="${index === galleryIndex}"><span aria-hidden="true">0${index + 1}</span>${slide.label}</button>`).join('')}</div><div class="gallery-arrows"><button type="button" data-gallery-step="-1" aria-label="${lang === 'zh' ? '上一张图片' : 'Previous image'}">←</button><button type="button" data-gallery-step="1" aria-label="${lang === 'zh' ? '下一张图片' : 'Next image'}">→</button></div></div>
-              <span class="gallery-counter sr-only" aria-hidden="true">0${galleryIndex + 1} / 03</span>
+              <div class="gallery-footer"><div class="gallery-selectors" role="group" aria-label="${lang === 'zh' ? '选择图片' : 'Choose an image'}">${copy.about.gallery.map((slide,index) => `<button type="button" data-gallery-select="${index}" aria-pressed="${index === galleryIndex}">${slide.label}</button>`).join('')}</div></div>
               <span class="gallery-status sr-only" role="status" aria-live="polite" aria-atomic="true"></span>
             </div>
           </div>
@@ -600,9 +594,9 @@ function render() {
                     </a>
                   </div>
                   <div class="project-body">
-                    <div class="project-title-row"><div><h3>${card.title}</h3><span>${card.titleEn}</span></div><a href="${card.url}" target="_blank" rel="noreferrer" aria-label="${copy.work.visit}: ${card.title}">↗</a></div>
+                    <div class="project-title-row"><h3>${card.title}</h3><span>${card.titleEn}</span></div>
                     <p>${card.body}</p>
-                    <div class="project-meta"><div class="project-results">${card.metric.map(item => `<span>${item}</span>`).join('')}</div><a href="${card.url}" target="_blank" rel="noreferrer">${copy.work.visit}</a></div>
+                    <div class="project-meta"><div class="project-results">${card.metric.map(item => `<span>${item}</span>`).join('')}</div><a class="content-link" href="${card.url}" target="_blank" rel="noopener noreferrer" aria-label="${copy.work.visit}: ${card.title}">${copy.work.visit}</a></div>
                     <div class="project-tags">${card.tags.map(tag => `<span>${tag}</span>`).join('')}</div>
                   </div>
                 </article>`).join('')}
