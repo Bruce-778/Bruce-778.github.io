@@ -46,7 +46,6 @@ const content = {
     experience: {
       kicker: '02 / EXPERIENCE',
       title: '实习经历',
-      intro: '产品服务、数据标注与学术研究。',
       items: [
         ['实习', '2023.08 — 2024.04', '希游旅行有限公司', '产品与客户服务', '优化用车服务流程与用户转化', ['70+ 日均订单', '60% 二销转化率']],
         ['实习', '2025.04 — 2025.05', '整智智能信息技术（杭州）有限公司', '数据标注员', '复核教育文本，推动返工率下降 30%', ['120+ 教育文本', '85%+ 通过率']],
@@ -57,7 +56,6 @@ const content = {
     work: {
       kicker: '03 / PROJECTS',
       title: '项目经历',
-      intro: '独立设计、开发并上线的产品。',
       visit: '访问项目 ↗',
       cards: [
         {
@@ -96,7 +94,6 @@ const content = {
     journey: {
       kicker: '04 / EDUCATION',
       title: '学习经历',
-      intro: '香港城市大学 · 浙江工业大学',
       items: [
         {
           id: 'cityu', date: '2026.09 — 2027.06', name: ['香港城市大学'],
@@ -126,7 +123,6 @@ const content = {
     contact: {
       kicker: '06 / CONTACT',
       title: '联系我',
-      body: '欢迎交流与项目合作。',
       cta: '发一封邮件',
       github: '查看 GitHub',
       emailLabel: 'Email',
@@ -186,7 +182,6 @@ const content = {
     experience: {
       kicker: '02 / EXPERIENCE',
       title: 'Work experience',
-      intro: 'Product services, data annotation, and academic research.',
       items: [
         ['Internship', 'Aug 2023 — Apr 2024', 'Xiooh Travel', 'Product & Customer Service', 'Improved ride services and customer conversion', ['70+ daily orders', '60% upsell conversion']],
         ['Internship', 'Apr — May 2025', 'Zhengzhi Intelligent Information Technology', 'Data Annotator', 'Reviewed educational texts and reduced rework by 30%', ['120+ texts', '85%+ pass rate']],
@@ -197,7 +192,6 @@ const content = {
     work: {
       kicker: '03 / PROJECTS',
       title: 'Projects',
-      intro: 'Products I designed, built, and launched.',
       visit: 'Visit project ↗',
       cards: [
         {
@@ -236,7 +230,6 @@ const content = {
     journey: {
       kicker: '04 / EDUCATION',
       title: 'Learning experience',
-      intro: 'City University of Hong Kong · Zhejiang University of Technology',
       items: [
         {
           id: 'cityu', date: 'Sep 2026 — Jun 2027', name: ['City University', 'of Hong Kong'],
@@ -265,7 +258,6 @@ const content = {
     contact: {
       kicker: '06 / CONTACT',
       title: 'Contact',
-      body: 'For inquiries and project collaborations.',
       cta: 'Send an email',
       github: 'View GitHub',
       emailLabel: 'Email',
@@ -306,12 +298,12 @@ const phrases = (items) => items.map(item => `<span class="text-unit">${item}</s
 function protectLineEndings() {
   const segmenter = typeof Intl.Segmenter === 'function' ? new Intl.Segmenter('zh-CN', { granularity: 'word' }) : null;
   const selectors = [
-    'h2', '.hero-motto', '.hero-note > span:last-child', '.section-heading p',
+    'h2', '.hero-motto', '.hero-note > span:last-child',
     '.bt-profile-story p', '.gallery-caption h3', '.gallery-caption p',
     '.experience-content h3', '.experience-content strong', '.experience-content p',
     '.project-body > p', '.lab-item h3', '.lab-item p',
     '.publication-copy h3 a',
-    '.award-list > span', '.contact-copy p', '.site-footer > span:first-child',
+    '.award-list > span', '.site-footer > span:first-child',
   ].join(',');
   document.querySelectorAll(selectors).forEach(element => {
     if (element.children.length) return;
@@ -557,8 +549,8 @@ function render() {
             <h1>${copy.hero.title}${copy.hero.nameCn ? `<small>${copy.hero.nameCn}</small>` : ''}</h1>
             <p class="hero-motto">${copy.hero.motto}</p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#work">${copy.hero.primary}<span>↘</span></a>
-              <a class="button button-quiet" href="./assets/bruce-tu-resume.pdf" target="_blank" rel="noopener noreferrer" type="application/pdf" aria-label="${lang === 'zh' ? '查看简历（PDF，新标签页打开）' : 'View résumé (Chinese PDF, opens in a new tab)'}">${copy.hero.secondary}<span aria-hidden="true">↗</span></a>
+              <a class="button button-quiet" href="#work">${copy.hero.primary}</a>
+              <a class="button button-quiet" href="./assets/bruce-tu-resume.pdf" target="_blank" rel="noopener noreferrer" type="application/pdf" aria-label="${lang === 'zh' ? '查看简历（PDF，新标签页打开）' : 'View résumé (Chinese PDF, opens in a new tab)'}">${copy.hero.secondary}</a>
             </div>
             <div class="hero-note"><span class="status-dot"></span><span>${copy.hero.note}</span></div>
           </div>
@@ -592,13 +584,13 @@ function render() {
         </section>
 
         <section class="section-pad experience-section" id="experience">
-          <div class="section-heading"><span class="section-kicker">${copy.experience.kicker}</span><h2>${copy.experience.title}</h2><p>${copy.experience.intro}</p></div>
+          <div class="section-heading"><span class="section-kicker">${copy.experience.kicker}</span><h2>${copy.experience.title}</h2></div>
           <div class="experience-list">${copy.experience.items.slice().reverse().map(([type, date, place, role, detail, result], index) => `<article class="experience-item" data-reading-anchor="experience-${index}"><div class="experience-meta"><span class="experience-type">${type}</span><span class="experience-date">${date}</span></div><div class="experience-content"><h3>${place}</h3><strong>${role}</strong><p>${detail}</p></div><div class="experience-result">${result.map(item => `<span>${item}</span>`).join('')}</div></article>`).join('')}</div>
         </section>
 
         <section class="work-section" id="work">
           <div class="section-pad work-inner">
-            <div class="section-heading light"><span class="section-kicker">${copy.work.kicker}</span><h2>${copy.work.title}</h2><p>${copy.work.intro}</p></div>
+            <div class="section-heading light"><span class="section-kicker">${copy.work.kicker}</span><h2>${copy.work.title}</h2></div>
             <div class="project-grid">
               ${copy.work.cards.map(card => `
                 <article class="project-card ${card.id}" data-reading-anchor="work-${card.id}">
@@ -620,7 +612,7 @@ function render() {
         </section>
 
         <section class="section-pad journey-section" id="education">
-          <div class="section-heading"><span class="section-kicker">${copy.journey.kicker}</span><h2>${copy.journey.title}</h2><p>${copy.journey.intro}</p></div>
+          <div class="section-heading"><span class="section-kicker">${copy.journey.kicker}</span><h2>${copy.journey.title}</h2></div>
           <div class="education-grid">${copy.journey.items.map(school => `
             <article class="education-card" data-reading-anchor="education-${school.id}">
               <div class="education-image"><img src="${school.image}" alt="${school.imageAlt}" loading="lazy" /></div>
@@ -647,7 +639,7 @@ function render() {
 
         <section class="section-pad contact-section" id="contact">
           <div class="contact-card">
-            <div class="contact-copy"><span class="section-kicker">${copy.contact.kicker}</span><h2>${copy.contact.title}</h2><p>${copy.contact.body}</p><a class="button button-light" href="mailto:tubinghao11103@163.com">${copy.contact.cta}<span>↗</span></a></div>
+            <div class="contact-copy"><span class="section-kicker">${copy.contact.kicker}</span><h2>${copy.contact.title}</h2><a class="button button-light" href="mailto:tubinghao11103@163.com">${copy.contact.cta}<span>↗</span></a></div>
             <div class="contact-details">
               ${[[copy.contact.emailLabel, 'tubinghao11103@163.com'], [copy.contact.emailAltLabel, copy.contact.emailAlt]].map(([label, email]) => `<div class="detail-row"><span>${label}</span><div class="contact-value"><a href="mailto:${email}">${email}</a><button class="copy-email" type="button" data-copy-email="${email}" aria-label="${lang === 'zh' ? '复制邮箱' : 'Copy email'} ${email}">${lang === 'zh' ? '复制' : 'Copy'}</button></div></div>`).join('')}
               <div class="detail-row"><span>GitHub</span><a href="https://github.com/Bruce-778" target="_blank" rel="noreferrer">github.com/Bruce-778 ↗</a></div>
