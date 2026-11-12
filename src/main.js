@@ -525,7 +525,7 @@ function render() {
   cleanupView = [];
   const copy = content[lang];
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
-  document.title = lang === 'zh' ? '屠炳豪 Bruce Tu — 个人主页' : 'Binghao Tu (Bruce) — Personal Site';
+  document.title = 'Binghao Tu';
   app.innerHTML = `
     <div class="site-shell">
       <a class="skip-link" href="#main-content">${lang === 'zh' ? '跳至正文' : 'Skip to content'}</a>
