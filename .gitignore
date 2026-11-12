@@ -4,4 +4,5 @@ dist/
 *.log
 *.zip
 output/ui-review-*/
+design-qa.md
 output/conference-refresh-*/

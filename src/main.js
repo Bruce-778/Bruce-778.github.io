@@ -123,15 +123,13 @@ const content = {
     contact: {
       kicker: '06 / CONTACT',
       title: '联系我',
-      cta: '发一封邮件',
-      github: '查看 GitHub',
       emailLabel: 'Email',
       emailAltLabel: 'Gmail',
       emailAlt: 'bruce031103@gmail.com',
       basedLabel: '所在地',
       location: '宁波',
       resumeLabel: '简历',
-      resumeLink: '查看 PDF',
+      resumeLink: '查看简历',
     },
     footer: '© 2026 屠炳豪 Bruce Tu',
     toggle: 'EN',
@@ -258,15 +256,13 @@ const content = {
     contact: {
       kicker: '06 / CONTACT',
       title: 'Contact',
-      cta: 'Send an email',
-      github: 'View GitHub',
       emailLabel: 'Email',
       emailAltLabel: 'Gmail',
       emailAlt: 'bruce031103@gmail.com',
       basedLabel: 'Based in',
       location: 'Ningbo',
       resumeLabel: 'Résumé',
-      resumeLink: 'View PDF · Chinese',
+      resumeLink: 'View résumé',
     },
     footer: '© 2026 Binghao Tu (Bruce)',
     toggle: '中',
@@ -281,6 +277,17 @@ const publications = [
   { venue: 'GCCCE 2025', image: 'gccce-2025.webp', url: 'https://gccce2025.jiangnan.edu.cn/dfiles/18334/doc/pdf/jiaoshi.pdf#page=311', source: 'https://gccce2025.jiangnan.edu.cn/dfiles/18334/doc/pdf/jiaoshi.pdf#page=1', alt: { zh: 'GCCCE 2025 教师论坛论文集官方封面', en: 'Official GCCCE 2025 Teacher Forum proceedings cover' } },
   { venue: 'EMNLP 2025', image: 'emnlp-2025-official-hero.webp', url: 'https://aclanthology.org/2025.emnlp-main.42/', source: 'https://2025.emnlp.org/', alt: { zh: 'EMNLP 2025 官网宣传主视觉：30 周年标识与苏州夜景', en: 'EMNLP 2025 official website hero with the 30th anniversary logo and Suzhou skyline' } },
   { venue: 'CITERS 2025', image: 'citers-2025.webp', url: 'https://citers2025.cite.hku.hk/wp-content/uploads/Conference_Proceedings_of_CITERS_2025.pdf#page=73', source: 'https://citers2025.cite.hku.hk/', alt: { zh: 'CITERS 2025 官方会议封面', en: 'Official CITERS 2025 conference cover' } },
+];
+
+// Preprints have no conference artwork or acceptance implied by their presentation.
+const preprints = [
+  {
+    id: '2611.10305',
+    title: 'Plug-and-Play Verifier for Decoupling Process Reward in Stabilizing Long-Horizon Agentic Reasoning',
+    date: '2026-11-06',
+    url: 'https://arxiv.org/abs/2611.10305',
+    pdf: 'https://arxiv.org/pdf/2611.10305',
+  },
 ];
 
 let savedLanguage;
@@ -510,19 +517,22 @@ function setupEmailCopy() {
   const status = document.querySelector('.contact-status');
   const timers = new Set();
   document.querySelectorAll('[data-copy-email]').forEach(button => button.addEventListener('click', async () => {
+    status.classList.remove('is-error');
+    status.textContent = '';
     try {
       await navigator.clipboard.writeText(button.dataset.copyEmail);
       button.textContent = lang === 'zh' ? '已复制' : 'Copied';
       status.textContent = lang === 'zh' ? '邮箱已复制' : 'Email address copied';
       button.disabled = true;
       const timer = setTimeout(() => {
-        button.textContent = lang === 'zh' ? '复制' : 'Copy';
+        button.textContent = lang === 'zh' ? '复制邮箱' : 'Copy email';
         button.disabled = false;
         status.textContent = '';
         timers.delete(timer);
       }, 2500);
       timers.add(timer);
     } catch {
+      status.classList.add('is-error');
       status.textContent = lang === 'zh' ? '未能自动复制，请选择邮箱地址手动复制' : 'Select the email address to copy it manually';
     }
   }));
@@ -636,6 +646,10 @@ function render() {
 
         <section class="section-pad publications-section" id="research">
           <div class="section-heading"><span class="section-kicker">05 / PUBLICATIONS</span><h2>${lang === 'zh' ? '论文发表' : 'Publications'}</h2></div>
+          <div class="preprint-list">${preprints.map(paper => `<article class="preprint-item" data-reading-anchor="preprint-${paper.id}">
+            <div class="preprint-meta"><p>arXiv</p><span>${lang === 'zh' ? '预印本 · 共同作者' : 'Preprint · Co-author'}</span><time datetime="${paper.date}">${paper.date.replaceAll('-', '.')}</time></div>
+            <div class="publication-copy"><h3 lang="en"><a href="${paper.url}" target="_blank" rel="noopener noreferrer">${paper.title}</a></h3><div class="publication-links"><a class="content-link" href="${paper.pdf}" target="_blank" rel="noopener noreferrer" type="application/pdf">${lang === 'zh' ? '阅读论文' : 'Read paper'}</a><a class="content-link" href="${paper.url}" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? 'arXiv 摘要' : 'arXiv abstract'}</a></div></div>
+          </article>`).join('')}</div>
           <div class="publication-list">${copy.journey.papers.map(([title, meta], index) => {
             const paper = publications[index];
             return `<article class="publication-item" data-reading-anchor="paper-${index}"><button class="publication-image" type="button" data-cover-index="${index}" aria-haspopup="dialog" aria-label="${lang === 'zh' ? '查看会议封面' : 'View conference cover'}: ${paper.venue}"><img src="./assets/conferences/${paper.image}" alt="${paper.alt[lang]}" loading="lazy" /><span aria-hidden="true">${lang === 'zh' ? '查看封面' : 'View cover'} ⤢</span></button><div class="publication-copy"><p class="publication-venue">${meta}</p><h3><a href="${paper.url}" target="_blank" rel="noopener noreferrer">${title}</a></h3><div class="publication-links"><a class="content-link" href="${paper.url}" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '阅读论文' : 'Read paper'}</a><a class="content-link" href="${paper.source}" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '会议资料' : 'Conference'}</a></div></div></article>`;
@@ -644,15 +658,14 @@ function render() {
         </section>
 
         <section class="section-pad contact-section" id="contact">
-          <div class="contact-card">
-            <div class="contact-copy"><span class="section-kicker">${copy.contact.kicker}</span><h2>${copy.contact.title}</h2><a class="button button-light" href="mailto:tubinghao11103@163.com">${copy.contact.cta}</a></div>
-            <div class="contact-details">
-              ${[[copy.contact.emailLabel, 'tubinghao11103@163.com'], [copy.contact.emailAltLabel, copy.contact.emailAlt]].map(([label, email]) => `<div class="detail-row"><span>${label}</span><div class="contact-value"><a href="mailto:${email}">${email}</a><button class="content-link copy-email" type="button" data-copy-email="${email}" aria-label="${lang === 'zh' ? '复制邮箱' : 'Copy email'} ${email}">${lang === 'zh' ? '复制' : 'Copy'}</button></div></div>`).join('')}
-              <div class="detail-row"><span>GitHub</span><a class="content-link" href="https://github.com/Bruce-778" target="_blank" rel="noopener noreferrer">github.com/Bruce-778</a></div>
-              <div class="detail-row"><span>${copy.contact.resumeLabel}</span><div class="resume-links"><a class="content-link" href="./assets/bruce-tu-resume.pdf" target="_blank" rel="noopener noreferrer" type="application/pdf">${copy.contact.resumeLink}</a><a class="content-link" href="./assets/bruce-tu-resume.pdf" download="Binghao-Tu-Resume.pdf">${lang === 'zh' ? '下载' : 'Download'}</a></div></div>
-              <div class="detail-row"><span>${copy.contact.basedLabel}</span><span>${copy.contact.location}</span></div>
-              <p class="contact-status" role="status" aria-live="polite"></p>
-            </div>
+          <div class="contact-heading"><div class="section-heading"><span class="section-kicker">${copy.contact.kicker}</span><h2>${copy.contact.title}</h2></div><p class="contact-location"><span class="sr-only">${copy.contact.basedLabel}: </span>${copy.contact.location}</p></div>
+          <div class="contact-emails">
+            ${[[copy.contact.emailLabel, 'tubinghao11103@163.com'], [copy.contact.emailAltLabel, copy.contact.emailAlt]].map(([label, email]) => `<div class="contact-email"><span class="contact-email-label">${label}</span><a class="contact-email-address" href="mailto:${email}">${email}</a><button class="contact-text-link copy-email" type="button" data-copy-email="${email}" aria-label="${lang === 'zh' ? '复制邮箱' : 'Copy email'} ${email}">${lang === 'zh' ? '复制邮箱' : 'Copy email'}</button></div>`).join('')}
+            <p class="contact-status" role="status" aria-live="polite"></p>
+          </div>
+          <div class="contact-utilities">
+            <div class="contact-github"><span>GitHub</span><a href="https://github.com/Bruce-778" target="_blank" rel="noopener noreferrer">github.com/Bruce-778</a></div>
+            <div class="resume-links" role="group" aria-label="${copy.contact.resumeLabel}"><a class="resume-view" href="./assets/bruce-tu-resume.pdf" target="_blank" rel="noopener noreferrer" type="application/pdf" aria-label="${lang === 'zh' ? '查看中文简历（PDF，新标签页打开）' : 'View Chinese résumé (PDF, opens in a new tab)'}">${copy.contact.resumeLink}</a><a class="contact-text-link" href="./assets/bruce-tu-resume.pdf" download="Binghao-Tu-Resume.pdf">${lang === 'zh' ? '下载 PDF' : 'Download PDF'}</a></div>
           </div>
         </section>
       </main>

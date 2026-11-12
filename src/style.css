@@ -200,7 +200,14 @@ main:focus { outline:none; }
 .award-list { display:flex; flex-wrap:wrap; gap:9px; }
 .award-list > span { max-width:100%; padding:6px 11px; border:1px solid #dce6e3; border-radius:7px; background:#eff5f2; color:var(--ink-soft); font-size:14px; text-wrap:balance; }
 .publications-section { padding-block:12px 48px; }
-.publication-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 36px; margin-top:26px; border-top:1px solid var(--line); }
+.preprint-list { margin-top:26px; border-top:1px solid var(--line); }
+.preprint-item { display:grid; grid-template-columns:180px minmax(0,1fr); align-items:start; gap:32px; padding:28px 0; }
+.preprint-meta { display:flex; flex-direction:column; gap:5px; color:var(--ink-soft); font-size:14px; }
+.preprint-meta p { margin:0 0 3px; color:var(--blue-deep); font-size:20px; font-weight:500; line-height:1.5; }
+.preprint-meta span,.preprint-meta time { white-space:nowrap; }
+.preprint-meta time { font-variant-numeric:tabular-nums; }
+.preprint-item .publication-copy h3 { max-width:860px; text-wrap:balance; }
+.publication-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 36px; border-top:1px solid var(--line); }
 .publication-item { display:grid; grid-template-columns:212px minmax(0,1fr); gap:24px; align-items:center; min-width:0; padding:28px 0; border-bottom:1px solid var(--line); }
 /* The artwork defines its frame: full-height covers, no padded landscape box. */
 .publication-image { display:flex; flex-direction:column; align-items:center; justify-content:flex-start; width:100%; padding:0; border:0; border-radius:8px; background:transparent; cursor:zoom-in; }
@@ -248,26 +255,32 @@ main:focus { outline:none; }
 .cover-controls { display:flex; align-items:center; gap:12px; }
 .cover-count { font-size:13px; font-variant-numeric:tabular-nums; }
 
-.contact-section { padding-bottom:44px; }
-.contact-card { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:40px; align-items:center; padding:42px; border:1px solid #d5e4e7; border-radius:26px; background:linear-gradient(120deg,#e6f1f5,#eaf1ec); }
-.contact-copy h2 { margin:14px 0 0; font:500 clamp(30px,3.4vw,42px)/1.25 var(--serif); letter-spacing:-.03em; }
-:lang(en) .contact-copy h2 { font-size:clamp(38px,4vw,48px); }
-.button-light { margin-top:24px; border-color:#cbdde3; background:#fff; color:var(--ink); font-size:16px; }
-.contact-details { min-width:0; }
-.detail-row { display:grid; grid-template-columns:72px minmax(0,1fr); align-items:center; gap:14px; padding:11px 0; min-height:56px; border-bottom:1px solid #cadce0; color:var(--ink-soft); font-size:16px; }
-.detail-row a { color:var(--ink); overflow-wrap:anywhere; }
-.detail-row a:not(.content-link):hover { color:var(--blue-deep); text-decoration:underline; text-underline-offset:4px; }
-.detail-row .content-link { justify-self:start; min-height:44px; padding:8px 13px; font-size:14px; font-weight:500; }
-.detail-row:last-of-type { border-bottom:0; }
-.contact-value { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; min-width:0; }
-.contact-value a { white-space:nowrap; }
-.copy-email { min-width:60px; cursor:pointer; }
-.copy-email:disabled { cursor:default; color:#45695a; }
-.resume-links { display:flex; flex-wrap:wrap; gap:8px; }
-.resume-links a { white-space:nowrap; }
-.contact-status { min-height:20px; margin:4px 0 -20px; color:var(--blue-deep); font-size:12px; }
-.site-footer a { white-space:nowrap; }
-.site-footer { display:flex; justify-content:space-between; gap:20px; padding-block:24px 30px; border-top:1px solid var(--line); color:var(--ink-soft); font-size:12px; }
+.contact-section { padding-block:24px 0; }
+.contact-heading { display:flex; align-items:flex-end; justify-content:space-between; gap:24px; padding-bottom:28px; border-bottom:1px solid var(--line); }
+.contact-heading .section-heading h2 { font-size:42px; }
+.contact-location { margin:0 0 4px; color:var(--ink-soft); font-size:18px; white-space:nowrap; }
+.contact-emails { position:relative; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); padding-block:32px; }
+.contact-email { display:flex; min-width:0; flex-direction:column; align-items:flex-start; gap:6px; padding-right:40px; }
+.contact-email + .contact-email { padding:0 0 0 40px; border-left:1px solid var(--line); }
+.contact-email-label { color:var(--ink-soft); font-size:20px; }
+.contact-email-address { display:flex; align-items:center; min-height:44px; font-size:26px; font-weight:500; letter-spacing:-.025em; line-height:1.5; white-space:nowrap; }
+.contact-email-address:hover,.contact-github a:hover { color:var(--blue-deep); text-decoration:underline; text-underline-offset:5px; text-decoration-thickness:1px; }
+.contact-text-link { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:8px 0; border:0; background:transparent; color:var(--blue-deep); font-size:20px; font-weight:400; line-height:1.5; white-space:nowrap; cursor:pointer; }
+.contact-text-link:hover { text-decoration:underline; text-underline-offset:5px; text-decoration-thickness:1px; }
+.copy-email { min-width:80px; justify-content:flex-start; }
+.copy-email:disabled { cursor:default; color:#45695a; text-decoration:none; }
+.contact-status { position:absolute; right:0; bottom:5px; max-width:100%; margin:0; color:var(--blue-deep); font-size:13px; line-height:1.5; }
+.contact-status.is-error { position:static; grid-column:1 / -1; padding-top:8px; }
+.contact-utilities { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px 32px; padding-block:26px; border-top:1px solid var(--line); }
+.contact-github { display:flex; align-items:center; flex-wrap:wrap; gap:6px 24px; min-width:0; }
+.contact-github > span { color:var(--ink-soft); font-size:20px; }
+.contact-github a { display:inline-flex; align-items:center; min-height:44px; font-size:22px; white-space:nowrap; }
+.resume-links { display:flex; flex-wrap:wrap; align-items:center; gap:12px 28px; }
+.resume-view { display:inline-flex; align-items:center; justify-content:center; min-height:46px; padding:8px 24px; border:1px solid #c5dbe3; border-radius:9px; background:#fff; font-size:20px; line-height:1.5; white-space:nowrap; transition:background .2s,border-color .2s; }
+.resume-view:hover { background:#edf5f7; border-color:#91b7c0; }
+.site-footer a { display:inline-flex; align-items:center; min-height:44px; white-space:nowrap; }
+.site-footer a:hover { color:var(--blue-deep); text-decoration:underline; text-underline-offset:5px; }
+.site-footer { display:flex; align-items:center; justify-content:space-between; gap:20px; padding-block:20px 30px; border-top:1px solid var(--line); color:var(--ink-soft); font-size:15px; }
 
 @media (max-width:1050px) {
   .hero { gap:24px; min-height:580px; }
@@ -282,8 +295,9 @@ main:focus { outline:none; }
   .experience-result { grid-column:2; flex-direction:row; flex-wrap:wrap; padding:0; }
   .education-card { grid-template-columns:28% minmax(0,1fr); }
   .education-copy { padding:22px 24px; }
-  .contact-card { gap:32px; padding:32px; }
-  .detail-row { grid-template-columns:1fr; gap:3px; }
+  .contact-email { padding-right:24px; }
+  .contact-email + .contact-email { padding-left:24px; }
+  .contact-email-address { font-size:22px; }
 }
 @media (max-width:760px) {
   .section-pad,.site-footer { width:calc(100% - 40px); }
@@ -312,6 +326,9 @@ main:focus { outline:none; }
   .publication-list { grid-template-columns:minmax(0,1fr); }
   .publication-item { grid-template-columns:212px minmax(0,1fr); gap:28px; }
   .publication-copy h3 { font-size:19px; }
+  .preprint-item { grid-template-columns:minmax(0,1fr); gap:14px; }
+  .preprint-meta { flex-direction:row; flex-wrap:wrap; align-items:center; gap:6px 12px; }
+  .preprint-meta p { margin:0; font-size:17px; }
   .bt-profile-story p { font-size:16px; }
   .project-grid { grid-template-columns:minmax(0,1fr); gap:24px; }
   .project-body { padding:24px; }
@@ -320,8 +337,13 @@ main:focus { outline:none; }
   .lab-index { display:block; margin-bottom:5px; }
   .education-copy h3 { font-size:22px; }
   .education-program .text-unit { font-size:17px; }
-  .contact-card { grid-template-columns:minmax(0,1fr); gap:24px; }
-  .detail-row { grid-template-columns:72px minmax(0,1fr); gap:12px; }
+  .contact-emails { grid-template-columns:minmax(0,1fr); padding-block:10px; }
+  .contact-email { padding:20px 0; }
+  .contact-email + .contact-email { padding:20px 0; border-left:0; border-top:1px solid var(--line); }
+  .contact-email-address { font-size:24px; }
+  .contact-utilities { flex-direction:column; align-items:flex-start; gap:14px; padding-block:20px; }
+  .contact-github { gap:8px 18px; }
+  .contact-github a { font-size:18px; }
 }
 @media (max-width:540px) {
   .hero { grid-template-columns:minmax(0,1fr); min-height:auto; padding-block:44px 46px; gap:22px; }
@@ -355,6 +377,7 @@ main:focus { outline:none; }
   .gallery-cover > img { height:224px; }
   .gallery-cover .gallery-caption { justify-content:space-between; gap:16px; padding:20px; background:#fff; }
   .publication-item { grid-template-columns:minmax(0,1fr); gap:18px; padding-block:26px; }
+  .preprint-item { padding-block:24px; }
   .publication-image { width:236px; max-width:100%; justify-self:center; }
   .publication-image img { height:320px; }
   .publication-image > span { font-size:12px; }
@@ -386,16 +409,17 @@ main:focus { outline:none; }
   .education-copy h3 { font-size:23px; }
   .education-focus li { font-size:13px; }
   .degree-meta { font-size:13px; }
-  .contact-card { padding:26px 22px; border-radius:22px; }
-  .contact-copy h2 { font-size:32px; }
-  :lang(en) .contact-copy h2 { font-size:38px; }
-  .detail-row { grid-template-columns:minmax(0,1fr); gap:8px; font-size:15px; }
-  .detail-row > :first-child { color:var(--blue-deep); font-size:14px; }
-  .contact-value { gap:6px; }
+  .contact-heading { gap:16px; padding-bottom:22px; }
+  .contact-heading .section-heading h2 { font-size:32px; }
+  :lang(en) .contact-heading .section-heading h2 { font-size:38px; }
+  .contact-location { font-size:16px; }
+  .contact-email-label,.contact-github > span { font-size:16px; }
+  .contact-email-address { font-size:clamp(19px,5.8vw,24px); }
+  .contact-text-link,.resume-view { font-size:16px; }
   .cover-panel { padding:16px; }
   .cover-art { height:47dvh; }
   .cover-description { font-size:14px; }
-  .site-footer { font-size:11px; flex-wrap:wrap; gap:6px 16px; }
+  .site-footer { font-size:12px; flex-wrap:wrap; gap:4px 16px; padding-block:14px 22px; }
 }
 @media (max-width:380px) {
   .hero h1 { font-size:64px; gap:8px 12px; }
