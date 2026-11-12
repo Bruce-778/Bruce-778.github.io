@@ -4,6 +4,7 @@ import githubIcon from './icons/github-logo.svg?raw';
 import resumeIcon from './icons/file-text.svg?raw';
 import downloadIcon from './icons/download-simple.svg?raw';
 import locationIcon from './icons/map-pin.svg?raw';
+import medalIcon from './icons/medal.svg?raw';
 
 const contactIcon = svg => `<span class="contact-icon" aria-hidden="true">${svg}</span>`;
 
@@ -281,7 +282,7 @@ const content = {
 // Official conference covers are separate from the links to the author's papers.
 const publications = [
   { venue: 'ICIC 2026', image: 'icic-2026.webp', url: 'https://link.springer.com/chapter/10.1007/978-981-92-3557-5_2', source: 'https://link.springer.com/book/10.1007/978-981-92-3557-5', alt: { zh: 'ICIC 2026 会议论文集第七卷官方封面', en: 'Official ICIC 2026 proceedings cover, Part VII' } },
-  { venue: 'GCCCE 2025', image: 'gccce-2025.webp', url: 'https://gccce2025.jiangnan.edu.cn/dfiles/18334/doc/pdf/jiaoshi.pdf#page=311', source: 'https://gccce2025.jiangnan.edu.cn/dfiles/18334/doc/pdf/jiaoshi.pdf#page=1', alt: { zh: 'GCCCE 2025 教师论坛论文集官方封面', en: 'Official GCCCE 2025 Teacher Forum proceedings cover' } },
+  { venue: 'GCCCE 2025', image: 'gccce-2025.webp', url: 'https://gccce2025.jiangnan.edu.cn/dfiles/18334/doc/pdf/jiaoshi.pdf#page=311', source: 'https://gccce2025.jiangnan.edu.cn/dfiles/18334/doc/pdf/jiaoshi.pdf#page=1', award: 'Best Paper Nomination Award', alt: { zh: 'GCCCE 2025 教师论坛论文集官方封面', en: 'Official GCCCE 2025 Teacher Forum proceedings cover' } },
   { venue: 'EMNLP 2025', image: 'emnlp-2025-official-hero.webp', url: 'https://aclanthology.org/2025.emnlp-main.42/', source: 'https://2025.emnlp.org/', alt: { zh: 'EMNLP 2025 官网宣传主视觉：30 周年标识与苏州夜景', en: 'EMNLP 2025 official website hero with the 30th anniversary logo and Suzhou skyline' } },
   { venue: 'CITERS 2025', image: 'citers-2025.webp', url: 'https://citers2025.cite.hku.hk/wp-content/uploads/Conference_Proceedings_of_CITERS_2025.pdf#page=73', source: 'https://citers2025.cite.hku.hk/', alt: { zh: 'CITERS 2025 官方会议封面', en: 'Official CITERS 2025 conference cover' } },
 ];
@@ -633,7 +634,7 @@ function render() {
           </article>`).join('')}</div>
           <div class="publication-list">${copy.journey.papers.map(([title, meta], index) => {
             const paper = publications[index];
-            return `<article class="publication-item" data-reading-anchor="paper-${index}"><button class="publication-image" type="button" data-cover-index="${index}" aria-haspopup="dialog" aria-label="${lang === 'zh' ? '查看会议封面' : 'View conference cover'}: ${paper.venue}"><img src="./assets/conferences/${paper.image}" alt="${paper.alt[lang]}" loading="lazy" /><span aria-hidden="true">${lang === 'zh' ? '查看封面' : 'View cover'} ⤢</span></button><div class="publication-copy"><p class="publication-venue">${meta}</p><h3><a href="${paper.url}" target="_blank" rel="noopener noreferrer">${title}</a></h3><div class="publication-links"><a class="content-link" href="${paper.url}" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '阅读论文' : 'Read paper'}</a><a class="content-link" href="${paper.source}" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '会议资料' : 'Conference'}</a></div></div></article>`;
+            return `<article class="publication-item" data-reading-anchor="paper-${index}"><button class="publication-image" type="button" data-cover-index="${index}" aria-haspopup="dialog" aria-label="${lang === 'zh' ? '查看会议封面' : 'View conference cover'}: ${paper.venue}"><img src="./assets/conferences/${paper.image}" alt="${paper.alt[lang]}" loading="lazy" /><span aria-hidden="true">${lang === 'zh' ? '查看封面' : 'View cover'} ⤢</span></button><div class="publication-copy"><p class="publication-venue">${meta}</p><h3><a href="${paper.url}" target="_blank" rel="noopener noreferrer">${title}</a></h3><div class="publication-links"><a class="content-link" href="${paper.url}" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '阅读论文' : 'Read paper'}</a><a class="content-link" href="${paper.source}" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '会议资料' : 'Conference'}</a></div>${paper.award ? `<p class="publication-award" lang="en"><span class="award-icon" aria-hidden="true">${medalIcon}</span><span>${paper.award}</span></p>` : ''}</div></article>`;
           }).join('')}</div>
           <p class="publication-credits"><a href="https://github.com/Bruce-778/Bruce-778.github.io/blob/main/ASSET_SOURCES.md" target="_blank" rel="noopener noreferrer">${lang === 'zh' ? '图片来源与署名' : 'Image sources & credits'} ↗</a></p>
         </section>

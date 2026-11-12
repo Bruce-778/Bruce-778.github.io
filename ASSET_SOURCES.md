@@ -22,6 +22,6 @@ Each cover is presented beside its corresponding publication. Desktop cards use 
 
 The older `public/assets/papers/` figure files are retained in the repository for history but are not referenced by the page or carousel.
 
-## Contact icons — updated 2026-11-12
+## UI icons — updated 2026-11-12
 
-The five regular-weight SVG icons in `src/icons/` are unmodified assets from [Phosphor Icons](https://github.com/phosphor-icons/core), pinned to commit `2b75f3ad12b420c9504ef05df8d2564a28f8500e`: envelope-simple, github-logo, file-text, download-simple, and map-pin. They are displayed at 18px using the site's existing blue accent. The upstream MIT license is retained in `src/icons/LICENSE`. No external icon runtime or font is loaded.
+The six regular-weight SVG icons in `src/icons/` are unmodified assets from [Phosphor Icons](https://github.com/phosphor-icons/core), pinned to commit `2b75f3ad12b420c9504ef05df8d2564a28f8500e`: envelope-simple, github-logo, file-text, download-simple, map-pin, and medal. Contact icons are displayed at 18px using the site's existing blue accent; the GCCCE 2025 nomination badge uses a 17px medal in sage green. The upstream MIT license is retained in `src/icons/LICENSE`. No external icon runtime or font is loaded.
