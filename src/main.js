@@ -1,4 +1,11 @@
 import './style.css';
+import envelopeIcon from './icons/envelope-simple.svg?raw';
+import githubIcon from './icons/github-logo.svg?raw';
+import resumeIcon from './icons/file-text.svg?raw';
+import downloadIcon from './icons/download-simple.svg?raw';
+import locationIcon from './icons/map-pin.svg?raw';
+
+const contactIcon = svg => `<span class="contact-icon" aria-hidden="true">${svg}</span>`;
 
 const content = {
   zh: {
@@ -513,32 +520,6 @@ function setupCoverPreview(copy) {
   cleanupView.push(() => document.documentElement.classList.remove('has-dialog'));
 }
 
-function setupEmailCopy() {
-  const status = document.querySelector('.contact-status');
-  const timers = new Set();
-  document.querySelectorAll('[data-copy-email]').forEach(button => button.addEventListener('click', async () => {
-    status.classList.remove('is-error');
-    status.textContent = '';
-    try {
-      await navigator.clipboard.writeText(button.dataset.copyEmail);
-      button.textContent = lang === 'zh' ? '已复制' : 'Copied';
-      status.textContent = lang === 'zh' ? '邮箱已复制' : 'Email address copied';
-      button.disabled = true;
-      const timer = setTimeout(() => {
-        button.textContent = lang === 'zh' ? '复制邮箱' : 'Copy email';
-        button.disabled = false;
-        status.textContent = '';
-        timers.delete(timer);
-      }, 2500);
-      timers.add(timer);
-    } catch {
-      status.classList.add('is-error');
-      status.textContent = lang === 'zh' ? '未能自动复制，请选择邮箱地址手动复制' : 'Select the email address to copy it manually';
-    }
-  }));
-  cleanupView.push(() => timers.forEach(clearTimeout));
-}
-
 function render() {
   cleanupView.forEach(cleanup => cleanup());
   cleanupView = [];
@@ -658,14 +639,13 @@ function render() {
         </section>
 
         <section class="section-pad contact-section" id="contact">
-          <div class="contact-heading"><div class="section-heading"><span class="section-kicker">${copy.contact.kicker}</span><h2>${copy.contact.title}</h2></div><p class="contact-location"><span class="sr-only">${copy.contact.basedLabel}: </span>${copy.contact.location}</p></div>
+          <div class="contact-heading"><div class="section-heading"><span class="section-kicker">${copy.contact.kicker}</span><h2>${copy.contact.title}</h2></div><p class="contact-location">${contactIcon(locationIcon)}<span class="sr-only">${copy.contact.basedLabel}: </span>${copy.contact.location}</p></div>
           <div class="contact-emails">
-            ${[[copy.contact.emailLabel, 'tubinghao11103@163.com'], [copy.contact.emailAltLabel, copy.contact.emailAlt]].map(([label, email]) => `<div class="contact-email"><span class="contact-email-label">${label}</span><a class="contact-email-address" href="mailto:${email}">${email}</a><button class="contact-text-link copy-email" type="button" data-copy-email="${email}" aria-label="${lang === 'zh' ? '复制邮箱' : 'Copy email'} ${email}">${lang === 'zh' ? '复制邮箱' : 'Copy email'}</button></div>`).join('')}
-            <p class="contact-status" role="status" aria-live="polite"></p>
+            ${[[copy.contact.emailLabel, 'tubinghao11103@163.com'], [copy.contact.emailAltLabel, copy.contact.emailAlt]].map(([label, email]) => `<div class="contact-email"><span class="contact-email-label">${contactIcon(envelopeIcon)}${label}</span><a class="contact-email-address" href="mailto:${email}">${email}</a></div>`).join('')}
           </div>
           <div class="contact-utilities">
-            <div class="contact-github"><span>GitHub</span><a href="https://github.com/Bruce-778" target="_blank" rel="noopener noreferrer">github.com/Bruce-778</a></div>
-            <div class="resume-links" role="group" aria-label="${copy.contact.resumeLabel}"><a class="resume-view" href="./assets/bruce-tu-resume.pdf" target="_blank" rel="noopener noreferrer" type="application/pdf" aria-label="${lang === 'zh' ? '查看中文简历（PDF，新标签页打开）' : 'View Chinese résumé (PDF, opens in a new tab)'}">${copy.contact.resumeLink}</a><a class="contact-text-link" href="./assets/bruce-tu-resume.pdf" download="Binghao-Tu-Resume.pdf">${lang === 'zh' ? '下载 PDF' : 'Download PDF'}</a></div>
+            <div class="contact-github"><span>${contactIcon(githubIcon)}GitHub</span><a href="https://github.com/Bruce-778" target="_blank" rel="noopener noreferrer">github.com/Bruce-778</a></div>
+            <div class="resume-links" role="group" aria-label="${copy.contact.resumeLabel}"><a class="resume-view" href="./assets/bruce-tu-resume.pdf" target="_blank" rel="noopener noreferrer" type="application/pdf" aria-label="${lang === 'zh' ? '查看中文简历（PDF，新标签页打开）' : 'View Chinese résumé (PDF, opens in a new tab)'}">${contactIcon(resumeIcon)}${copy.contact.resumeLink}</a><a class="contact-text-link" href="./assets/bruce-tu-resume.pdf" download="Binghao-Tu-Resume.pdf">${contactIcon(downloadIcon)}${lang === 'zh' ? '下载 PDF' : 'Download PDF'}</a></div>
           </div>
         </section>
       </main>
@@ -740,7 +720,6 @@ function render() {
   cleanupView.push(() => document.removeEventListener('click', closeMenu));
   setupGallery(copy.about);
   setupCoverPreview(copy);
-  setupEmailCopy();
   animateCounters();
   setupActiveNavigation();
 }
